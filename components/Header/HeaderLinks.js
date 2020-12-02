@@ -144,83 +144,83 @@ export default function HeaderLinks(props) {
           }}
           buttonIcon={Group}
           dropdownList={[
-            <Link href="/sections#headers">
-              <a
-                className={classes.dropdownLink}
-                onClick={e => smoothScroll(e, "headers")}
-              >
-                <Dns className={classes.dropdownIcons} /> Headers
-              </a>
-            </Link>,
-            <Link href="/sections#features">
-              <a
-                className={classes.dropdownLink}
-                onClick={e => smoothScroll(e, "features")}
-              >
-                <Build className={classes.dropdownIcons} /> Features
-              </a>
-            </Link>,
-            <Link href="/sections#access">
-              <a
-                className={classes.dropdownLink}
-                onClick={e => smoothScroll(e, "access")}
-              >
-                <Build className={classes.dropdownIcons} /> Access
-              </a>
-            </Link>,
-            <Link href="/sections#blogs">
-              <a
-                className={classes.dropdownLink}
-                onClick={e => smoothScroll(e, "blogs")}
-              >
-                <ListIcon className={classes.dropdownIcons} /> Blogs
-              </a>
-            </Link>,
-            <Link href="/sections#teams">
-              <a
-                className={classes.dropdownLink}
-                onClick={e => smoothScroll(e, "teams")}
-              >
-                <People className={classes.dropdownIcons} /> Teams
-              </a>
-            </Link>,
-            <Link href="/sections#projects">
-              <a
-                className={classes.dropdownLink}
-                onClick={e => smoothScroll(e, "projects")}
-              >
-                <Assignment className={classes.dropdownIcons} /> Projects
-              </a>
-            </Link>,
-            <Link href="/sections#pricing">
-              <a
-                className={classes.dropdownLink}
-                onClick={e => smoothScroll(e, "pricing")}
-              >
-                <MonetizationOn className={classes.dropdownIcons} /> Pricing
-              </a>
-            </Link>,
-            <Link href="/sections#testimonials">
-              <a
-                className={classes.dropdownLink}
-                onClick={e => smoothScroll(e, "testimonials")}
-              >
-                <Chat className={classes.dropdownIcons} /> Testimonials
-              </a>
-            </Link>,
-            <Link href="/sections#contacts">
-              <a
-                className={classes.dropdownLink}
-                onClick={e => smoothScroll(e, "contacts")}
-              >
-                <Call className={classes.dropdownIcons} /> Contacts
-              </a>
-            </Link>
+            // <Link href="/sections#headers">
+            //   <a
+            //     className={classes.dropdownLink}
+            //     onClick={e => smoothScroll(e, "headers")}
+            //   >
+            //     <Dns className={classes.dropdownIcons} /> Headers
+            //   </a>
+            // </Link>,
+            // <Link href="/sections#features">
+            //   <a
+            //     className={classes.dropdownLink}
+            //     onClick={e => smoothScroll(e, "features")}
+            //   >
+            //     <Build className={classes.dropdownIcons} /> Features
+            //   </a>
+            // </Link>,
+            // <Link href="/sections#access">
+            //   <a
+            //     className={classes.dropdownLink}
+            //     onClick={e => smoothScroll(e, "access")}
+            //   >
+            //     <Build className={classes.dropdownIcons} /> Access
+            //   </a>
+            // </Link>,
+            // <Link href="/sections#blogs">
+            //   <a
+            //     className={classes.dropdownLink}
+            //     onClick={e => smoothScroll(e, "blogs")}
+            //   >
+            //     <ListIcon className={classes.dropdownIcons} /> Blogs
+            //   </a>
+            // </Link>,
+            // <Link href="/sections#teams">
+            //   <a
+            //     className={classes.dropdownLink}
+            //     onClick={e => smoothScroll(e, "teams")}
+            //   >
+            //     <People className={classes.dropdownIcons} /> Teams
+            //   </a>
+            // </Link>,
+            // <Link href="/sections#projects">
+            //   <a
+            //     className={classes.dropdownLink}
+            //     onClick={e => smoothScroll(e, "projects")}
+            //   >
+            //     <Assignment className={classes.dropdownIcons} /> Projects
+            //   </a>
+            // </Link>,
+            // <Link href="/sections#pricing">
+            //   <a
+            //     className={classes.dropdownLink}
+            //     onClick={e => smoothScroll(e, "pricing")}
+            //   >
+            //     <MonetizationOn className={classes.dropdownIcons} /> Pricing
+            //   </a>
+            // </Link>,
+            // <Link href="/sections#testimonials">
+            //   <a
+            //     className={classes.dropdownLink}
+            //     onClick={e => smoothScroll(e, "testimonials")}
+            //   >
+            //     <Chat className={classes.dropdownIcons} /> Testimonials
+            //   </a>
+            // </Link>,
+            // <Link href="/sections#contacts">
+            //   <a
+            //     className={classes.dropdownLink}
+            //     onClick={e => smoothScroll(e, "contacts")}
+            //   >
+            //     <Call className={classes.dropdownIcons} /> Contacts
+            //   </a>
+            // </Link>
           ]}
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link href="/contact-us">
+        <Link href="#">
           <Button 
             className={classes.contactButton}
             color={"transparent"}
@@ -232,7 +232,7 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <Hidden mdDown>
           <Button
-            href="https://acralending.com/correspondent-portal"
+            href="#"
             color={"transparent"}
             className={classes.navButton}
             round
@@ -242,7 +242,7 @@ export default function HeaderLinks(props) {
         </Hidden>
         <Hidden mdUp>
           <Button
-            href="https://acralending.com/correspondent-portal"
+            href="#"
             color={"blue"}
             className={classes.navButton}
             round

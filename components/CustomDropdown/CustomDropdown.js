@@ -181,6 +181,7 @@ CustomDropdown.propTypes = {
     "dark",
     "primary",
     "info",
+    "blue",
     "success",
     "warning",
     "danger",

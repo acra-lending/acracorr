@@ -68,8 +68,7 @@ export default function LandingPage({ ...rest }) {
               <Button
                 color="blue"
                 size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                target="_blank"
+                href="#"
               >
                 Get Approved 
               </Button>
@@ -184,8 +183,7 @@ export default function LandingPage({ ...rest }) {
                         <Button
                         color="blue"
                         size="lg"
-                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                        target="_blank"
+                        href="#"
                       >
                         Apply Now
                       </Button>
