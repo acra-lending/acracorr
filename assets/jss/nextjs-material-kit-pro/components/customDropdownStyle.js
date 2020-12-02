@@ -3,6 +3,7 @@ import {
   primaryColor,
   primaryBoxShadow,
   infoColor,
+  blueColor,
   infoBoxShadow,
   successColor,
   successBoxShadow,
@@ -138,6 +139,13 @@ const customDropdownStyle = theme => ({
   infoHover: {
     "&:hover": {
       backgroundColor: infoColor[0],
+      color: whiteColor,
+      ...infoBoxShadow
+    }
+  },
+  blueHover: {
+    "&:hover": {
+      backgroundColor: blueColor,
       color: whiteColor,
       ...infoBoxShadow
     }

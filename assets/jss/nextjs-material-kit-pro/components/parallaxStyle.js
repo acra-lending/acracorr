@@ -1,8 +1,11 @@
 import {
   blackColor,
+  blueColor,
+  skyColor,
   primaryColor,
   roseColor,
   infoColor,
+  grayColor,
   successColor,
   warningColor,
   dangerColor,
@@ -73,6 +76,52 @@ const parallaxStyle = {
   darkColor: {
     "&:before": {
       background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
+    },
+    "&:after,&:before": {
+      position: "absolute",
+      zIndex: "1",
+      width: "100%",
+      height: "100%",
+      display: "block",
+      left: "0",
+      top: "0",
+      content: "''"
+    }
+  },
+  blueColor: {
+    "&:before": {
+      background: "rgba(" + hexToRgb(blueColor) + ", 0.8)",
+    },
+    "&:after": {
+      background:
+        "linear-gradient(152deg,rgba(" +
+        hexToRgb(grayColor[26]) +
+        ",.8),rgba(" +
+        hexToRgb(blackColor) +
+        ",.5))"
+    },
+    "&:after,&:before": {
+      position: "absolute",
+      zIndex: "1",
+      width: "100%",
+      height: "100%",
+      display: "block",
+      left: "0",
+      top: "0",
+      content: "''"
+    }
+  },
+  skyColor: {
+    "&:before": {
+      background: "rgba(" + hexToRgb(skyColor) + ", 0.8)",
+    },
+    "&:after": {
+      background:
+        "linear-gradient(152deg,rgba(" +
+        hexToRgb(grayColor[26]) +
+        ",.8),rgba(" +
+        hexToRgb(skyColor) +
+        ",.5))"
     },
     "&:after,&:before": {
       position: "absolute",

@@ -2,6 +2,7 @@ import {
   primaryColor,
   warningColor,
   dangerColor,
+  blueColor,
   successColor,
   infoColor,
   roseColor,
@@ -28,6 +29,9 @@ const infoStyle = {
   },
   danger: {
     color: dangerColor[0]
+  },
+  blue: {
+    color: blueColor
   },
   success: {
     color: successColor[0]

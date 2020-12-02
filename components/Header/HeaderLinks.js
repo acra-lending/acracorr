@@ -15,6 +15,7 @@ import Hidden from "@material-ui/core/Hidden";
 // @material-ui/icons
 import Apps from "@material-ui/icons/Apps";
 import ShoppingCart from "@material-ui/icons/ShoppingCart";
+import MeetingRoom from "@material-ui/icons/MeetingRoom";
 import ViewDay from "@material-ui/icons/ViewDay";
 import Dns from "@material-ui/icons/Dns";
 import Build from "@material-ui/icons/Build";
@@ -24,7 +25,6 @@ import Assignment from "@material-ui/icons/Assignment";
 import MonetizationOn from "@material-ui/icons/MonetizationOn";
 import Chat from "@material-ui/icons/Chat";
 import Call from "@material-ui/icons/Call";
-import ViewCarousel from "@material-ui/icons/ViewCarousel";
 import AccountBalance from "@material-ui/icons/AccountBalance";
 import ArtTrack from "@material-ui/icons/ArtTrack";
 import ViewQuilt from "@material-ui/icons/ViewQuilt";
@@ -38,6 +38,8 @@ import Layers from "@material-ui/icons/Layers";
 import ShoppingBasket from "@material-ui/icons/ShoppingBasket";
 import LineStyle from "@material-ui/icons/LineStyle";
 import Error from "@material-ui/icons/Error";
+import PlaceIcon from '@material-ui/icons/Place';
+import Group from "@material-ui/icons/Group";
 
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
@@ -96,33 +98,37 @@ export default function HeaderLinks(props) {
           noLiPadding
           navDropdown
           hoverColor={dropdownHoverColor}
-          buttonText="Components"
+          buttonText="Our Programs"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
           }}
           buttonIcon={Apps}
           dropdownList={[
-            <Link href="/presentation">
+            <Link href="#">
               <a className={classes.dropdownLink}>
-                <LineStyle className={classes.dropdownIcons} /> Presentation
-                Page
+                <LineStyle className={classes.dropdownIcons} /> 3-Month Bank Statement
               </a>
             </Link>,
-            <Link href="/components">
+            <Link href="#">
               <a className={classes.dropdownLink}>
                 <Layers className={classes.dropdownIcons} />
-                All components
+                12-Month Bank Statement
               </a>
             </Link>,
             <a
-              href="https://demos.creative-tim.com/nextjs-material-kit-pro/documentation/tutorial?ref=njsmkp-navbar"
-              target="_blank"
+              href="#"
               className={classes.dropdownLink}
             >
               <Icon className={classes.dropdownIcons}>content_paste</Icon>
-              Documentation
-            </a>
+              ATR-In-Full
+            </a>,
+            <Link href="#">
+              <a className={classes.dropdownLink}>
+                <Layers className={classes.dropdownIcons} />
+                Jumbo Non-QM
+              </a>
+            </Link>
           ]}
         />
       </ListItem>
@@ -131,12 +137,12 @@ export default function HeaderLinks(props) {
           noLiPadding
           navDropdown
           hoverColor={dropdownHoverColor}
-          buttonText="Sections"
+          buttonText="Our Team"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
           }}
-          buttonIcon={ViewDay}
+          buttonIcon={Group}
           dropdownList={[
             <Link href="/sections#headers">
               <a
@@ -152,6 +158,14 @@ export default function HeaderLinks(props) {
                 onClick={e => smoothScroll(e, "features")}
               >
                 <Build className={classes.dropdownIcons} /> Features
+              </a>
+            </Link>,
+            <Link href="/sections#access">
+              <a
+                className={classes.dropdownLink}
+                onClick={e => smoothScroll(e, "access")}
+              >
+                <Build className={classes.dropdownIcons} /> Access
               </a>
             </Link>,
             <Link href="/sections#blogs">
@@ -206,107 +220,34 @@ export default function HeaderLinks(props) {
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          navDropdown
-          hoverColor={dropdownHoverColor}
-          buttonText="Examples"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          buttonIcon={ViewCarousel}
-          dropdownList={[
-            <Link href="/about-us">
-              <a className={classes.dropdownLink}>
-                <AccountBalance className={classes.dropdownIcons} /> About Us
-              </a>
-            </Link>,
-            <Link href="/blog-post">
-              <a className={classes.dropdownLink}>
-                <ArtTrack className={classes.dropdownIcons} /> Blog Post
-              </a>
-            </Link>,
-            <Link href="/blog-posts">
-              <a className={classes.dropdownLink}>
-                <ViewQuilt className={classes.dropdownIcons} /> Blog Posts
-              </a>
-            </Link>,
-            <Link href="/contact-us">
-              <a className={classes.dropdownLink}>
-                <LocationOn className={classes.dropdownIcons} /> Contact Us
-              </a>
-            </Link>,
-            <Link href="/landing-page">
-              <a className={classes.dropdownLink}>
-                <ViewDay className={classes.dropdownIcons} /> Landing Page
-              </a>
-            </Link>,
-            <Link href="/login">
-              <a className={classes.dropdownLink}>
-                <Fingerprint className={classes.dropdownIcons} /> Login Page
-              </a>
-            </Link>,
-            <Link href="/pricing">
-              <a className={classes.dropdownLink}>
-                <AttachMoney className={classes.dropdownIcons} /> Pricing Page
-              </a>
-            </Link>,
-            <Link href="/shopping-cart">
-              <a className={classes.dropdownLink}>
-                <ShoppingBasket className={classes.dropdownIcons} /> Shopping
-                Cart
-              </a>
-            </Link>,
-            <Link href="/ecommerce">
-              <a className={classes.dropdownLink}>
-                <Store className={classes.dropdownIcons} /> Ecommerce Page
-              </a>
-            </Link>,
-            <Link href="/product">
-              <a className={classes.dropdownLink}>
-                <ShoppingCart className={classes.dropdownIcons} /> Product Page
-              </a>
-            </Link>,
-            <Link href="/profile">
-              <a className={classes.dropdownLink}>
-                <AccountCircle className={classes.dropdownIcons} /> Profile Page
-              </a>
-            </Link>,
-            <Link href="/signup">
-              <a className={classes.dropdownLink}>
-                <PersonAdd className={classes.dropdownIcons} /> Signup Page
-              </a>
-            </Link>,
-            <Link href="/error-page">
-              <a className={classes.dropdownLink}>
-                <Error className={classes.dropdownIcons} /> Error Page
-              </a>
-            </Link>
-          ]}
-        />
+        <Link href="/contact-us">
+          <Button 
+            className={classes.contactButton}
+            color={"transparent"}
+          >
+            <PlaceIcon className={classes.icon} /> Contact Us
+          </Button>
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Hidden mdDown>
           <Button
-            href="https://www.creative-tim.com/product/nextjs-material-kit-pro?ref=njsmkp-navbar"
-            color={"white"}
-            target="_blank"
+            href="https://acralending.com/correspondent-portal"
+            color={"transparent"}
             className={classes.navButton}
             round
           >
-            <ShoppingCart className={classes.icons} /> buy now
+            <MeetingRoom className={classes.icons} /> sign in
           </Button>
         </Hidden>
         <Hidden mdUp>
           <Button
-            href="https://www.creative-tim.com/product/nextjs-material-kit-pro?ref=njsmkp-navbar"
-            color={"info"}
-            target="_blank"
+            href="https://acralending.com/correspondent-portal"
+            color={"blue"}
             className={classes.navButton}
             round
           >
-            <ShoppingCart className={classes.icons} /> buy now
+            <MeetingRoom className={classes.icons} /> sign in
           </Button>
         </Hidden>
       </ListItem>
@@ -323,6 +264,7 @@ HeaderLinks.propTypes = {
     "dark",
     "primary",
     "info",
+    "blue",
     "success",
     "warning",
     "danger",

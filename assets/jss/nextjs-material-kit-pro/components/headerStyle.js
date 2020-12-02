@@ -2,6 +2,8 @@ import {
   container,
   defaultFont,
   primaryColor,
+  blueColor,
+  skyColor,
   infoColor,
   successColor,
   warningColor,
@@ -92,6 +94,36 @@ const headerStyle = theme => ({
       hexToRgb(blackColor) +
       ", 0.14), 0 7px 12px -5px rgba(" +
       hexToRgb(infoColor[0]) +
+      ", 0.46)"
+  },
+  blue: {
+    backgroundColor: blueColor,
+    color: whiteColor,
+    boxShadow:
+      "0 4px 20px 0px rgba(" +
+      hexToRgb(blackColor) +
+      ", 0.14), 0 7px 12px -5px rgba(" +
+      hexToRgb(blueColor) +
+      ", 0.46)"
+  },
+  sky: {
+    backgroundColor: skyColor,
+    color: whiteColor,
+    boxShadow:
+      "0 4px 20px 0px rgba(" +
+      hexToRgb(blackColor) +
+      ", 0.14), 0 7px 12px -5px rgba(" +
+      hexToRgb(skyColor) +
+      ", 0.46)"
+  },
+  darkGray: {
+    backgroundColor: grayColor[26],
+    color: whiteColor,
+    boxShadow:
+      "0 4px 20px 0px rgba(" +
+      hexToRgb(blackColor) +
+      ", 0.14), 0 7px 12px -5px rgba(" +
+      hexToRgb(grayColor[26]) +
       ", 0.46)"
   },
   success: {

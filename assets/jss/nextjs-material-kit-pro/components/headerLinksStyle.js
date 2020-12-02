@@ -1,4 +1,5 @@
 import {
+  blueColor,
   grayColor,
   whiteColor,
   mlAuto,
@@ -117,6 +118,31 @@ const headerLinksStyle = theme => ({
       marginLeft: "15px",
       marginBottom: "5px",
       marginTop: "5px",
+      textAlign: "left",
+      "& > span:first-child": {
+        justifyContent: "flex-start"
+      }
+    },
+    "& $icons": {
+      marginRight: "3px"
+    }
+  },
+  contactButton: {
+    position: "relative",
+    fontWeight: "400",
+    fontSize: "12px",
+    textTransform: "uppercase",
+    lineHeight: "20px",
+    textDecoration: "none",
+    margin: "0px",
+    paddingLeft: "10px",
+    display: "inline-flex",
+    [theme.breakpoints.down("sm")]: {
+      width: "calc(100% - 30px)",
+      marginLeft: "15px",
+      marginBottom: "8px",
+      marginTop: "8px",
+      paddingLeft: "16px",
       textAlign: "left",
       "& > span:first-child": {
         justifyContent: "flex-start"

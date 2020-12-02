@@ -23,9 +23,11 @@ import Router from "next/router";
 
 import PageChange from "components/PageChange/PageChange.js";
 
-import "assets/scss/nextjs-material-kit-pro.scss?v=1.1.0";
+/*import "assets/scss/nextjs-material-kit-pro.scss?v=1.1.0"; */
 
 import "assets/css/react-demo.css";
+
+import "assets/css/nextjs-material-kit-pro.css";
 
 import "animate.css/animate.min.css";
 

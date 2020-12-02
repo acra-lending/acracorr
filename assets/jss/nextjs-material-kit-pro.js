@@ -130,10 +130,13 @@ const grayColor = [
   "#9a9a9a",
   "#f5f5f5",
   "#505050",
-  "#1f1f1f"
+  "#1f1f1f",
+  "#323E48"
 ];
 const whiteColor = "#FFF";
 const blackColor = "#000";
+const blueColor = "#0033A1";
+const skyColor = "#8AB7E9";
 const twitterColor = "#55acee";
 const facebookColor = "#3b5998";
 const googleColor = "#dd4b39";
@@ -145,6 +148,27 @@ const behanceColor = "#1769ff";
 const dribbbleColor = "#ea4c89";
 const redditColor = "#ff4500";
 const instagramColor = "#125688";
+
+const darkGrayGradientColor = {
+  "&:before": {
+    background: "rgba(" + hexToRgb(grayColor[26]) + ", 0.8)",
+  },
+  "&:after": {
+    background:
+      "linear-gradient(152deg,rgba(" +
+      hexToRgb(grayColor[26]) +
+      ",.8),rgba(" +
+      hexToRgb(skyColor) +
+      ",.5))"
+  },
+  color: whiteColor,
+  boxShadow:
+    "0 4px 20px 0px rgba(" +
+    hexToRgb(blackColor) +
+    ", 0.14), 0 7px 12px -5px rgba(" +
+    hexToRgb(blueColor) +
+    ", 0.46)"
+}
 
 const transition = {
   transition: "all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1)"
@@ -185,7 +209,7 @@ const card = {
 };
 
 const defaultFont = {
-  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+  fontFamily: '"Univers", "Helvetica", "Arial", sans-serif',
   fontWeight: "300",
   lineHeight: "1.5em"
 };
@@ -331,7 +355,6 @@ const title = {
   marginTop: "30px",
   marginBottom: "25px",
   minHeight: "32px",
-  fontFamily: `"Roboto Slab", "Times New Roman", serif`
 };
 
 const cardTitle = {
@@ -453,6 +476,9 @@ export {
   grayColor,
   whiteColor,
   blackColor,
+  blueColor,
+  skyColor,
+  darkGrayGradientColor,
   twitterColor,
   facebookColor,
   googleColor,
