@@ -400,7 +400,7 @@ dl {
     align-items: center; }
   .body-page-transition #page-transition > div:after {
     content: "";
-    background-image: url("../img/bg7.jpg");
+    background-image: url("../img/Acra_Icon.png");
     background-size: cover;
     position: fixed;
     z-index: 9998;

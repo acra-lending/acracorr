@@ -7,13 +7,14 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 // core components
 import {
   infoColor,
+  blueColor,
   whiteColor,
   title
 } from "assets/jss/nextjs-material-kit-pro.js";
 
 const useStyles = makeStyles({
   progress: {
-    color: infoColor[0],
+    color: blueColor,
     width: "6rem !important",
     height: "6rem !important"
   },
@@ -44,7 +45,7 @@ export default function PageChange(props) {
           <CircularProgress className={classes.progress} />
         </div>
         <h4 className={classes.title}>
-          Loading page contents for: {props.path}
+          Loading: {props.path}
         </h4>
       </div>
     </div>
