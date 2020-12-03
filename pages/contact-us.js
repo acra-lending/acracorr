@@ -198,8 +198,14 @@ export default function ContactUsPage() {
                   title="Our Location"
                   description={
                     <p>
-                      25531 Commercecentre Drive <br /> Suite 160
-                      <br /> Lake Forest, CA 92630
+                      <a 
+                        href="https://goo.gl/maps/mYZ6ESkqEPoR8bLSA" 
+                        target="_blank" 
+                        style={{ color: "inherit" }}
+                      >
+                        25531 Commercecentre Drive <br /> Suite 160
+                        <br /> Lake Forest, CA 92630
+                      </a>
                     </p>
                   }
                   icon={PinDrop}
@@ -210,7 +216,12 @@ export default function ContactUsPage() {
                   title="Email"
                   description={
                     <p>
-                      corr@acralending.com
+                      <a 
+                        href="mailto:corr@acralending.com"
+                        style={{ color: "inherit" }}
+                      >
+                        corr@acralending.com
+                      </a>
                     </p>
                   }
                   icon={Email}
@@ -221,8 +232,18 @@ export default function ContactUsPage() {
                   title="Call Us"
                   description={
                     <p>
-                      Toll Free: (888) 800-7661
-                      <br/>Direct: (949) 900-6630
+                      <a 
+                        href="tel:888-800-7661"
+                        style={{ color: "inherit" }}
+                      >
+                        Toll Free: (888) 800-7661
+                      </a>
+                      <a 
+                        href="tel:949-900-6630"
+                        style={{ color: "inherit" }}
+                      >
+                        <br/>Direct: (949) 900-6630
+                      </a>
                     </p>
                   }
                   icon={Phone}
