@@ -6,6 +6,7 @@ import {
   mlAuto,
   mrAuto,
   blackColor,
+  blueColor,
   whiteColor,
   grayColor,
   hexToRgb

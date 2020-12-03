@@ -75,7 +75,7 @@ const parallaxStyle = {
   },
   darkColor: {
     "&:before": {
-      background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
+      background: "rgba(" + hexToRgb(blackColor) + ", 0.4)"
     },
     "&:after,&:before": {
       position: "absolute",
@@ -90,7 +90,7 @@ const parallaxStyle = {
   },
   blueColor: {
     "&:before": {
-      background: "rgba(" + hexToRgb(blueColor) + ", 0.8)",
+      background: "rgba(" + hexToRgb(blueColor) + ", 0.6)",
     },
     "&:after": {
       background:

@@ -135,7 +135,6 @@ const headerLinksStyle = theme => ({
     lineHeight: "20px",
     textDecoration: "none",
     margin: "0px",
-    paddingLeft: "10px",
     display: "inline-flex",
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% - 30px)",

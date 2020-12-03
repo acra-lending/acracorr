@@ -11,6 +11,7 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Icon from "@material-ui/core/Icon";
 import Hidden from "@material-ui/core/Hidden";
+import GroupIcon from '@material-ui/icons/Group';
 
 // @material-ui/icons
 import Apps from "@material-ui/icons/Apps";
@@ -40,6 +41,7 @@ import LineStyle from "@material-ui/icons/LineStyle";
 import Error from "@material-ui/icons/Error";
 import PlaceIcon from '@material-ui/icons/Place';
 import Group from "@material-ui/icons/Group";
+import HomeIcon from '@material-ui/icons/Home';
 
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
@@ -94,6 +96,16 @@ export default function HeaderLinks(props) {
   return (
     <List className={classes.list + " " + classes.mlAuto}>
       <ListItem className={classes.listItem}>
+        <Link href="/home">
+          <Button 
+            className={classes.contactButton}
+            color={"transparent"}
+          >
+            <HomeIcon className={classes.icon} /> Home
+          </Button>
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           navDropdown
@@ -133,6 +145,16 @@ export default function HeaderLinks(props) {
         />
       </ListItem>
       <ListItem className={classes.listItem}>
+        <Link href="/team">
+          <Button 
+            className={classes.contactButton}
+            color={"transparent"}
+          >
+            <Group className={classes.icon} /> Our Team
+          </Button>
+        </Link>
+      </ListItem>
+      {/* <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           navDropdown
@@ -144,81 +166,81 @@ export default function HeaderLinks(props) {
           }}
           buttonIcon={Group}
           dropdownList={[
-            // <Link href="/sections#headers">
-            //   <a
-            //     className={classes.dropdownLink}
-            //     onClick={e => smoothScroll(e, "headers")}
-            //   >
-            //     <Dns className={classes.dropdownIcons} /> Headers
-            //   </a>
-            // </Link>,
-            // <Link href="/sections#features">
-            //   <a
-            //     className={classes.dropdownLink}
-            //     onClick={e => smoothScroll(e, "features")}
-            //   >
-            //     <Build className={classes.dropdownIcons} /> Features
-            //   </a>
-            // </Link>,
-            // <Link href="/sections#access">
-            //   <a
-            //     className={classes.dropdownLink}
-            //     onClick={e => smoothScroll(e, "access")}
-            //   >
-            //     <Build className={classes.dropdownIcons} /> Access
-            //   </a>
-            // </Link>,
-            // <Link href="/sections#blogs">
-            //   <a
-            //     className={classes.dropdownLink}
-            //     onClick={e => smoothScroll(e, "blogs")}
-            //   >
-            //     <ListIcon className={classes.dropdownIcons} /> Blogs
-            //   </a>
-            // </Link>,
-            // <Link href="/sections#teams">
-            //   <a
-            //     className={classes.dropdownLink}
-            //     onClick={e => smoothScroll(e, "teams")}
-            //   >
-            //     <People className={classes.dropdownIcons} /> Teams
-            //   </a>
-            // </Link>,
-            // <Link href="/sections#projects">
-            //   <a
-            //     className={classes.dropdownLink}
-            //     onClick={e => smoothScroll(e, "projects")}
-            //   >
-            //     <Assignment className={classes.dropdownIcons} /> Projects
-            //   </a>
-            // </Link>,
-            // <Link href="/sections#pricing">
-            //   <a
-            //     className={classes.dropdownLink}
-            //     onClick={e => smoothScroll(e, "pricing")}
-            //   >
-            //     <MonetizationOn className={classes.dropdownIcons} /> Pricing
-            //   </a>
-            // </Link>,
-            // <Link href="/sections#testimonials">
-            //   <a
-            //     className={classes.dropdownLink}
-            //     onClick={e => smoothScroll(e, "testimonials")}
-            //   >
-            //     <Chat className={classes.dropdownIcons} /> Testimonials
-            //   </a>
-            // </Link>,
-            // <Link href="/sections#contacts">
-            //   <a
-            //     className={classes.dropdownLink}
-            //     onClick={e => smoothScroll(e, "contacts")}
-            //   >
-            //     <Call className={classes.dropdownIcons} /> Contacts
-            //   </a>
-            // </Link>
+            <Link href="/sections#headers">
+              <a
+                className={classes.dropdownLink}
+                onClick={e => smoothScroll(e, "headers")}
+              >
+                <Dns className={classes.dropdownIcons} /> Headers
+              </a>
+            </Link>,
+            <Link href="/sections#features">
+              <a
+                className={classes.dropdownLink}
+                onClick={e => smoothScroll(e, "features")}
+              >
+                <Build className={classes.dropdownIcons} /> Features
+              </a>
+            </Link>,
+            <Link href="/sections#access">
+              <a
+                className={classes.dropdownLink}
+                onClick={e => smoothScroll(e, "access")}
+              >
+                <Build className={classes.dropdownIcons} /> Access
+              </a>
+            </Link>,
+            <Link href="/sections#blogs">
+              <a
+                className={classes.dropdownLink}
+                onClick={e => smoothScroll(e, "blogs")}
+              >
+                <ListIcon className={classes.dropdownIcons} /> Blogs
+              </a>
+            </Link>,
+            <Link href="/sections#teams">
+              <a
+                className={classes.dropdownLink}
+                onClick={e => smoothScroll(e, "teams")}
+              >
+                <People className={classes.dropdownIcons} /> Teams
+              </a>
+            </Link>,
+            <Link href="/sections#projects">
+              <a
+                className={classes.dropdownLink}
+                onClick={e => smoothScroll(e, "projects")}
+              >
+                <Assignment className={classes.dropdownIcons} /> Projects
+              </a>
+            </Link>,
+            <Link href="/sections#pricing">
+              <a
+                className={classes.dropdownLink}
+                onClick={e => smoothScroll(e, "pricing")}
+              >
+                <MonetizationOn className={classes.dropdownIcons} /> Pricing
+              </a>
+            </Link>,
+            <Link href="/sections#testimonials">
+              <a
+                className={classes.dropdownLink}
+                onClick={e => smoothScroll(e, "testimonials")}
+              >
+                <Chat className={classes.dropdownIcons} /> Testimonials
+              </a>
+            </Link>,
+            <Link href="/sections#contacts">
+              <a
+                className={classes.dropdownLink}
+                onClick={e => smoothScroll(e, "contacts")}
+              >
+                <Call className={classes.dropdownIcons} /> Contacts
+              </a>
+            </Link>
           ]}
         />
-      </ListItem>
+      </ListItem> */}
       <ListItem className={classes.listItem}>
         <Link href="#">
           <Button 

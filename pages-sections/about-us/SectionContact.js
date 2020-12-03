@@ -32,32 +32,51 @@ export default function SectionContact() {
           className={classNames(classes.mrAuto, classes.mlAuto)}
         >
           <h2 className={classNames(classes.title, classes.textCenter)}>
-            Want to work with us?
+            Contact Us
           </h2>
           <h4 className={classNames(classes.description, classes.textCenter)}>
-            Divide details about your product or agency work into parts. Write a
-            few lines about each one and contact us about any further
-            collaboration. We will get back to you in a couple of hours.
+            Fill in the details below and a member of our team will reach out to you soon.
           </h4>
           <form>
             <GridContainer>
-              <GridItem md={4} sm={4}>
+              <GridItem md={6} sm={6}>
                 <CustomInput
-                  labelText="Your name"
+                  labelText="Name"
                   formControlProps={{
                     fullWidth: true
                   }}
                 />
               </GridItem>
-              <GridItem md={4} sm={4}>
+              <GridItem md={6} sm={6}>
                 <CustomInput
-                  labelText="Your email"
+                  labelText="Email"
                   formControlProps={{
                     fullWidth: true
                   }}
                 />
               </GridItem>
-              <GridItem md={4} sm={4}>
+              <GridItem md={6} sm={6}>
+                <CustomInput
+                  labelText="Phone"
+                  formControlProps={{
+                    fullWidth: true
+                  }}
+                />
+              </GridItem>
+              <GridItem md={12} sm={12}>
+                <CustomInput
+                  labelText="Message..."
+                  id="textarea-input"
+                  formControlProps={{
+                    fullWidth: true
+                  }}
+                  inputProps={{
+                    multiline: true,
+                    rows: 5
+                  }}
+                />
+              </GridItem>
+              {/* <GridItem md={4} sm={4}>
                 <FormControl
                   fullWidth
                   className={
@@ -117,7 +136,7 @@ export default function SectionContact() {
                     </MenuItem>
                   </Select>
                 </FormControl>
-              </GridItem>
+              </GridItem> */}
             </GridContainer>
             <GridContainer>
               <GridItem
@@ -129,8 +148,8 @@ export default function SectionContact() {
                   classes.textCenter
                 )}
               >
-                <Button color="primary" round>
-                  Let{"'"}s talk
+                <Button color="blue" round>
+                  Submit
                 </Button>
               </GridItem>
             </GridContainer>

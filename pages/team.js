@@ -36,15 +36,15 @@ export default function AboutUsPage() {
     <div>
       <Header
         brand="NextJS Material Kit PRO"
-        links={<HeaderLinks dropdownHoverColor="info" />}
+        links={<HeaderLinks dropdownHoverColor="blue" />}
         fixed
         color="transparent"
         changeColorOnScroll={{
           height: 300,
-          color: "info"
+          color: "darkGray"
         }}
       />
-      <Parallax image={require("assets/img/bg9.jpg")} filter="dark" small>
+      <Parallax image={require("assets/img/bg-our-team.jpg")} filter="dark" small>
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem
@@ -56,10 +56,9 @@ export default function AboutUsPage() {
                 classes.textCenter
               )}
             >
-              <h1 className={classes.title}>About Us</h1>
+              <h1 className={classes.title}>Our Team</h1>
               <h4>
-                Meet the amazing team behind this project and find out more
-                about how we work.
+                The leadership team at Acra Lending is a group of highly-experienced and dedicated senior managers with an average of 25 years’ experience in Non-QM mortgage origination, underwriting and servicing.
               </h4>
             </GridItem>
           </GridContainer>
@@ -67,67 +66,104 @@ export default function AboutUsPage() {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <SectionDescription />
           <SectionTeam />
-          <SectionServices />
-          <SectionOffice />
           <SectionContact />
         </div>
       </div>
       <Footer
         content={
           <div>
-            <div className={classes.left}>
+            <div className={classes.center}>
               <List className={classes.list}>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="https://www.creative-tim.com/?ref=njsmkp-about-us"
+                    href="#"
                     className={classes.block}
-                    target="_blank"
                   >
-                    Creative Tim
+                    Company Information
                   </a>
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="https://www.creative-tim.com/presentation?ref=njsmkp-about-us"
+                    href="#"
                     className={classes.block}
-                    target="_blank"
                   >
-                    About us
+                    Terms of Use
                   </a>
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="http://blog.creative-tim.com/?ref=njsmkp-about-us"
+                    href="#"
                     className={classes.block}
-                    target="_blank"
                   >
-                    Blog
+                    Privacy Policy
                   </a>
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="https://www.creative-tim.com/license?ref=njsmkp-about-us"
+                    href="#"
                     className={classes.block}
-                    target="_blank"
                   >
-                    Licenses
+                    CCPA
+                  </a>
+                </ListItem>
+                <ListItem className={classes.inlineBlock}>
+                  <a
+                    href="#"
+                    className={classes.block}
+                  >
+                    State Licensing Information
                   </a>
                 </ListItem>
               </List>
             </div>
-            <div className={classes.right}>
-              &copy; {1900 + new Date().getYear()} , made with{" "}
+            <div className={classes.center}>
+              <List className={classes.list}>
+                <ListItem className={classes.inlineBlock}>
+                <img 
+                    src={require("assets/img/equal-lenders-logo.png")}
+                    className="footer-logo"
+                  />
+                </ListItem>
+                <ListItem className={classes.inlineBlock}>
+                  <p>&copy; {1900 + new Date().getYear()} Acra Lending.{" "}
+                    All rights reserved. NMLS ID # 144549
+                    <a 
+                    href="https://nmlsconsumeraccess.org/"
+                  >
+                  <img 
+                    src={require("assets/img/nmls-logo.png")}
+                    className="footer-logo"
+                  />
+                  </a>
+                  </p>
+
+                </ListItem>
+                {/* <ListItem className={classes.inlineBlock}>
+                  <a 
+                    href="https://nmlsconsumeraccess.org/"
+                    className={classes.block}
+                  >
+                  <img 
+                    src={require("assets/img/nmls-logo.png")}
+                    className="footer-logo"
+                  />
+                  {" "}NMLS: #144549
+                  </a>
+                </ListItem> */}
+              </List>
+            </div>
+            {/* <div className={classes.center}>
+              &copy; {1900 + new Date().getYear()} Acra Lending{" "}
               <Favorite className={classes.icon} /> by{" "}
               <a
-                href="https://www.creative-tim.com?ref=njsmkp-about-us"
+                href="https://www.creative-tim.com/?ref=njsmkp-landing"
                 target="_blank"
               >
                 Creative Tim
               </a>{" "}
               for a better web.
-            </div>
+            </div> */}
           </div>
         }
       />
