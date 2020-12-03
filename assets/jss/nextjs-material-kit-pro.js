@@ -1,17 +1,15 @@
 /*!
 
 =========================================================
-* NextJS Material Kit PRO v1.1.0 based on Material Kit PRO - v2.0.2 (Bootstrap 4.0.0 Final Edition) and Material Kit PRO React v1.8.0
+* Acra Lending NextJS Material Kit PRO v1.1.0 based on Material Kit PRO - v2.0.2 (Bootstrap 4.0.0 Final Edition) and Material Kit PRO React v1.8.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/nextjs-material-kit-pro
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+* Copyright 2020 Acra Lending
 
-* Coded by Creative Tim
+* Code modified by DevByDesign
 
 =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
 
@@ -403,6 +401,26 @@ const mainRaised = {
     ", 0.2)"
 };
 
+const mainRaisedContact = {
+  "@media (max-width: 576px)": {
+    marginTop: "-30px"
+  },
+  "@media (max-width: 830px)": {
+    marginLeft: "10px",
+    marginRight: "10px"
+  },
+  margin: "-400px 30px 0px",
+  borderRadius: "6px",
+  boxShadow:
+    "0 16px 24px 2px rgba(" +
+    hexToRgb(blackColor) +
+    ", 0.14), 0 6px 30px 5px rgba(" +
+    hexToRgb(blackColor) +
+    ", 0.12), 0 8px 10px -5px rgba(" +
+    hexToRgb(blackColor) +
+    ", 0.2)"
+};
+
 const section = {
   backgroundPosition: "50%",
   backgroundSize: "cover"
@@ -512,6 +530,7 @@ export {
   cardSubtitle,
   main,
   mainRaised,
+  mainRaisedContact,
   section,
   sectionDark,
   sectionDescription,

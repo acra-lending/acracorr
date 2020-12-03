@@ -1,17 +1,15 @@
 /*!
 
 =========================================================
-* NextJS Material Kit PRO v1.1.0 based on Material Kit PRO - v2.0.2 (Bootstrap 4.0.0 Final Edition) and Material Kit PRO React v1.8.0
+* Acra Lending NextJS Material Kit PRO v1.1.0 based on Material Kit PRO - v2.0.2 (Bootstrap 4.0.0 Final Edition) and Material Kit PRO React v1.8.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/nextjs-material-kit-pro
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+* Copyright 2020 Acra Lending
 
-* Coded by Creative Tim
+* Code modified by DevByDesign
 
 =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
 @font-face {
@@ -235,8 +233,8 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  background-color: #eee;
-  color: #3c4858;
+  background-color: #323E48;
+  color: #eee;
   margin: 0;
   font-size: 1rem;
   text-align: left; }
@@ -252,11 +250,11 @@ legend {
     outline: 0; }
 
 a {
-  color: #9c27b0;
+  /* color: #0033A1; */
   text-decoration: none;
   background-color: transparent; }
   a:hover, a:focus {
-    color: #89229b;
+    /* color: #0033A1; */
     text-decoration: none; }
 
 label {

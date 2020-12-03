@@ -47,7 +47,7 @@ export default function LandingPage({ ...rest }) {
     <div>
       <Header
         color="transparent"
-        brand="test"
+        brand="Acra Lending"
         links={<HeaderLinks dropdownHoverColor="blue" />}
         fixed
         changeColorOnScroll={{

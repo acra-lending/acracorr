@@ -242,7 +242,7 @@ export default function HeaderLinks(props) {
         />
       </ListItem> */}
       <ListItem className={classes.listItem}>
-        <Link href="#">
+        <Link href="/contact-us">
           <Button 
             className={classes.contactButton}
             color={"transparent"}

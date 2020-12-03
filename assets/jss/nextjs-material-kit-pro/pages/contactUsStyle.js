@@ -3,6 +3,7 @@ import {
   title,
   main,
   mainRaised,
+  mainRaisedContact,
   mlAuto,
   description
 } from "assets/jss/nextjs-material-kit-pro.js";
@@ -10,6 +11,7 @@ import {
 const contactUsStyle = {
   main,
   mainRaised,
+  mainRaisedContact,
   title,
   mlAuto,
   description,

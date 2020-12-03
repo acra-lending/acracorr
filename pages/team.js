@@ -35,7 +35,7 @@ export default function AboutUsPage() {
   return (
     <div>
       <Header
-        brand="NextJS Material Kit PRO"
+        brand="Acra Lending"
         links={<HeaderLinks dropdownHoverColor="blue" />}
         fixed
         color="transparent"
