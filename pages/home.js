@@ -62,15 +62,23 @@ export default function LandingPage({ ...rest }) {
             <GridItem xs={12} sm={6} md={12}>
               <h1 className={classes.title}>BECOME AN APPROVED ACRA LENDING CORRESPONDENT PARTNER</h1>
               <h4>
-                Acra Lending offers tailor made programs for correspondents looking to expand their product offering.
+                Grow your lending business by partnering with Acra Lending, one of the largest Correspondent Investors in the U.S. You bring your unwavering commitment to your customers. We bring our solid commitment to you through our service and strength in numbers. All you need, from one partner!
               </h4>
               <br />
               <Button
                 color="blue"
                 size="lg"
                 href="#"
+                style={{ marginRight: "20px"}}
               >
                 Get Approved 
+              </Button>
+              <Button
+                color="blue"
+                size="lg"
+                href="#"
+              >
+                Sellers Guide
               </Button>
             </GridItem>
           </GridContainer>

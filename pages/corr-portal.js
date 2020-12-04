@@ -1,32 +1,52 @@
 /*eslint-disable*/
 import React from "react";
-// nodejs library that concatenates classes
-import classNames from "classnames";
+import Iframe from "../components/Iframe/Iframe";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import Checkbox from "@material-ui/core/Checkbox";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
+import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
+import Timeline from "@material-ui/icons/Timeline";
+import Code from "@material-ui/icons/Code";
+import Group from "@material-ui/icons/Group";
+import Face from "@material-ui/icons/Face";
+import Email from "@material-ui/icons/Email";
+import Check from "@material-ui/icons/Check";
 import Favorite from "@material-ui/icons/Favorite";
 // core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
+import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Parallax from "components/Parallax/Parallax.js";
-import Footer from "components/Footer/Footer.js";
-// sections for this page
-import SectionDescription from "pages-sections/about-us/SectionDescription.js";
-import SectionTeam from "pages-sections/about-us/SectionTeam.js";
-import SectionServices from "pages-sections/about-us/SectionServices.js";
-import SectionOffice from "pages-sections/about-us/SectionOffice.js";
-import SectionContact from "pages-sections/about-us/SectionContact.js";
+import Button from "components/CustomButtons/Button.js";
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
+import InfoArea from "components/InfoArea/InfoArea.js";
+import CustomInput from "components/CustomInput/CustomInput.js";
 
-import aboutUsStyle from "assets/jss/nextjs-material-kit-pro/pages/aboutUsStyle.js";
+import signupPageStyle from "assets/jss/nextjs-material-kit-pro/pages/signupPageStyle.js";
 
-const useStyles = makeStyles(aboutUsStyle);
+import image from "assets/img/bg7.jpg";
 
-export default function AboutUsPage() {
+const useStyles = makeStyles(signupPageStyle);
+
+export default function SignUpPage({ ...rest }) {
+  const [checked, setChecked] = React.useState([1]);
+  const handleToggle = value => {
+    const currentIndex = checked.indexOf(value);
+    const newChecked = [...checked];
+    if (currentIndex === -1) {
+      newChecked.push(value);
+    } else {
+      newChecked.splice(currentIndex, 1);
+    }
+    setChecked(newChecked);
+  };
   React.useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -35,42 +55,37 @@ export default function AboutUsPage() {
   return (
     <div>
       <Header
+        absolute
+        color="transparent"
         brand="Acra Lending"
         links={<HeaderLinks dropdownHoverColor="blue" />}
         fixed
-        color="transparent"
         changeColorOnScroll={{
-          height: 300,
+          height: 50,
           color: "darkGray"
         }}
+        {...rest}
       />
-      <Parallax image={require("assets/img/bg-our-team.jpg")} filter="sky" small>
-        <div className={classes.container}>
+      <div
+        className={classes.pageHeader}
+        style={{
+          backgroundImage: "url(" + image + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "top center"
+        }}
+      >
+        <div className={classes.containerLarge}>
           <GridContainer justify="center">
-            <GridItem
-              md={8}
-              sm={8}
-              className={classNames(
-                classes.mlAuto,
-                classes.mrAuto,
-                classes.textCenter
-              )}
-            >
-              <h1 className={classes.title} style={{ color: "#fff" }}>Our Team</h1>
-              <h4>
-                The leadership team at Acra Lending is a group of highly-experienced and dedicated senior managers with an average of 25 years’ experience in Non-QM mortgage origination, underwriting and servicing.
-              </h4>
+            <GridItem xs={12} sm={12} md={12}>
+              <Card className={classes.cardSignup}>
+                <CardBody>
+                  <Iframe />
+                </CardBody>
+              </Card>
             </GridItem>
           </GridContainer>
         </div>
-      </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
-          <SectionTeam />
-          <SectionContact />
-        </div>
-      </div>
-      <Footer
+        <Footer
         content={
           <div>
             <div className={classes.center}>
@@ -167,6 +182,7 @@ export default function AboutUsPage() {
           </div>
         }
       />
+      </div>
     </div>
   );
 }

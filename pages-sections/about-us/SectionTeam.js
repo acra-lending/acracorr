@@ -40,7 +40,8 @@ import cardProfile2 from "assets/img/team/KyleGunderlock.jpg";
 import cardProfile3 from "assets/img/team/JeffreyLemieux.jpeg";
 import cardProfile4 from "assets/img/team/MarcFeltman.jpg";
 import cardProfile5 from "assets/img/team/AndyGauder.jpg";
-import cardProfile6 from "assets/img/team/avatar1.png";
+import cardProfile6 from "assets/img/team/ToddLautzenheiser.jpg";
+import cardProfile7 from "assets/img/team/avatar1.png";
 import cardProfile1Square from "assets/img/faces/card-profile1-square.jpg";
 import cardProfile2Square from "assets/img/faces/card-profile2-square.jpg";
 import cardProfile4Square from "assets/img/faces/card-profile4-square.jpg";
@@ -690,12 +691,12 @@ export default function SectionTeam() {
               <Card plain profile>
                 <CardHeader image plain>
                   <a href="#martin" onClick={()=> setClassicModal7(true)}>
-                    <img src={cardProfile6} alt="..." />
+                    <img src={cardProfile7} alt="..." />
                   </a>
                   <div
                     className={classes.coloredShadow}
                     style={{
-                      backgroundImage: `url(${cardProfile6})`,
+                      backgroundImage: `url(${cardProfile7})`,
                       opacity: "1"
                     }}
                   />
@@ -742,11 +743,11 @@ export default function SectionTeam() {
                       }
                     >
                       <CardHeader image plain>
-                        <img src={cardProfile6} alt="..." />
+                        <img src={cardProfile7} alt="..." />
                         <div
                           className={classes.coloredShadow}
                           style={{
-                            backgroundImage: `url(${cardProfile6})`,
+                            backgroundImage: `url(${cardProfile7})`,
                             opacity: "1"
                           }}
                         />

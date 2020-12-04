@@ -177,7 +177,7 @@ const containerFluid = {
   paddingLeft: "15px",
   marginRight: "auto",
   marginLeft: "auto",
-  width: "100%"
+  width: "100%",
 };
 const container = {
   ...containerFluid,
@@ -192,6 +192,22 @@ const container = {
   },
   "@media (min-width: 1200px)": {
     maxWidth: "1140px"
+  }
+};
+
+const containerLarge = {
+  ...containerFluid,
+  "@media (min-width: 576px)": {
+    maxWidth: "540px"
+  },
+  "@media (min-width: 768px)": {
+    maxWidth: "720px"
+  },
+  "@media (min-width: 992px)": {
+    maxWidth: "960px"
+  },
+  "@media (min-width: 1200px)": {
+    maxWidth: "1860px"
   }
 };
 
@@ -403,7 +419,7 @@ const mainRaised = {
 
 const mainRaisedContact = {
   "@media (max-width: 576px)": {
-    marginTop: "-30px"
+    marginTop: "-400px"
   },
   "@media (max-width: 830px)": {
     marginLeft: "10px",
@@ -481,6 +497,7 @@ export {
   transition,
   container,
   containerFluid,
+  containerLarge,
   boxShadow,
   card,
   defaultFont,

@@ -1,7 +1,10 @@
 import {
   primaryColor,
   grayColor,
+  blueColor,
+  skyColor,
   container,
+  containerLarge,
   cardTitle,
   whiteColor,
   blackColor,
@@ -18,6 +21,13 @@ const signupPageStyle = {
     paddingTop: "20vh",
     color: whiteColor
   },
+  containerLarge: {
+    ...containerLarge,
+    zIndex: "2",
+    position: "relative",
+    paddingTop: "20vh",
+    color: whiteColor
+  },
   pageHeader: {
     minHeight: "100vh",
     height: "auto",
@@ -28,15 +38,15 @@ const signupPageStyle = {
     border: "0",
     alignItems: "center",
     "&:before": {
-      background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
+      background: "rgba(" + hexToRgb(skyColor) + ", 0.8)"
     },
     "&:after": {
       background:
         "linear-gradient(60deg,rgba(" +
-        hexToRgb(primaryColor[4]) +
-        ",.56),rgba(" +
-        hexToRgb(primaryColor[5]) +
-        ",.95))"
+        hexToRgb(grayColor[26]) +
+        ",.8),rgba(" +
+        hexToRgb(skyColor) +
+        ",.5))"
     },
     "&:before,&:after": {
       position: "absolute",
@@ -59,7 +69,8 @@ const signupPageStyle = {
       ", 0.12), 0 8px 10px -5px rgba(" +
       hexToRgb(blackColor) +
       ", 0.2);",
-    marginBottom: "100px",
+    marginBottom: "0px",
+    marginTop: "-40px",
     padding: "40px 0px"
   },
   cardTitle: {
