@@ -139,7 +139,7 @@ export default function ContactUsPage() {
           mapElement={<div style={{ height: `100%` }} />}
         />
       </div> */}
-      <Parallax image={require("assets/img/contact-bg1.jpg")} filter="blue" small>
+      <Parallax image={require("assets/img/contact-bg1.jpg")} filter="sky" small>
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaisedContact)}>
         <div className={classes.contactContent}>
