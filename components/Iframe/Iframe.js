@@ -13,7 +13,7 @@ const Iframe = () => {
     return (
         // basic bootstrap classes. you can change with yours.
         <div>
-            <iframe src="https://bt.citadelservicing.com/correspondent-portal" frameborder="0" scrolling="no" width="100%" height="700px" ></iframe>
+            <iframe src="https://bt.citadelservicing.com/correspondent-portal" frameborder="0" scrolling="yes" width="100%" height="700px" ></iframe>
         </div>
     );
 };
