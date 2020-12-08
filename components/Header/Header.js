@@ -68,7 +68,7 @@ export default function Header(props) {
       <Toolbar className={classes.container}>
         <Button className={classes.title}>
           <Link href="/">
-            <a><img src={require("assets/img/Acra_Logo_White_RGB.png")} className="logo"></img></a>
+            <a><img src={require("assets/img/Acra_Logo_Horizontal_Correspondent_White_RGB.png")} className="logo"></img></a>
           </Link>
         </Button>
         <Hidden smDown implementation="css" className={classes.hidden}>
