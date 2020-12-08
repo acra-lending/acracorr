@@ -62,7 +62,7 @@ export default function LandingPage({ ...rest }) {
             <GridItem xs={12} sm={6} md={12}>
               <h1 className={classes.title}>BECOME AN APPROVED ACRA LENDING CORRESPONDENT PARTNER</h1>
               <h4>
-                Grow your lending business by partnering with Acra Lending, one of the largest Correspondent Investors in the U.S. You bring your unwavering commitment to your customers. We bring our solid commitment to you through our service and strength in numbers. All you need, from one partner!
+                Acra lending, formerly Citadel Servicing Corporation, is an experienced non -Agency mortgage banking company recently acquired by a well-established private equity firm.  Under new ownership and leadership Acra Correspondent is committed to providing simplicity, consistency and an optimal customer experience.  Part of this commitment includes completing in house eligibility reviews with no reliance on third party reviews for due diligence or third party appraisal reviews, reducing the time it takes to complete a loan.  
               </h4>
               <br />
               <Button
@@ -77,8 +77,16 @@ export default function LandingPage({ ...rest }) {
                 color="blue"
                 size="lg"
                 href="#"
+                style={{ marginRight: "20px"}}
               >
                 Sellers Guide
+              </Button>
+              <Button
+                color="blue"
+                size="lg"
+                href="#"
+              >
+                Loan Qualification Engine
               </Button>
             </GridItem>
           </GridContainer>
