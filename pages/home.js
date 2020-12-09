@@ -25,6 +25,7 @@ import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 
+
 import landingPageStyle from "assets/jss/nextjs-material-kit-pro/pages/landingPageStyle.js";
 import featuresStyle from "assets/jss/nextjs-material-kit-pro/pages/sectionsSections/featuresStyle.js";
 
@@ -34,6 +35,7 @@ import bg9 from "assets/img/bg9.jpg";
 import SectionProduct from "pages-sections/landing-page/SectionProduct.js";
 import SectionTeam from "pages-sections/landing-page/SectionTeam.js";
 import SectionWork from "pages-sections/landing-page/SectionWork.js";
+import SectionSignUp from "pages-sections/home/SignUp.js";
 
 const useStyles = makeStyles(landingPageStyle, featuresStyle);
 
@@ -65,7 +67,8 @@ export default function LandingPage({ ...rest }) {
                 Acra lending, formerly Citadel Servicing Corporation, is an experienced non -Agency mortgage banking company recently acquired by a well-established private equity firm.  Under new ownership and leadership Acra Correspondent is committed to providing simplicity, consistency and an optimal customer experience.  Part of this commitment includes completing in house eligibility reviews with no reliance on third party reviews for due diligence or third party appraisal reviews, reducing the time it takes to complete a loan.  
               </h4>
               <br />
-              <Button
+              <SectionSignUp />
+              {/* <Button
                 color="blue"
                 size="lg"
                 href="#"
@@ -87,7 +90,7 @@ export default function LandingPage({ ...rest }) {
                 href="#"
               >
                 Loan Qualification Engine
-              </Button>
+              </Button> */}
             </GridItem>
           </GridContainer>
         </div>
