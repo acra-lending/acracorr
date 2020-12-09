@@ -106,6 +106,16 @@ export default function HeaderLinks(props) {
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
+        <Link href="/programs">
+          <Button 
+            className={classes.contactButton}
+            color={"transparent"}
+          >
+            <Apps className={classes.icon} /> Our Programs
+          </Button>
+        </Link>
+      </ListItem>
+      {/* <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           navDropdown
@@ -143,7 +153,7 @@ export default function HeaderLinks(props) {
             </Link>
           ]}
         />
-      </ListItem>
+      </ListItem> */}
       <ListItem className={classes.listItem}>
         <Link href="/team">
           <Button 

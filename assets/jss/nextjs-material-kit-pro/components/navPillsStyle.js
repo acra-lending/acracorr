@@ -2,6 +2,8 @@ import {
   roseColor,
   primaryColor,
   infoColor,
+  blueColor,
+  skyColor,
   successColor,
   warningColor,
   dangerColor,
@@ -37,7 +39,7 @@ const navPillsStyle = theme => ({
     float: "left",
     position: "relative",
     display: "block",
-    borderRadius: "30px",
+    borderRadius: "5px",
     minWidth: "100px",
     textAlign: "center",
     transition: "all .3s",
@@ -47,10 +49,10 @@ const navPillsStyle = theme => ({
     opacity: "1",
     maxWidth: "100%",
     margin: "0 5px",
-    minHeight: "unset",
+    minHeight: "80px",
     lineHeight: "24px",
     textTransform: "uppercase",
-    fontSize: "12px",
+    fontSize: "16px",
     fontWeight: "500"
   },
   pillsWithIcons: {
@@ -97,6 +99,18 @@ const navPillsStyle = theme => ({
         hexToRgb(blackColor) +
         ", 0.14), 0 7px 10px -5px rgba(" +
         hexToRgb(successColor[0]) +
+        ", 0.4)"
+    }
+  },
+  blue: {
+    "&,&:hover": {
+      color: whiteColor,
+      backgroundColor: blueColor,
+      boxShadow:
+        "0 4px 20px 0px rgba(" +
+        hexToRgb(blackColor) +
+        ", 0.14), 0 7px 10px -5px rgba(" +
+        hexToRgb(blueColor) +
         ", 0.4)"
     }
   },
