@@ -36,6 +36,7 @@ import SectionProduct from "pages-sections/landing-page/SectionProduct.js";
 import SectionTeam from "pages-sections/landing-page/SectionTeam.js";
 import SectionWork from "pages-sections/landing-page/SectionWork.js";
 import SectionSignUp from "pages-sections/home/SignUp.js";
+import ApplyNow from "pages-sections/home/ApplyNow.js";
 
 const useStyles = makeStyles(landingPageStyle, featuresStyle);
 
@@ -199,13 +200,7 @@ export default function LandingPage({ ...rest }) {
                       icon={TouchApp}
                       title=""
                       description={
-                        <Button
-                        color="blue"
-                        size="lg"
-                        href="#"
-                      >
-                        Apply Now
-                      </Button>
+                        <ApplyNow />
                       }
                     />
                   </GridItem>
