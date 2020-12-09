@@ -118,6 +118,7 @@ NavPills.propTypes = {
     "primary",
     "warning",
     "danger",
+    "blue",
     "success",
     "info",
     "rose"

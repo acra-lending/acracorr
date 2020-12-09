@@ -112,71 +112,144 @@ export default function SectionCards() {
               <GridItem xs={12} sm={12} md={12} lg={12}>
                 <div className={classes.rotatingCardContainer}>
                   <Card color="rose" className={classes.cardRotate}>
-                    <div className={classes.front + " " + classes.wrapperRose}>
+                    <div className={classes.front + " " + classes.wrapperBlue}>
                       <CardBody color className={classes.cardBodyRotate}>
-                        <h5 className={classes.cardCategorySocialWhite}>
-                          <i className="fab fa-dribbble" /> Dribbble
-                        </h5>
-                        <h4 className={classes.cardTitleWhite}>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            {'"'}Dribbble just acquired Crew, a very interesting
-                            startup...{'"'}
-                          </a>
+                        <h4 className={classes.cardTitleWhite} style={{ textAlign: "center" }}>
+                          Initial Submission
                         </h4>
-                        <p className={classes.cardDescriptionWhite}>
-                          Don{"'"}t be scared of the truth because we need to
-                          restart the human foundation in truth And I love you
-                          like Kanye loves Kanye I love Rick Owens’ bed design
-                          but the back is...
-                        </p>
                       </CardBody>
-                      <CardFooter>
-                        <div className={classes.authorWhite}>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <img
-                              src={avatar}
-                              alt="..."
-                              className={
-                                classes.imgRaised + " " + classes.avatar
-                              }
-                            />
-                            <span>Tania Andrew</span>
-                          </a>
-                        </div>
-                        <div
-                          className={classes.statsWhite + " " + classes.mlAuto}
-                        >
-                          <Favorite />
-                          2.4K ·
-                          <Share />
-                          45
-                        </div>
-                      </CardFooter>
                     </div>
-                    <div className={classes.back + " " + classes.wrapperRose}>
+                    <div className={classes.back + " " + classes.wrapperSky}>
                       <CardBody className={classes.cardBodyRotate}>
-                        <h5 className={classes.cardCategorySocialWhite}>
-                          <i className="fab fa-dribbble" /> Dribbble
-                        </h5>
                         <h4 className={classes.cardTitleWhite}>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            {'"'}Dribbble just acquired Crew, a very interesting
-                            startup...{'"'}
-                          </a>
+                            24 Hours
                         </h4>
-                        <div>
-                          <Button round color="white">
-                            <Subject /> Read
-                          </Button>
-                          <Button simple color="white">
-                            <Bookmark /> Bookmark
-                          </Button>
-                        </div>
                       </CardBody>
                     </div>
                   </Card>
                 </div>
               </GridItem>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <div className={classes.rotatingCardContainer}>
+                  <Card color="rose" className={classes.cardRotate}>
+                    <div className={classes.front + " " + classes.wrapperBlue}>
+                      <CardBody color className={classes.cardBodyRotate}>
+                        <h4 className={classes.cardTitleWhite} style={{ textAlign: "center" }}>
+                          Underwriting
+                        </h4>
+                      </CardBody>
+                    </div>
+                    <div className={classes.back + " " + classes.wrapperSky}>
+                      <CardBody className={classes.cardBodyRotate}>
+                        <h4 className={classes.cardTitleWhite}>
+                            5 Days
+                        </h4>
+                      </CardBody>
+                    </div>
+                  </Card>
+                </div>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <div className={classes.rotatingCardContainer}>
+                  <Card color="rose" className={classes.cardRotate}>
+                    <div className={classes.front + " " + classes.wrapperBlue}>
+                      <CardBody color className={classes.cardBodyRotate}>
+                        <h4 className={classes.cardTitleWhite} style={{ textAlign: "center" }}>
+                          RM Conditions Review
+                        </h4>
+                      </CardBody>
+                    </div>
+                    <div className={classes.back + " " + classes.wrapperSky}>
+                      <CardBody className={classes.cardBodyRotate}>
+                        <h4 className={classes.cardTitleWhite}>
+                            48 Hours
+                        </h4>
+                      </CardBody>
+                    </div>
+                  </Card>
+                </div>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <div className={classes.rotatingCardContainer}>
+                  <Card color="rose" className={classes.cardRotate}>
+                    <div className={classes.front + " " + classes.wrapperBlue}>
+                      <CardBody color className={classes.cardBodyRotate}>
+                        <h4 className={classes.cardTitleWhite} style={{ textAlign: "center" }}>
+                          Conditions Review
+                        </h4>
+                      </CardBody>
+                    </div>
+                    <div className={classes.back + " " + classes.wrapperSky}>
+                      <CardBody className={classes.cardBodyRotate}>
+                        <h4 className={classes.cardTitleWhite}>
+                            5 Days
+                        </h4>
+                      </CardBody>
+                    </div>
+                  </Card>
+                </div>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <div className={classes.rotatingCardContainer}>
+                  <Card color="rose" className={classes.cardRotate}>
+                    <div className={classes.front + " " + classes.wrapperBlue}>
+                      <CardBody color className={classes.cardBodyRotate}>
+                        <h4 className={classes.cardTitleWhite} style={{ textAlign: "center" }}>
+                          Closed Loan Submission
+                        </h4>
+                      </CardBody>
+                    </div>
+                    <div className={classes.back + " " + classes.wrapperSky}>
+                      <CardBody className={classes.cardBodyRotate}>
+                        <h4 className={classes.cardTitleWhite}>
+                            24 Hours
+                        </h4>
+                      </CardBody>
+                    </div>
+                  </Card>
+                </div>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <div className={classes.rotatingCardContainer}>
+                  <Card color="rose" className={classes.cardRotate}>
+                    <div className={classes.front + " " + classes.wrapperBlue}>
+                      <CardBody color className={classes.cardBodyRotate}>
+                        <h4 className={classes.cardTitleWhite} style={{ textAlign: "center" }}>
+                          Closed Loan Purchase Review
+                        </h4>
+                      </CardBody>
+                    </div>
+                    <div className={classes.back + " " + classes.wrapperSky}>
+                      <CardBody className={classes.cardBodyRotate}>
+                        <h4 className={classes.cardTitleWhite}>
+                            24 Hours
+                        </h4>
+                      </CardBody>
+                    </div>
+                  </Card>
+                </div>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
+                <div className={classes.rotatingCardContainer}>
+                  <Card color="rose" className={classes.cardRotate}>
+                    <div className={classes.front + " " + classes.wrapperBlue}>
+                      <CardBody color className={classes.cardBodyRotate}>
+                        <h4 className={classes.cardTitleWhite} style={{ textAlign: "center" }}>
+                          Closed Loan Condition Review
+                        </h4>
+                      </CardBody>
+                    </div>
+                    <div className={classes.back + " " + classes.wrapperSky}>
+                      <CardBody className={classes.cardBodyRotate}>
+                        <h4 className={classes.cardTitleWhite}>
+                            24 Hours
+                        </h4>
+                      </CardBody>
+                    </div>
+                  </Card>
+                </div>
+              </GridItem>
+            
             </GridContainer>
           </div>
         </div>

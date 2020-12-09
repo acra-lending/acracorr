@@ -3,6 +3,9 @@ import {
   blackColor,
   primaryColor,
   roseColor,
+  blueColor,
+  grayColor,
+  skyColor,
   infoColor,
   warningColor,
   dangerColor,
@@ -126,7 +129,17 @@ const style = {
     background:
       "linear-gradient(60deg," + roseColor[1] + "," + roseColor[2] + ")",
     color: whiteColor
-  }
+  },
+  wrapperBlue: {
+    background:
+      "linear-gradient(60deg," + grayColor[26] + "," + blueColor + ")",
+    color: whiteColor
+  },
+  wrapperSky: {
+    background:
+      "linear-gradient(60deg," + grayColor[26] + "," + skyColor + ")",
+    color: whiteColor
+  },
 };
 
 export default style;

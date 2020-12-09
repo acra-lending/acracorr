@@ -3,7 +3,6 @@ import {
   primaryColor,
   infoColor,
   blueColor,
-  skyColor,
   successColor,
   warningColor,
   dangerColor,

@@ -52,25 +52,28 @@ export default function SectionPills() {
                         tabContent: (
                         <span>
                             <p>
-                            Collaboratively administrate empowered markets via
-                            plug-and-play networks. Dynamically procrastinate B2C
-                            users after installed base benefits.
+                            Qualify with enough liquid assets to cover the loan balance
                             </p>
                             <br />
                             <p>
-                            Dramatically visualize customer directed convergence
-                            without revolutionary ROI. Collaboratively
-                            administrate empowered markets via plug-and-play
-                            networks. Dynamically procrastinate B2C users after
-                            installed base benefits.
+                            Details: <br/>
+                            <ul>
+                                <li>Borrower does not have to be currently employed</li>
+                                <li>Only show two months of statements for qualifying account</li>
+                                <li>Max LTV 70%</li>
+                                <li>Any Occupancy</li>
+                                <li>Down to 600 credit score</li>
+                                <li>Purchase or Refinance</li>
+                                <li>Can use Liquid Assets</li>
+                            </ul>
                             </p>
                             <br />
                             <p>
-                            Dramatically visualize customer directed convergence
-                            without revolutionary ROI. Collaboratively
-                            administrate empowered markets via plug-and-play
-                            networks. Dynamically procrastinate B2C users after
-                            installed base benefits.
+                            Matrix & Guidelines
+                            <ul>
+                                <li><a href="#">Product Matrix</a></li>
+                                <li><a href="#">Underwriting Guidelines</a></li>
+                            </ul>
                             </p>
                         </span>
                         )
@@ -79,20 +82,30 @@ export default function SectionPills() {
                         tabButton: "3-Month Bank Statement",
                         // tabIcon: Schedule,
                         tabContent: (
-                        <span>
+                            <span>
                             <p>
-                            Efficiently unleash cross-media information without
-                            cross-media value. Quickly maximize timely
-                            deliverables for real-time schemas.
+                            Qualify with most recent Personal or Business Account’s Bank Statements
                             </p>
                             <br />
                             <p>
-                            Dramatically maintain clicks-and-mortar solutions
-                            without functional solutions. Dramatically visualize
-                            customer directed convergence without revolutionary
-                            ROI. Collaboratively administrate empowered markets
-                            via plug-and-play networks. Dynamically procrastinate
-                            B2C users after installed base benefits.
+                            Details: <br/>
+                            <ul>
+                                <li>Up to $3M Loan Amounts</li>
+                                <li>75% Max LTV Purchases</li>
+                                <li>70% Max LTV Refinance</li>
+                                <li>Self-Employed Borrowers Only</li>
+                                <li>675 or greater credit scores</li>
+                                <li>Owner Occupied Only</li>
+                                <li>First Time Home Buyers considered at lower LTV</li>
+                            </ul>
+                            </p>
+                            <br />
+                            <p>
+                            Matrix & Guidelines
+                            <ul>
+                                <li><a href="#">Product Matrix</a></li>
+                                <li><a href="#">Underwriting Guidelines</a></li>
+                            </ul>
                             </p>
                         </span>
                         )
@@ -101,20 +114,30 @@ export default function SectionPills() {
                         tabButton: "12-Month Bank Statement",
                         // tabIcon: Schedule,
                         tabContent: (
-                        <span>
+                            <span>
                             <p>
-                            Efficiently unleash cross-media information without
-                            cross-media value. Quickly maximize timely
-                            deliverables for real-time schemas.
+                            Qualify with 100% on personal account deposits and 50% on business account deposits (12 consecutive months)
                             </p>
                             <br />
                             <p>
-                            Dramatically maintain clicks-and-mortar solutions
-                            without functional solutions. Dramatically visualize
-                            customer directed convergence without revolutionary
-                            ROI. Collaboratively administrate empowered markets
-                            via plug-and-play networks. Dynamically procrastinate
-                            B2C users after installed base benefits.
+                            Details: <br/>
+                            <ul>
+                                <li>Up to $3M Loan Amounts</li>
+                                <li>Up to 90% Max LTV</li>
+                                <li>Self-Employed and 1099 Borrowers</li>
+                                <li>600 or greater credit scores</li>
+                                <li>No reserves required at 65% or less LTV</li>
+                                <li>No 4506T / No K1’s / No P&L’s</li>
+                                <li>No MI</li>
+                            </ul>
+                            </p>
+                            <br />
+                            <p>
+                            Matrix & Guidelines
+                            <ul>
+                                <li><a href="#">Product Matrix</a></li>
+                                <li><a href="#">Underwriting Guidelines</a></li>
+                            </ul>
                             </p>
                         </span>
                         )
@@ -123,20 +146,30 @@ export default function SectionPills() {
                         tabButton: "Jumbo Non-QM",
                         // tabIcon: Schedule,
                         tabContent: (
-                        <span>
+                            <span>
                             <p>
-                            Efficiently unleash cross-media information without
-                            cross-media value. Quickly maximize timely
-                            deliverables for real-time schemas.
+                            Qualify with Full Doc, Bank Statements, or DSCR
                             </p>
                             <br />
                             <p>
-                            Dramatically maintain clicks-and-mortar solutions
-                            without functional solutions. Dramatically visualize
-                            customer directed convergence without revolutionary
-                            ROI. Collaboratively administrate empowered markets
-                            via plug-and-play networks. Dynamically procrastinate
-                            B2C users after installed base benefits.
+                            Details: <br/>
+                            <ul>
+                                <li>Loan Amounts up to $3M OO and $2M NOO</li>
+                                <li>I/O available with a 650+ FICO</li>
+                                <li>C/O available with no max cash in hand depending on LTV</li>
+                                <li>Foreign National</li>
+                                <li>No reserve requirements at or below 65% LTV, C/O proceeds can be used for reserves above 65% LTV</li>
+                                <li>Fast Turn-Times</li>
+                                <li>Can use transferred appraisals</li>
+                            </ul>
+                            </p>
+                            <br />
+                            <p>
+                            Matrix & Guidelines
+                            <ul>
+                                <li><a href="#">Product Matrix</a></li>
+                                <li><a href="#">Underwriting Guidelines</a></li>
+                            </ul>
                             </p>
                         </span>
                         )

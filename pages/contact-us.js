@@ -300,15 +300,15 @@ export default function ContactUsPage() {
                       color="blue"
                       type="submit"
                       disabled={isSubmitting}
-                      round>
+                      >
                         Contact Us
                     </Button>
                   </div>
                   {messageSent && setIsSuccessMessage && (
-                        <div>Message sent successfully!</div>
+                        <div><p>Message sent successfully!</p></div>
                       )}
                       {messageSent && !setIsSuccessMessage && (
-                        <div>Something went wrong. Please try again.</div>
+                        <div><p>Something went wrong. Please try again.</p></div>
                       )}
                 </form>
               </GridItem>
