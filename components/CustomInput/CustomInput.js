@@ -102,5 +102,5 @@ CustomInput.propTypes = {
   error: PropTypes.bool,
   success: PropTypes.bool,
   white: PropTypes.bool,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func
 };

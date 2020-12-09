@@ -15,7 +15,7 @@ import GridItem from "components/Grid/GridItem.js";
 
 import errorPageStyle from "assets/jss/nextjs-material-kit-pro/pages/errorPageStyles.js";
 
-import image from "assets/img/clint-mckoy.jpg";
+import image from "assets/img/stairs-to-nothing.jpg";
 
 const useStyles = makeStyles(errorPageStyle);
 
@@ -30,8 +30,8 @@ export default function ErrorPage({ ...rest }) {
       <Header
         absolute
         color="transparent"
-        brand="NextJS Material Kit PRO"
-        links={<HeaderLinks dropdownHoverColor="dark" />}
+        brand="Acra Lending"
+        links={<HeaderLinks dropdownHoverColor="blue" />}
         {...rest}
       />
       <div
@@ -49,7 +49,7 @@ export default function ErrorPage({ ...rest }) {
               <h1 className={classes.title}>404</h1>
               <h2 className={classes.subTitle}>Page not found :(</h2>
               <h4 className={classes.description}>
-                Ooooups! Looks like you got lost.
+                Oooops! Looks like the page you're looking for doesn't exist.
               </h4>
             </GridItem>
           </GridContainer>
@@ -59,56 +59,97 @@ export default function ErrorPage({ ...rest }) {
       <Footer
         content={
           <div>
-            <div className={classes.left}>
+            <div className={classes.center}>
               <List className={classes.list}>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="https://www.creative-tim.com/?ref=njsmkp-error"
-                    target="_blank"
+                    href="#"
                     className={classes.block}
                   >
-                    Creative Tim
+                    Company Information
                   </a>
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="https://www.creative-tim.com/presentation/?ref=njsmkp-error"
-                    target="_blank"
+                    href="#"
                     className={classes.block}
                   >
-                    About us
+                    Terms of Use
                   </a>
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="http://blog.creative-tim.com/?ref=njsmkp-error"
+                    href="#"
                     className={classes.block}
                   >
-                    Blog
+                    Privacy Policy
                   </a>
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="https://www.creative-tim.com/license/?ref=njsmkp-error"
-                    target="_blank"
+                    href="#"
                     className={classes.block}
                   >
-                    Licenses
+                    CCPA
+                  </a>
+                </ListItem>
+                <ListItem className={classes.inlineBlock}>
+                  <a
+                    href="#"
+                    className={classes.block}
+                  >
+                    State Licensing Information
                   </a>
                 </ListItem>
               </List>
             </div>
-            <div className={classes.right}>
-              &copy; {1900 + new Date().getYear()} , made with{" "}
+            <div className={classes.center}>
+              <List className={classes.list}>
+                <ListItem className={classes.inlineBlock}>
+                <img 
+                    src={require("assets/img/equal-lenders-logo.png")}
+                    className="footer-logo"
+                  />
+                </ListItem>
+                <ListItem className={classes.inlineBlock}>
+                  <p>&copy; {1900 + new Date().getYear()} Acra Lending.{" "}
+                    All rights reserved. NMLS ID # 144549
+                    <a 
+                    href="https://nmlsconsumeraccess.org/"
+                  >
+                  <img 
+                    src={require("assets/img/nmls-logo.png")}
+                    className="footer-logo"
+                  />
+                  </a>
+                  </p>
+
+                </ListItem>
+                {/* <ListItem className={classes.inlineBlock}>
+                  <a 
+                    href="https://nmlsconsumeraccess.org/"
+                    className={classes.block}
+                  >
+                  <img 
+                    src={require("assets/img/nmls-logo.png")}
+                    className="footer-logo"
+                  />
+                  {" "}NMLS: #144549
+                  </a>
+                </ListItem> */}
+              </List>
+            </div>
+            {/* <div className={classes.center}>
+              &copy; {1900 + new Date().getYear()} Acra Lending{" "}
               <Favorite className={classes.icon} /> by{" "}
               <a
-                href="https://www.creative-tim.com/?ref=njsmkp-error"
+                href="https://www.creative-tim.com/?ref=njsmkp-landing"
                 target="_blank"
               >
                 Creative Tim
               </a>{" "}
               for a better web.
-            </div>
+            </div> */}
           </div>
         }
       />

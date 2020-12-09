@@ -50,6 +50,8 @@ import ImageUpload from "components/CustomUpload/ImageUpload.js";
 
 import javascriptStyles from "assets/jss/nextjs-material-kit-pro/pages/componentsSections/javascriptStyles.js";
 
+import SignUpContact from "pages-sections/about-us/SignUpContact.js";
+
 import dg1 from "assets/img/dg1.jpg";
 import dg2 from "assets/img/dg2.jpg";
 
@@ -64,8 +66,6 @@ Transition.displayName = "Transition";
 export default function SectionSignUp() {
   const [checked, setChecked] = React.useState([]);
   const [signupModal1, setSignupModal1] = React.useState(false);
-  const [signupModal2, setSignupModal2] = React.useState(false);
-  const [signupModal3, setSignupModal3] = React.useState(false);
   const handleToggle = value => {
     const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
@@ -77,6 +77,10 @@ export default function SectionSignUp() {
     }
     setChecked(newChecked);
   };
+
+  const Nothing = e => {
+      e.preventDefault();
+  }
   const classes = useStyles();
   return (
     <div className={classes.section + " cd-section"} id="javascriptComponents">
@@ -194,7 +198,8 @@ export default function SectionSignUp() {
                             or be classical
                         </h4>
                         </div> */}
-                        <form className={classes.form}>
+                        <SignUpContact />
+                        {/* <form className={classes.form}>
                         <CustomInput
                             formControlProps={{
                             fullWidth: true,
@@ -248,7 +253,7 @@ export default function SectionSignUp() {
                             Get started
                             </Button>
                         </div>
-                        </form>
+                        </form> */}
                     </GridItem>
                     </GridContainer>
                 </DialogContent>
@@ -479,7 +484,7 @@ export default function SectionSignUp() {
                 color="blue"
                 size="lg"
                 block  
-                onClick="#">
+                onClick={Nothing}>
                 Loan Qualification Engine
             </Button>
             {/* SIGNUP MODAL START */}
