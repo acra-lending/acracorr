@@ -30,6 +30,8 @@ import Code from "@material-ui/icons/Code";
 import Group from "@material-ui/icons/Group";
 import Email from "@material-ui/icons/Email";
 import Check from "@material-ui/icons/Check";
+import Apps from "@material-ui/icons/Apps";
+import PhotoSizeSelectActualIcon from "@material-ui/icons/PhotoSizeSelectActual";
 import AttachFile from "@material-ui/icons/AttachFile";
 import Layers from "@material-ui/icons/Layers";
 // core components
@@ -61,7 +63,9 @@ Transition.displayName = "Transition";
 
 export default function SectionSignUp() {
   const [checked, setChecked] = React.useState([]);
-  const [signupModal, setSignupModal] = React.useState(false);
+  const [signupModal1, setSignupModal1] = React.useState(false);
+  const [signupModal2, setSignupModal2] = React.useState(false);
+  const [signupModal3, setSignupModal3] = React.useState(false);
   const handleToggle = value => {
     const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
@@ -84,7 +88,7 @@ export default function SectionSignUp() {
                 color="blue"
                 size="lg" 
                 block
-                onClick={() => setSignupModal(true)}>
+                onClick={() => setSignupModal1(true)}>
                 Get Approved
             </Button>
             {/* SIGNUP MODAL START */}
@@ -93,10 +97,10 @@ export default function SectionSignUp() {
                 root: classes.modalRoot,
                 paper: classes.modal + " " + classes.modalSignup
                 }}
-                open={signupModal}
+                open={signupModal1}
                 TransitionComponent={Transition}
                 keepMounted
-                onClose={() => setSignupModal(false)}
+                onClose={() => setSignupModal1(false)}
                 aria-labelledby="signup-modal-slide-title"
                 aria-describedby="signup-modal-slide-description"
             >
@@ -111,7 +115,7 @@ export default function SectionSignUp() {
                     className={classes.modalCloseButton}
                     key="close"
                     aria-label="Close"
-                    onClick={() => setSignupModal(false)}
+                    onClick={() => setSignupModal1(false)}
                     >
                     {" "}
                     <Close className={classes.modalClose} />
@@ -119,7 +123,7 @@ export default function SectionSignUp() {
                     <h3
                     className={classes.cardTitle + " " + classes.modalTitle}
                     >
-                    Register
+                    Partner With Us
                     </h3>
                 </DialogTitle>
                 <DialogContent
@@ -135,41 +139,36 @@ export default function SectionSignUp() {
                     >
                         <InfoArea
                         className={classes.infoArea}
-                        title="Marketing"
+                        title="Industry Leading Non-QM Programs"
                         description={
                             <p>
-                            We{"'"}ve created the marketing campaign of the
-                            website. It was a very interesting
-                            collaboration.
+                                Extensive range of products to meet lending portfolios.
                             </p>
                         }
-                        icon={Timeline}
-                        iconColor="rose"
+                        icon={Apps}
+                        iconColor="blue"
                         />
                         <InfoArea
                         className={classes.infoArea}
-                        title="Fully Coded in HTML5"
+                        title="A Dedicated Correspondent Executive"
                         description={
                             <p>
-                            We{"'"}ve developed the website with HTML5 and
-                            CSS3. The client has access to the code using
-                            GitHub.
-                            </p>
-                        }
-                        icon={Code}
-                        iconColor="primary"
-                        />
-                        <InfoArea
-                        className={classes.infoArea}
-                        title="Built Audience"
-                        description={
-                            <p>
-                            There is also a Fully Customizable CMS Admin
-                            Dashboard for this product.
+                                Highly trained executives with a deep understanding of the Non-QM industry.
                             </p>
                         }
                         icon={Group}
-                        iconColor="info"
+                        iconColor="blue"
+                        />
+                        <InfoArea
+                        className={classes.infoArea}
+                        title="Marketing Collateral"
+                        description={
+                            <p>
+                                Professionally designed marketing collateral ready to incorporate your brand identity.
+                            </p>
+                        }
+                        icon={PhotoSizeSelectActualIcon}
+                        iconColor="blue"
                         />
                     </GridItem>
                     <GridItem
@@ -178,7 +177,7 @@ export default function SectionSignUp() {
                         md={5}
                         className={classes.mrAuto}
                     >
-                        <div className={classes.textCenter}>
+                        {/* <div className={classes.textCenter}>
                         <Button justIcon round color="twitter">
                             <i className="fab fa-twitter" />
                         </Button>
@@ -194,7 +193,7 @@ export default function SectionSignUp() {
                         <h4 className={classes.socialTitle}>
                             or be classical
                         </h4>
-                        </div>
+                        </div> */}
                         <form className={classes.form}>
                         <CustomInput
                             formControlProps={{
@@ -207,12 +206,9 @@ export default function SectionSignUp() {
                                 position="start"
                                 className={classes.inputAdornment}
                                 >
-                                <Face
-                                    className={classes.inputAdornmentIcon}
-                                />
                                 </InputAdornment>
                             ),
-                            placeholder: "First Name..."
+                            placeholder: "Name..."
                             }}
                         />
                         <CustomInput
@@ -226,9 +222,6 @@ export default function SectionSignUp() {
                                 position="start"
                                 className={classes.inputAdornment}
                                 >
-                                <Email
-                                    className={classes.inputAdornmentIcon}
-                                />
                                 </InputAdornment>
                             ),
                             placeholder: "Email..."
@@ -245,45 +238,13 @@ export default function SectionSignUp() {
                                 position="start"
                                 className={classes.inputAdornment}
                                 >
-                                <Icon
-                                    className={classes.inputAdornmentIcon}
-                                >
-                                    lock_outline
-                                </Icon>
                                 </InputAdornment>
                             ),
-                            placeholder: "Password..."
+                            placeholder: "Phone..."
                             }}
-                        />
-                        <FormControlLabel
-                            classes={{
-                            label: classes.label
-                            }}
-                            control={
-                            <Checkbox
-                                tabIndex={-1}
-                                onClick={() => handleToggle(1)}
-                                checkedIcon={
-                                <Check className={classes.checkedIcon} />
-                                }
-                                icon={
-                                <Check className={classes.uncheckedIcon} />
-                                }
-                                classes={{
-                                checked: classes.checked,
-                                root: classes.checkRoot
-                                }}
-                            />
-                            }
-                            label={
-                            <span>
-                                I agree to the{" "}
-                                <a href="#pablo">terms and conditions</a>.
-                            </span>
-                            }
                         />
                         <div className={classes.textCenter}>
-                            <Button round color="primary">
+                            <Button color="blue">
                             Get started
                             </Button>
                         </div>
@@ -301,19 +262,19 @@ export default function SectionSignUp() {
                 color="blue"
                 size="lg"
                 block 
-                onClick={() => setSignupModal(true)}>
+                onClick={() => setSignupModal1(true)}>
                 Sellers Guide
             </Button>
             {/* SIGNUP MODAL START */}
-            <Dialog
+            {/* <Dialog
                 classes={{
                 root: classes.modalRoot,
                 paper: classes.modal + " " + classes.modalSignup
                 }}
-                open={signupModal}
+                open={signupModal1}
                 TransitionComponent={Transition}
                 keepMounted
-                onClose={() => setSignupModal(false)}
+                onClose={() => setSignupModal1(false)}
                 aria-labelledby="signup-modal-slide-title"
                 aria-describedby="signup-modal-slide-description"
             >
@@ -328,7 +289,7 @@ export default function SectionSignUp() {
                     className={classes.modalCloseButton}
                     key="close"
                     aria-label="Close"
-                    onClick={() => setSignupModal(false)}
+                    onClick={() => setSignupModal1(false)}
                     >
                     {" "}
                     <Close className={classes.modalClose} />
@@ -509,7 +470,7 @@ export default function SectionSignUp() {
                     </GridContainer>
                 </DialogContent>
                 </Card>
-            </Dialog>
+            </Dialog> */}
             {/* SIGNUP MODAL END */}
             </GridItem>
             <GridItem xs={12} sm={10} md={4} lg={4}>
@@ -518,19 +479,19 @@ export default function SectionSignUp() {
                 color="blue"
                 size="lg"
                 block  
-                onClick={() => setSignupModal(true)}>
+                onClick="#">
                 Loan Qualification Engine
             </Button>
             {/* SIGNUP MODAL START */}
-            <Dialog
+            {/* <Dialog
                 classes={{
                 root: classes.modalRoot,
                 paper: classes.modal + " " + classes.modalSignup
                 }}
-                open={signupModal}
+                open={signupModal3}
                 TransitionComponent={Transition}
                 keepMounted
-                onClose={() => setSignupModal(false)}
+                onClose={() => setSignupModal3(false)}
                 aria-labelledby="signup-modal-slide-title"
                 aria-describedby="signup-modal-slide-description"
             >
@@ -545,7 +506,7 @@ export default function SectionSignUp() {
                     className={classes.modalCloseButton}
                     key="close"
                     aria-label="Close"
-                    onClick={() => setSignupModal(false)}
+                    onClick={() => setSignupModal3(false)}
                     >
                     {" "}
                     <Close className={classes.modalClose} />
@@ -577,8 +538,8 @@ export default function SectionSignUp() {
                             collaboration.
                             </p>
                         }
-                        icon={Timeline}
-                        iconColor="rose"
+                        icon={Apps}
+                        iconColor="blue"
                         />
                         <InfoArea
                         className={classes.infoArea}
@@ -726,7 +687,7 @@ export default function SectionSignUp() {
                     </GridContainer>
                 </DialogContent>
                 </Card>
-            </Dialog>
+            </Dialog> */}
             {/* SIGNUP MODAL END */}
             </GridItem>
         </GridContainer>
