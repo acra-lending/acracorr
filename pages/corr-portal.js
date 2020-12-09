@@ -29,6 +29,11 @@ import CardBody from "components/Card/CardBody.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 
+// Spinner
+import Loader from "react-loader-spinner";
+// Spinner css
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
 import signupPageStyle from "assets/jss/nextjs-material-kit-pro/pages/signupPageStyle.js";
 
 import image from "assets/img/bg7.jpg";
@@ -79,6 +84,16 @@ export default function SignUpPage({ ...rest }) {
             <GridItem xs={12} sm={12} md={12}>
               <Card className={classes.cardSignup}>
                 <CardBody>
+                <GridContainer justify="center">
+                  <Loader
+                    style={{position: "absolute", left: "47%", top: "35%"}}
+                    type="Grid"
+                    color="#0033A1"
+                    height={100}
+                    width={100}
+                    timeout={2200}
+                  />
+            </GridContainer>
                   <Iframe />
                 </CardBody>
               </Card>
