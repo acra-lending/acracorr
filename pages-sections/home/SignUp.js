@@ -83,7 +83,7 @@ export default function SectionSignUp() {
   }
   const classes = useStyles();
   return (
-    <div className={classes.section} id="javascriptComponents">
+    <div className={classes.section} id="javascriptComponents" style={{ padding: "32px 0 0" }}>
       <div>
         <GridContainer>
             <GridItem xs={12} sm={6} md={4} lg={3}>
