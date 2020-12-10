@@ -38,9 +38,9 @@ export default function AboutUsPage() {
         brand="Acra Lending"
         links={<HeaderLinks dropdownHoverColor="blue" />}
         fixed
-        color="transparent"
+        color="white"
         changeColorOnScroll={{
-          height: 300,
+          height: 200,
           color: "darkGray"
         }}
       />
@@ -56,7 +56,7 @@ export default function AboutUsPage() {
                 classes.textCenter
               )}
             >
-              <h1 className={classes.title} style={{ color: "#fff" }}>Our Team</h1>
+              <h1 className={classes.title} style={{ color: "#fff", marginTop: "-32px" }}>Our Team</h1>
               <h4>
                 The leadership team at Acra Lending is a group of highly-experienced and dedicated senior managers with an average of 25 years’ experience in Non-QM mortgage origination, underwriting and servicing.
               </h4>
@@ -64,7 +64,7 @@ export default function AboutUsPage() {
           </GridContainer>
         </div>
       </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}>
+      <div className={classNames(classes.main, classes.mainRaised)} style={{ margin: "-160px 30px 0px"}}>
         <div className={classes.container}>
           <SectionTeam />
           <SectionContact />

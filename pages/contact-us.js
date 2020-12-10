@@ -211,7 +211,7 @@ export default function ContactUsPage() {
         brand="Acra Lending"
         links={<HeaderLinks dropdownHoverColor="blue" />}
         fixed
-        color="darkGray"
+        color="white"
       />
       {/* <div className={classes.bigMap}>
         <CustomSkinMap

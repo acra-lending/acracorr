@@ -83,8 +83,8 @@ export default function SectionSignUp() {
   }
   const classes = useStyles();
   return (
-    <div className={classes.section + " cd-section"} id="javascriptComponents">
-      <div className={classes.container}>
+    <div className={classes.section} id="javascriptComponents">
+      <div>
         <GridContainer>
             <GridItem xs={12} sm={6} md={4} lg={3}>
             {/* BUTTON SIGNUP MODAL */}
@@ -478,14 +478,14 @@ export default function SectionSignUp() {
             </Dialog> */}
             {/* SIGNUP MODAL END */}
             </GridItem>
-            <GridItem xs={12} sm={10} md={4} lg={4}>
+            <GridItem xs={12} sm={10} md={4} lg={3}>
             {/* BUTTON SIGNUP MODAL */}
             <Button 
                 color="blue"
                 size="lg"
                 block  
                 onClick={Nothing}>
-                Loan Qualification Engine
+                Loan Engine
             </Button>
             {/* SIGNUP MODAL START */}
             {/* <Dialog

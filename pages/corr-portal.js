@@ -61,7 +61,7 @@ export default function SignUpPage({ ...rest }) {
     <div>
       <Header
         absolute
-        color="transparent"
+        color="white"
         brand="Acra Lending"
         links={<HeaderLinks dropdownHoverColor="blue" />}
         fixed
@@ -93,7 +93,7 @@ export default function SignUpPage({ ...rest }) {
                     width={100}
                     timeout={2200}
                   />
-            </GridContainer>
+                </GridContainer>
                   <Iframe />
                 </CardBody>
               </Card>

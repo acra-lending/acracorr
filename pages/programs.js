@@ -56,7 +56,7 @@ export default function SignUpPage({ ...rest }) {
     <div>
       <Header
         absolute
-        color="transparent"
+        color="white"
         brand="Acra Lending"
         links={<HeaderLinks dropdownHoverColor="blue" />}
         fixed

@@ -37,7 +37,6 @@ export default function SectionPills() {
                 </h3>
             </div> */}
             <GridContainer>
-
                 <GridItem xs={12} sm={12} md={8} lg={8}>
                 <NavPills
                     color="blue"
@@ -51,12 +50,14 @@ export default function SectionPills() {
                         // tabIcon: Dashboard,
                         tabContent: (
                         <span>
+                            <h3 style={{ margin: "0", paddingBottom: "12px" }}><strong>Overview</strong></h3>
                             <p>
                             Qualify with enough liquid assets to cover the loan balance
                             </p>
                             <br />
                             <p>
-                            Details: <br/>
+                            <h3 style={{ margin: "0", padding: "0" }}><strong>Details:</strong></h3>
+                            <br/>
                             <ul>
                                 <li>Borrower does not have to be currently employed</li>
                                 <li>Only show two months of statements for qualifying account</li>
@@ -69,7 +70,7 @@ export default function SectionPills() {
                             </p>
                             <br />
                             <p>
-                            Matrix & Guidelines
+                            <h3 style={{ margin: "0", paddingBottom: "12px" }}><strong>Matrix & Guidelines</strong></h3>
                             <ul>
                                 <li><a href="#">Product Matrix</a></li>
                                 <li><a href="#">Underwriting Guidelines</a></li>
@@ -83,12 +84,14 @@ export default function SectionPills() {
                         // tabIcon: Schedule,
                         tabContent: (
                             <span>
+                            <h3 style={{ margin: "0", paddingBottom: "12px" }}><strong>Overview</strong></h3>                                
                             <p>
                             Qualify with most recent Personal or Business Account’s Bank Statements
                             </p>
                             <br />
                             <p>
-                            Details: <br/>
+                            <h3 style={{ margin: "0", padding: "0" }}><strong>Details:</strong></h3>
+                            <br/>
                             <ul>
                                 <li>Up to $3M Loan Amounts</li>
                                 <li>75% Max LTV Purchases</li>
@@ -101,7 +104,7 @@ export default function SectionPills() {
                             </p>
                             <br />
                             <p>
-                            Matrix & Guidelines
+                            <h3 style={{ margin: "0", paddingBottom: "12px" }}><strong>Matrix & Guidelines</strong></h3>
                             <ul>
                                 <li><a href="#">Product Matrix</a></li>
                                 <li><a href="#">Underwriting Guidelines</a></li>
@@ -115,12 +118,14 @@ export default function SectionPills() {
                         // tabIcon: Schedule,
                         tabContent: (
                             <span>
+                            <h3 style={{ margin: "0", paddingBottom: "12px" }}><strong>Overview</strong></h3>                                
                             <p>
                             Qualify with 100% on personal account deposits and 50% on business account deposits (12 consecutive months)
                             </p>
                             <br />
                             <p>
-                            Details: <br/>
+                            <h3 style={{ margin: "0", padding: "0" }}><strong>Details:</strong></h3>
+                            <br/>
                             <ul>
                                 <li>Up to $3M Loan Amounts</li>
                                 <li>Up to 90% Max LTV</li>
@@ -133,7 +138,7 @@ export default function SectionPills() {
                             </p>
                             <br />
                             <p>
-                            Matrix & Guidelines
+                            <h3 style={{ margin: "0", paddingBottom: "12px" }}><strong>Matrix & Guidelines</strong></h3>
                             <ul>
                                 <li><a href="#">Product Matrix</a></li>
                                 <li><a href="#">Underwriting Guidelines</a></li>
@@ -147,12 +152,14 @@ export default function SectionPills() {
                         // tabIcon: Schedule,
                         tabContent: (
                             <span>
+                            <h3 style={{ margin: "0", paddingBottom: "12px" }}><strong>Overview</strong></h3>                                
                             <p>
                             Qualify with Full Doc, Bank Statements, or DSCR
                             </p>
                             <br />
                             <p>
-                            Details: <br/>
+                            <h3 style={{ margin: "0", padding: "0" }}><strong>Details:</strong></h3>
+                            <br/>
                             <ul>
                                 <li>Loan Amounts up to $3M OO and $2M NOO</li>
                                 <li>I/O available with a 650+ FICO</li>
@@ -165,7 +172,7 @@ export default function SectionPills() {
                             </p>
                             <br />
                             <p>
-                            Matrix & Guidelines
+                            <h3 style={{ margin: "0", paddingBottom: "12px" }}><strong>Matrix & Guidelines</strong></h3>
                             <ul>
                                 <li><a href="#">Product Matrix</a></li>
                                 <li><a href="#">Underwriting Guidelines</a></li>

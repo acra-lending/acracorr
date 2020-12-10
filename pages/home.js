@@ -49,25 +49,26 @@ export default function LandingPage({ ...rest }) {
   return (
     <div>
       <Header
-        color="transparent"
+        color="white"
         brand="Acra Lending"
         links={<HeaderLinks dropdownHoverColor="blue" />}
         fixed
         changeColorOnScroll={{
-          height: 300,
+          height: 150,
           color: "darkGray"
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/bg1-color.jpg")} filter="sky">
+      <Parallax image={require("assets/img/bg1-color.jpg")} filter="sky" style={{ height: "85vh" }}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={6} md={12}>
-              <h1 className={classes.title}>BECOME AN APPROVED ACRA LENDING CORRESPONDENT PARTNER</h1>
-              <h4>
-                Acra lending, formerly Citadel Servicing Corporation, is an experienced non -Agency mortgage banking company recently acquired by a well-established private equity firm.  Under new ownership and leadership Acra Correspondent is committed to providing simplicity, consistency and an optimal customer experience.  Part of this commitment includes completing in house eligibility reviews with no reliance on third party reviews for due diligence or third party appraisal reviews, reducing the time it takes to complete a loan.  
-              </h4>
               <br />
+              <h1 
+                className={classes.title}
+                style={{ padding: "64px 0 0 0", marginBottom: "0" }}
+              >
+                BECOME AN APPROVED ACRA LENDING CORRESPONDENT PARTNER</h1>
               <SectionSignUp />
               {/* <Button
                 color="blue"
@@ -102,7 +103,7 @@ export default function LandingPage({ ...rest }) {
           {/* Feature 5 START */}
           <div
             className={classes.features5}
-
+            style={{padding: "60px 0"}}
           >
             <GridContainer className={classes.margin0}>
               <GridItem
@@ -113,7 +114,8 @@ export default function LandingPage({ ...rest }) {
                   classes.mlAuto + " " + classes.mrAuto + " " + classes.textCenter
                 }
               >
-                <h2 className={classes.title}>What You'll Get Access To</h2>
+                <h4 className={classes.title} style={{ paddingTop: "0", marginTop: "0"}}>Acra lending, formerly Citadel Servicing Corporation, is an experienced non-Agency mortgage banking company recently acquired by a well-established private equity firm.  Under new ownership and leadership Acra Correspondent is committed to providing simplicity, consistency and an optimal customer experience.  Part of this commitment includes completing in house eligibility reviews with no reliance on third party reviews for due diligence or third party appraisal reviews, reducing the time it takes to complete a loan. </h4>
+                <h3 className={classes.title}>What You'll Get Access To</h3>
               </GridItem>
               <div className={classes.container}>
                 <GridContainer

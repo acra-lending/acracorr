@@ -47,6 +47,9 @@ export default function Header(props) {
       document.body
         .getElementsByTagName("header")[0]
         .classList.add(classes[changeColorOnScroll.color]);
+      document.body
+        .getElementsByTagName("img")[0]
+        .setAttribute("src", require("assets/img/Acra_Logo_Horizontal_Correspondent_White_RGB.png"));
     } else {
       document.body
         .getElementsByTagName("header")[0]
@@ -54,6 +57,9 @@ export default function Header(props) {
       document.body
         .getElementsByTagName("header")[0]
         .classList.remove(classes[changeColorOnScroll.color]);
+      document.body
+      .getElementsByTagName("img")[0]
+      .setAttribute("src", require("assets/img/Acra_Logo_Horizontal_Correspondent_Full_Color_RGB_Sm.png"));
     }
   };
   const { color, links, brand, fixed, absolute } = props;
@@ -68,7 +74,7 @@ export default function Header(props) {
       <Toolbar className={classes.container}>
         <Button className={classes.title}>
           <Link href="/">
-            <a><img src={require("assets/img/Acra_Logo_Horizontal_Correspondent_White_RGB.png")} className="logo"></img></a>
+            <a><img src={require("assets/img/Acra_Logo_Horizontal_Correspondent_Full_Color_RGB_Sm.png")} className="logo"></img></a>
           </Link>
         </Button>
         <Hidden smDown implementation="css" className={classes.hidden}>
@@ -135,7 +141,7 @@ Header.propTypes = {
   absolute: PropTypes.bool,
   // this will cause the sidebar to change the color from
   // props.color (see above) to changeColorOnScroll.color
-  // when the window.pageYOffset is heigher or equal to
+  // when the window.pageYOffset is higher or equal to
   // changeColorOnScroll.height and then when it is smaller than
   // changeColorOnScroll.height change it back to
   // props.color (see above)
@@ -147,7 +153,6 @@ Header.propTypes = {
       "blue",
       "sky",
       "darkGray",
-
       "success",
       "warning",
       "danger",

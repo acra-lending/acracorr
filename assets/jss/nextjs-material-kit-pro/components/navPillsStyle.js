@@ -39,7 +39,7 @@ const navPillsStyle = theme => ({
     position: "relative",
     display: "block",
     borderRadius: "5px",
-    minWidth: "100px",
+    minWidth: "180px",
     textAlign: "center",
     transition: "all .3s",
     padding: "10px 15px",
@@ -51,7 +51,7 @@ const navPillsStyle = theme => ({
     minHeight: "80px",
     lineHeight: "24px",
     textTransform: "uppercase",
-    fontSize: "16px",
+    fontSize: "18px",
     fontWeight: "500"
   },
   pillsWithIcons: {
