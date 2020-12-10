@@ -92,7 +92,7 @@ const landingPageStyle = {
       color: blackColor
     },
     "&:after": {
-      background: "rgba(" + hexToRgb(whiteColor) + ",0.55)",
+      // background: "rgba(" + hexToRgb(whiteColor) + ",0.55)",
       position: "absolute",
       width: "100%",
       height: "100%",

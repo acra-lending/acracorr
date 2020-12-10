@@ -60,11 +60,10 @@ export default function LandingPage({ ...rest }) {
         {...rest}
       />
       <Parallax 
-        style={{ height: "88vh" }} 
         image={require("assets/img/bg1-color.jpg")} 
         filter="sky"
       >
-        <div className={classes.container}>
+        <div className={classes.container} style={{ marginTop: "0" }}>
           <GridContainer>
             <GridItem xs={12} sm={6} md={12}>
               <br />
@@ -73,6 +72,7 @@ export default function LandingPage({ ...rest }) {
                 style={{ padding: "64px 0 0 0", marginBottom: "0" }}
               >
                 BECOME AN APPROVED ACRA LENDING CORRESPONDENT PARTNER</h1>
+                <h4>Acra Correspondent is committed to providing simplicity, consistency and an optimal customer experience.</h4>
               <SectionSignUp />
               {/* <Button
                 color="blue"
@@ -102,7 +102,7 @@ export default function LandingPage({ ...rest }) {
         </div>
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className="cd-section" {...rest}>
+        <div {...rest}>
 
           {/* Feature 5 START */}
           <div
@@ -118,7 +118,8 @@ export default function LandingPage({ ...rest }) {
                   classes.mlAuto + " " + classes.mrAuto + " " + classes.textCenter
                 }
               >
-                <h4 className={classes.title} style={{ paddingTop: "0", marginTop: "0"}}>Acra lending, formerly Citadel Servicing Corporation, is an experienced non-Agency mortgage banking company recently acquired by a well-established private equity firm.  Under new ownership and leadership Acra Correspondent is committed to providing simplicity, consistency and an optimal customer experience.  Part of this commitment includes completing in house eligibility reviews with no reliance on third party reviews for due diligence or third party appraisal reviews, reducing the time it takes to complete a loan. </h4>
+                <h4 className={classes.title} style={{ paddingTop: "0", marginTop: "0"}}>Acra lending, formerly Citadel Servicing Corporation, is an experienced non-Agency mortgage banking company recently acquired by a well-established private equity firm. Under new ownership and leadership, we are committed to completing in house eligibility reviews with no reliance on third party reviews for due diligence or third-party appraisal reviews, reducing the time it takes to complete a loan.</h4>
+                <hr style={{ borderColor: "#0033A1" }}/>
                 <h3 className={classes.title}>What You'll Get Access To</h3>
               </GridItem>
               <div className={classes.container}>

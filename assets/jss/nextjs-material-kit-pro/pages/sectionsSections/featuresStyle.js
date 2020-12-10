@@ -51,7 +51,7 @@ const features = {
       color: whiteColor
     },
     "&:after": {
-      background: "rgba(" + hexToRgb(blackColor) + ",0.55)",
+      // background: "rgba(" + hexToRgb(blackColor) + ",0.55)",
       position: "absolute",
       width: "100%",
       height: "100%",
