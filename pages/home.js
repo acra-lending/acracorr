@@ -1,4 +1,6 @@
-/*eslint-disable*/ import React from "react";
+/*eslint-disable*/ import React, { useState, useEffect } from "react";
+import axios from 'axios';
+import parse from 'html-react-parser';
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 // nodejs library that concatenates classes
@@ -24,6 +26,8 @@ import InfoArea from "components/InfoArea/InfoArea.js";
 import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
+import Spinner from 'components/Spinner/Spinner';
+
 
 
 import landingPageStyle from "assets/jss/nextjs-material-kit-pro/pages/landingPageStyle.js";
@@ -45,6 +49,26 @@ export default function LandingPage({ ...rest }) {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
   });
+
+  const WEBSITE_URL = 'https://bt.citadelservicing.com';
+  const API = 'wp-json/wp/v2';
+
+  const [corrs, setCorrs] = useState([]) 
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      const result = await axios (
+        `${WEBSITE_URL}/${API}/corr`
+      );
+      
+      setCorrs(result.data);
+      setIsLoading(false);
+    };
+    fetchData(); 
+  }, []);
+
   const classes = useStyles();
   return (
     <div>
@@ -59,11 +83,16 @@ export default function LandingPage({ ...rest }) {
         }}
         {...rest}
       />
+
       <Parallax 
         image={require("assets/img/bg1-color.jpg")} 
         filter="sky"
       >
+                      {isLoading ? (
+                <Spinner />
+              ) : ( 
         <div className={classes.container} style={{ marginTop: "0" }}>
+          {/* Start Loading Area */}
           <GridContainer>
             <GridItem xs={12} sm={6} md={12}>
               <br />
@@ -71,9 +100,17 @@ export default function LandingPage({ ...rest }) {
                 className={classes.title}
                 style={{ padding: "64px 0 0 0", marginBottom: "0" }}
               >
-                BECOME AN APPROVED ACRA LENDING CORRESPONDENT PARTNER</h1>
+                {corrs.length > 0 ? parse(corrs[3].content.rendered.replace(/<[^>]+>/g, '')) : null}
+                </h1>
+
+                {/* <h1 
+                className={classes.title}
+                style={{ padding: "64px 0 0 0", marginBottom: "0" }}
+              >
+                BECOME AN APPROVED ACRA LENDING CORRESPONDENT PARTNER</h1> */}
                 <h4>Acra Correspondent is committed to providing simplicity, consistency and an optimal customer experience.</h4>
               <SectionSignUp />
+
               {/* <Button
                 color="blue"
                 size="lg"
@@ -100,6 +137,7 @@ export default function LandingPage({ ...rest }) {
             </GridItem>
           </GridContainer>
         </div>
+      )} {/* End Loading Area */}
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div {...rest}>
@@ -109,6 +147,7 @@ export default function LandingPage({ ...rest }) {
             className={classes.features5}
             style={{padding: "60px 0"}}
           >
+
             <GridContainer className={classes.margin0}>
               <GridItem
                 xs={12}
@@ -122,6 +161,7 @@ export default function LandingPage({ ...rest }) {
                 <hr style={{ borderColor: "#0033A1" }}/>
                 <h3 className={classes.title}>What You'll Get Access To</h3>
               </GridItem>
+
               <div className={classes.container}>
                 <GridContainer
                   className={classes.gridContainer}
