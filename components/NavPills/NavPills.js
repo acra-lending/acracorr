@@ -109,8 +109,8 @@ NavPills.propTypes = {
   active: PropTypes.number,
   tabs: PropTypes.arrayOf(
     PropTypes.shape({
-      tabButton: PropTypes.string,
-      tabIcon: PropTypes.object,
+      tabButton: PropTypes.any,
+      tabIcon: PropTypes.any,
       tabContent: PropTypes.node
     })
   ).isRequired,

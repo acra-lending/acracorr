@@ -1,4 +1,5 @@
-/*eslint-disable*/ import React, { useState, useEffect } from "react";
+/*eslint-disable*/ 
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import parse from 'html-react-parser';
 // nodejs library to set properties for components
@@ -64,6 +65,7 @@ export default function LandingPage({ ...rest }) {
       );
       
       setCorrs(result.data);
+      console.log(result.data);
       setIsLoading(false);
     };
     fetchData(); 
@@ -88,9 +90,9 @@ export default function LandingPage({ ...rest }) {
         image={require("assets/img/bg1-color.jpg")} 
         filter="sky"
       >
-                      {isLoading ? (
-                <Spinner />
-              ) : ( 
+      {isLoading ? (
+        <Spinner />
+      ) : ( 
         <div className={classes.container} style={{ marginTop: "0" }}>
           {/* Start Loading Area */}
           <GridContainer>
@@ -100,7 +102,7 @@ export default function LandingPage({ ...rest }) {
                 className={classes.title}
                 style={{ padding: "64px 0 0 0", marginBottom: "0" }}
               >
-                {corrs.length > 0 ? parse(corrs[3].content.rendered.replace(/<[^>]+>/g, '')) : null}
+                {corrs.length > 0 ? parse(corrs[8].content.rendered.replace(/<[^>]+>/g, '')) : null}
                 </h1>
 
                 {/* <h1 
@@ -108,7 +110,7 @@ export default function LandingPage({ ...rest }) {
                 style={{ padding: "64px 0 0 0", marginBottom: "0" }}
               >
                 BECOME AN APPROVED ACRA LENDING CORRESPONDENT PARTNER</h1> */}
-                <h4>Acra Correspondent is committed to providing simplicity, consistency and an optimal customer experience.</h4>
+                <h4>{corrs.length > 0 ? parse(corrs[7].content.rendered.replace(/<[^>]+>/g, '')) : null}</h4>
               <SectionSignUp />
 
               {/* <Button
@@ -157,9 +159,9 @@ export default function LandingPage({ ...rest }) {
                   classes.mlAuto + " " + classes.mrAuto + " " + classes.textCenter
                 }
               >
-                <h4 className={classes.title} style={{ paddingTop: "0", marginTop: "0"}}>Acra lending, formerly Citadel Servicing Corporation, is an experienced non-Agency mortgage banking company recently acquired by a well-established private equity firm. Under new ownership and leadership, we are committed to completing in house eligibility reviews with no reliance on third party reviews for due diligence or third-party appraisal reviews, reducing the time it takes to complete a loan.</h4>
+                <h4 className={classes.title} style={{ paddingTop: "0", marginTop: "0"}}>{corrs.length > 0 ? parse(corrs[6].content.rendered.replace(/<[^>]+>/g, '')) : null}</h4>
                 <hr style={{ borderColor: "#0033A1" }}/>
-                <h3 className={classes.title}>What You'll Get Access To</h3>
+                <h3 className={classes.title}>{corrs.length > 0 ? parse(corrs[5].content.rendered.replace(/<[^>]+>/g, '')) : null}</h3>
               </GridItem>
 
               <div className={classes.container}>
@@ -172,10 +174,10 @@ export default function LandingPage({ ...rest }) {
                       vertical
                       className={classes.infoArea5}
                       icon={Apps}
-                      title="Industry Leading Non-QM Programs"
+                      title={corrs.length > 0 ? parse(corrs[4].content.rendered.replace(/<[^>]+>/g, '')) : null}
                       description={
                         <p>
-                          Extensive range of products to meet lending portfolios
+                          {corrs.length > 0 ? parse(corrs[4].acf.body.replace(/<[^>]+>/g, '')) : null}
                         </p>
                       }
                       iconColor="info"
@@ -186,10 +188,10 @@ export default function LandingPage({ ...rest }) {
                       vertical
                       className={classes.infoArea5}
                       icon={Assessment}
-                      title="Daily Rate Sheets/Pricing"
+                      title={corrs.length > 0 ? parse(corrs[3].content.rendered.replace(/<[^>]+>/g, '')) : null}
                       description={
                         <p>
-                          Competitive Rates
+                          {corrs.length > 0 ? parse(corrs[3].acf.body.replace(/<[^>]+>/g, '')) : null}
                         </p>
                       }
                       iconColor="danger"
@@ -200,10 +202,10 @@ export default function LandingPage({ ...rest }) {
                       vertical
                       className={classes.infoArea5}
                       icon={Group}
-                      title="A Dedicated Correspondent Executive"
+                      title={corrs.length > 0 ? parse(corrs[2].content.rendered.replace(/<[^>]+>/g, '')) : null}
                       description={
                         <p>
-                          Highly trained executives with a deep understanding of the Non-QM industry
+                          {corrs.length > 0 ? parse(corrs[2].acf.body.replace(/<[^>]+>/g, '')) : null}
                         </p>
                       }
                       iconColor="primary"
@@ -219,10 +221,10 @@ export default function LandingPage({ ...rest }) {
                       vertical
                       className={classes.infoArea5}
                       icon={Computer}
-                      title="Training Videos, Tutorials and Webinars"
+                      title={corrs.length > 0 ? parse(corrs[1].content.rendered.replace(/<[^>]+>/g, '')) : null}
                       description={
                         <p>
-                          Not only are our AE’s highly trained, we believe in sharing the knowledge
+                          {corrs.length > 0 ? parse(corrs[1].acf.body.replace(/<[^>]+>/g, '')) : null}
                         </p>
                       }
                     />
@@ -232,10 +234,10 @@ export default function LandingPage({ ...rest }) {
                       vertical
                       className={classes.infoArea5}
                       icon={PhotoSizeSelectActualIcon}
-                      title="Marketing Collateral"
+                      title={corrs.length > 0 ? parse(corrs[0].content.rendered.replace(/<[^>]+>/g, '')) : null}
                       description={
                         <p>
-                          Professionally designed marketing collateral ready to incorporate your brand identity
+                          {corrs.length > 0 ? parse(corrs[0].acf.body.replace(/<[^>]+>/g, '')) : null}
                         </p>
                       }
                     />
