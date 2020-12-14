@@ -53,7 +53,7 @@ InfoArea.defaultProps = {
 
 InfoArea.propTypes = {
   icon: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.any.isRequired,
   description: PropTypes.node.isRequired,
   iconColor: PropTypes.oneOf([
     "primary",

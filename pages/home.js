@@ -57,18 +57,25 @@ export default function LandingPage({ ...rest }) {
   const [corrs, setCorrs] = useState([]) 
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      const result = await axios (
+  const getData = async () => {
+    setIsLoading(true);
+    try {
+      const result = await
+      axios.get(
         `${WEBSITE_URL}/${API}/corr`
-      );
-      
-      setCorrs(result.data);
-      console.log(result.data);
+        )
+      setCorrs(result.data); // set State
       setIsLoading(false);
-    };
-    fetchData(); 
+
+    } catch (err) {
+      console.error(err.message);
+    }
+  } 
+
+  useEffect(() => {
+
+    getData();
+    
   }, []);
 
   const classes = useStyles();
@@ -102,7 +109,7 @@ export default function LandingPage({ ...rest }) {
                 className={classes.title}
                 style={{ padding: "64px 0 0 0", marginBottom: "0" }}
               >
-                {corrs.length > 0 ? parse(corrs[8].content.rendered.replace(/<[^>]+>/g, '')) : null}
+                {corrs.length > 0 ? parse(corrs[8].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}
                 </h1>
 
                 {/* <h1 
@@ -110,7 +117,7 @@ export default function LandingPage({ ...rest }) {
                 style={{ padding: "64px 0 0 0", marginBottom: "0" }}
               >
                 BECOME AN APPROVED ACRA LENDING CORRESPONDENT PARTNER</h1> */}
-                <h4>{corrs.length > 0 ? parse(corrs[7].content.rendered.replace(/<[^>]+>/g, '')) : null}</h4>
+                <h4>{corrs.length > 0 ? parse(corrs[7].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h4>
               <SectionSignUp />
 
               {/* <Button
@@ -159,9 +166,9 @@ export default function LandingPage({ ...rest }) {
                   classes.mlAuto + " " + classes.mrAuto + " " + classes.textCenter
                 }
               >
-                <h4 className={classes.title} style={{ paddingTop: "0", marginTop: "0"}}>{corrs.length > 0 ? parse(corrs[6].content.rendered.replace(/<[^>]+>/g, '')) : null}</h4>
+                <h4 className={classes.title} style={{ paddingTop: "0", marginTop: "0"}}>{corrs.length > 0 ? parse(corrs[6].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h4>
                 <hr style={{ borderColor: "#0033A1" }}/>
-                <h3 className={classes.title}>{corrs.length > 0 ? parse(corrs[5].content.rendered.replace(/<[^>]+>/g, '')) : null}</h3>
+                <h3 className={classes.title}>{corrs.length > 0 ? parse(corrs[5].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h3>
               </GridItem>
 
               <div className={classes.container}>
@@ -174,10 +181,10 @@ export default function LandingPage({ ...rest }) {
                       vertical
                       className={classes.infoArea5}
                       icon={Apps}
-                      title={corrs.length > 0 ? parse(corrs[4].content.rendered.replace(/<[^>]+>/g, '')) : null}
+                      title={corrs.length > 0 ? parse(corrs[4].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}
                       description={
                         <p>
-                          {corrs.length > 0 ? parse(corrs[4].acf.body.replace(/<[^>]+>/g, '')) : null}
+                          {corrs.length > 0 ? parse(corrs[4].acf.body.replace(/<[^>]+>/g, '')) : isLoading}
                         </p>
                       }
                       iconColor="info"
@@ -188,10 +195,10 @@ export default function LandingPage({ ...rest }) {
                       vertical
                       className={classes.infoArea5}
                       icon={Assessment}
-                      title={corrs.length > 0 ? parse(corrs[3].content.rendered.replace(/<[^>]+>/g, '')) : null}
+                      title={corrs.length > 0 ? parse(corrs[3].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}
                       description={
                         <p>
-                          {corrs.length > 0 ? parse(corrs[3].acf.body.replace(/<[^>]+>/g, '')) : null}
+                          {corrs.length > 0 ? parse(corrs[3].acf.body.replace(/<[^>]+>/g, '')) : isLoading}
                         </p>
                       }
                       iconColor="danger"
@@ -202,10 +209,10 @@ export default function LandingPage({ ...rest }) {
                       vertical
                       className={classes.infoArea5}
                       icon={Group}
-                      title={corrs.length > 0 ? parse(corrs[2].content.rendered.replace(/<[^>]+>/g, '')) : null}
+                      title={corrs.length > 0 ? parse(corrs[2].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}
                       description={
                         <p>
-                          {corrs.length > 0 ? parse(corrs[2].acf.body.replace(/<[^>]+>/g, '')) : null}
+                          {corrs.length > 0 ? parse(corrs[2].acf.body.replace(/<[^>]+>/g, '')) : isLoading}
                         </p>
                       }
                       iconColor="primary"
@@ -221,10 +228,10 @@ export default function LandingPage({ ...rest }) {
                       vertical
                       className={classes.infoArea5}
                       icon={Computer}
-                      title={corrs.length > 0 ? parse(corrs[1].content.rendered.replace(/<[^>]+>/g, '')) : null}
+                      title={corrs.length > 0 ? parse(corrs[1].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}
                       description={
                         <p>
-                          {corrs.length > 0 ? parse(corrs[1].acf.body.replace(/<[^>]+>/g, '')) : null}
+                          {corrs.length > 0 ? parse(corrs[1].acf.body.replace(/<[^>]+>/g, '')) : isLoading}
                         </p>
                       }
                     />
@@ -234,10 +241,10 @@ export default function LandingPage({ ...rest }) {
                       vertical
                       className={classes.infoArea5}
                       icon={PhotoSizeSelectActualIcon}
-                      title={corrs.length > 0 ? parse(corrs[0].content.rendered.replace(/<[^>]+>/g, '')) : null}
+                      title={corrs.length > 0 ? parse(corrs[0].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}
                       description={
                         <p>
-                          {corrs.length > 0 ? parse(corrs[0].acf.body.replace(/<[^>]+>/g, '')) : null}
+                          {corrs.length > 0 ? parse(corrs[0].acf.body.replace(/<[^>]+>/g, '')) : isLoading}
                         </p>
                       }
                     />

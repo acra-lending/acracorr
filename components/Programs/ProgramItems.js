@@ -30,18 +30,25 @@ export default function SectionPills() {
   const [corrs, setCorrs] = useState([]) 
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      const result = await axios (
+  const getData = async () => {
+    setIsLoading(true);
+    try {
+      const result = await
+      axios.get(
         `${WEBSITE_URL}/${API}/corrprograms`
-      );
-      
-      setCorrs(result.data);
-      console.log(result.data);
+        )
+      setCorrs(result.data); // set State
       setIsLoading(false);
-    };
-    fetchData(); 
+
+    } catch (err) {
+      console.error(err.message);
+    }
+  } 
+
+  useEffect(() => {
+
+    getData();
+    
   }, []);
 
 
