@@ -108,7 +108,7 @@ export default function LandingPage({ ...rest }) {
               <br />
               <h1 
                 className={classes.title}
-                style={{ padding: "64px 0 0 0", fontWeight: "bold" }}
+                style={{ padding: "80px 0 0 0", fontWeight: "bold" }}
               >
                 {corrs.length > 0 ? parse(corrs[8].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}
                 </h1>

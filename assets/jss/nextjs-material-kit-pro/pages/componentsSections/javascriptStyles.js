@@ -93,7 +93,7 @@ const javascriptStyles = theme => ({
     "@media (min-width: 1200px)": {
       paddingTop: "4.5rem",
     },
-    padding: "32px 0 0"
+    padding: "32px 0 32px"
   },
   space50: {
     height: "50px",
