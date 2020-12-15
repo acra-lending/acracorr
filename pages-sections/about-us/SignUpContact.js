@@ -59,12 +59,14 @@ export default function SectionContact() {
   } = useFormik({
     initialValues: {
       fullname: '',
+      company: '',
       email: '',
       phone: '',
       message: '',
     },
     onSubmit: ({
       fullname,
+      company,
       email,
       phone,
       message
@@ -73,6 +75,7 @@ export default function SectionContact() {
       //create a FormData field for each form field
       const bodyFormData = new FormData();
       bodyFormData.set('your-name', fullname);
+      bodyFormData.set('your-company', company);
       bodyFormData.set('your-email', email);
       bodyFormData.set('your-tel', phone);
 
@@ -130,6 +133,18 @@ export default function SectionContact() {
                   type="text"
                   onChange={handleChange}
                   value={values.fullname}
+                  required
+                  formControlProps={{
+                    fullWidth: true
+                  }}
+                />
+                <CustomInput
+                  labelText="Your Company"
+                  name="company"
+                  id="company"
+                  type="text"
+                  onChange={handleChange}
+                  value={values.company}
                   required
                   formControlProps={{
                     fullWidth: true
