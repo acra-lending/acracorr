@@ -419,7 +419,7 @@ const mainRaised = {
 
 const mainRaisedContact = {
   "@media (max-width: 576px)": {
-    marginTop: "-400px"
+    marginTop: "-350px"
   },
   "@media (max-width: 830px)": {
     marginLeft: "10px",
