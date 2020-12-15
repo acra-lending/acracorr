@@ -1,13 +1,10 @@
 import React from "react";
-
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
 import Schedule from "@material-ui/icons/Schedule";
 import List from "@material-ui/icons/List";
-
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -31,13 +28,6 @@ export default function SectionPills() {
         <div className={classes.container}>
             
             <div id="navigation-pills">
-
-            
-            {/* <div className={classes.title}>
-                <h3>
-                <small>Overview</small>
-                </h3>
-            </div> */}
                 <ProgramItems />
             </div>
         </div>

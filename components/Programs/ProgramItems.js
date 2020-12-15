@@ -66,7 +66,7 @@ export default function SectionPills() {
                 contentGrid: { xs: 12, sm: 9, md: 9 }
                 }}
                 tabs={
-                    corrs.map((corr, index) => (
+                    corrs.map((corr) => (
                         {
                             tabButton: [corr.title.rendered],
                             // tabIcon: Dashboard,

@@ -28,6 +28,7 @@ import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Spinner from 'components/Spinner/Spinner';
+import FooterItems from "components/Footer/FooterItems.js";
 
 
 
@@ -267,103 +268,7 @@ export default function LandingPage({ ...rest }) {
           {/* Feature 5 END */}
         </div>
       </div>
-      <Footer
-        content={
-          <div>
-            <div className={classes.center}>
-              <List className={classes.list}>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="#"
-                    className={classes.block}
-                  >
-                    Company Information
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="#"
-                    className={classes.block}
-                  >
-                    Terms of Use
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="#"
-                    className={classes.block}
-                  >
-                    Privacy Policy
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="#"
-                    className={classes.block}
-                  >
-                    CCPA
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="#"
-                    className={classes.block}
-                  >
-                    State Licensing Information
-                  </a>
-                </ListItem>
-              </List>
-            </div>
-            <div className={classes.center}>
-              <List className={classes.list}>
-                <ListItem className={classes.inlineBlock}>
-                <img 
-                    src={require("assets/img/equal-lenders-logo.png")}
-                    className="footer-logo"
-                  />
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <p>&copy; {1900 + new Date().getYear()} Acra Lending.{" "}
-                    All rights reserved. NMLS ID # 144549
-                    <a 
-                    href="https://nmlsconsumeraccess.org/"
-                  >
-                  <img 
-                    src={require("assets/img/nmls-logo.png")}
-                    className="footer-logo"
-                  />
-                  </a>
-                  </p>
-
-                </ListItem>
-                {/* <ListItem className={classes.inlineBlock}>
-                  <a 
-                    href="https://nmlsconsumeraccess.org/"
-                    className={classes.block}
-                  >
-                  <img 
-                    src={require("assets/img/nmls-logo.png")}
-                    className="footer-logo"
-                  />
-                  {" "}NMLS: #144549
-                  </a>
-                </ListItem> */}
-              </List>
-            </div>
-            {/* <div className={classes.center}>
-              &copy; {1900 + new Date().getYear()} Acra Lending{" "}
-              <Favorite className={classes.icon} /> by{" "}
-              <a
-                href="https://www.creative-tim.com/?ref=njsmkp-landing"
-                target="_blank"
-              >
-                Creative Tim
-              </a>{" "}
-              for a better web.
-            </div> */}
-          </div>
-        }
-      />
+      <FooterItems />
     </div>
   );
 }
