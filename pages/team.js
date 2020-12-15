@@ -1,5 +1,7 @@
 /*eslint-disable*/
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import parse from "html-react-parser";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -15,6 +17,7 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Footer from "components/Footer/Footer.js";
+import Spinner from 'components/Spinner/Spinner';
 // sections for this page
 import SectionDescription from "pages-sections/about-us/SectionDescription.js";
 import SectionTeam from "pages-sections/about-us/SectionTeam.js";
@@ -32,6 +35,34 @@ export default function AboutUsPage() {
     document.body.scrollTop = 0;
   });
   const classes = useStyles();
+
+  const WEBSITE_URL = 'https://bt.citadelservicing.com';
+  const API = 'wp-json/wp/v2';
+
+  const [corrs, setCorrs] = useState([]) 
+  const [isLoading, setIsLoading] = useState(false);
+
+  const getData = async () => {
+    setIsLoading(true);
+    try {
+      const result = await
+      axios.get(
+        `${WEBSITE_URL}/${API}/corrteam`
+        )
+      setCorrs(result.data); // set State
+      setIsLoading(false);
+
+    } catch (err) {
+      console.error(err.message);
+    }
+  } 
+
+  useEffect(() => {
+
+    getData();
+    
+  }, []);
+
   return (
     <div>
       <Header
@@ -47,7 +78,10 @@ export default function AboutUsPage() {
       <Parallax image={require("assets/img/bg-our-team.jpg")} filter="sky" small>
         <div className={classes.container}>
           <GridContainer justify="center">
-            <GridItem
+            {isLoading ? (
+              <Spinner />
+            ) : (
+              <GridItem
               md={8}
               sm={8}
               className={classNames(
@@ -56,11 +90,13 @@ export default function AboutUsPage() {
                 classes.textCenter
               )}
             >
-              <h1 className={classes.title} style={{ color: "#fff", marginTop: "-12px", paddingTop: "12px" }}>Our Team</h1>
+              <h1 className={classes.title} style={{ color: "#fff", marginTop: "-12px", paddingTop: "12px" }}>{corrs.length > 0 ? parse(corrs[0].title.rendered) : isLoading}</h1>
               <h4>
-                The leadership team at Acra Lending is a group of highly-experienced and dedicated senior managers with an average of 25 years’ experience in Non-QM mortgage origination, underwriting and servicing.
+                {corrs.length > 0 ? parse(corrs[0].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}
               </h4>
             </GridItem>
+            )}
+
           </GridContainer>
         </div>
       </Parallax>

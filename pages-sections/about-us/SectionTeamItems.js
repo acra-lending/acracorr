@@ -58,36 +58,9 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 
-export default function SectionTeam() {
+export default function SectionTeamItem(corrs) {
   const classes = useStyles();
-
-  const WEBSITE_URL = 'https://bt.citadelservicing.com';
-  const API = 'wp-json/wp/v2';
-
-  const [corrs, setCorrs] = useState([]); 
-  const [isLoading, setIsLoading] = useState(false);
-
-  const getData = async () => {
-    setIsLoading(true);
-    try {
-      const result = await
-      axios.get(
-        `${WEBSITE_URL}/${API}/corrmembers?_embed`
-        )
-      setCorrs(result.data); // set State
-      console.log(result.data)
-      setIsLoading(false);
-
-    } catch (err) {
-      console.error(err.message);
-    }
-  }
-
-  useEffect(() => {
-
-    getData();
-    
-  }, []);
+  console.log(corrs)
 
   return (
       <div className={classes.team}>
@@ -110,15 +83,11 @@ export default function SectionTeam() {
             </GridItem>
           </GridContainer>
           <GridContainer>
-            {isLoading ? (
-              <Spinner />
-            ) : (
-              corrs.map(corr => (
-                <GridItem xs={12} sm={4} md={4} key={corr.id}>
+              <GridItem xs={12} sm={4} md={4}>
                 <Card plain profile>
                   <CardHeader image plain>
                     <div>
-                      <img src={corr._embedded['wp:featuredmedia']['0'].media_details.sizes.full.source_url} alt={corr.acf.name} />
+                      <img src={cardProfile1} alt="..." />
                     </div>
                     <div
                       className={classes.coloredShadow}
@@ -129,23 +98,20 @@ export default function SectionTeam() {
                     />
                   </CardHeader>
                   <CardBody plain>
-                    <h4 className={classes.cardTitle}>{parse(corr.acf.name)}</h4>
+                    <h4 className={classes.cardTitle}>{parse(corrs.acf.name)}</h4>
                     <Muted>
-                      <h6 className={classes.cardCategory}>{parse(corr.acf.title)}</h6>
+                      <h6 className={classes.cardCategory}>{parse(corrs.acf.title)}</h6>
                     </Muted>
                   </CardBody>
                   <CardFooter profile plain className={classes.justifyContent}>
                     <Button color="blue" justIcon>
-                      <a href={"mailto:" + corr.acf.email} style={{ color: "inherit" }}>
+                      <a href={"mailto:" + corrs.acf.email} style={{ color: "inherit" }}>
                       <MailOutlineIcon />
                       </a>
                     </Button>
                   </CardFooter>
                 </Card>
               </GridItem>
-              )).reverse()
-            )}
-
           </GridContainer>
         </div>
       </div>
