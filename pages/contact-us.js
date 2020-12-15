@@ -32,7 +32,7 @@ import Button from "components/CustomButtons/Button.js";
 import Footer from "components/Footer/Footer.js";
 import FooterItems from "components/Footer/FooterItems.js";
 import Parallax from "components/Parallax/Parallax.js";
-import ContactForm from "components/contactForm/ContactForm.js";
+import ContactForm from "components/ContactForm/ContactForm.js";
 import Spinner from 'components/Spinner/Spinner';
 
 
