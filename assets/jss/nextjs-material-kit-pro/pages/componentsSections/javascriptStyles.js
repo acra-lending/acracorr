@@ -88,10 +88,10 @@ const javascriptStyles = theme => ({
   },
   headingButtons: {
     "@media (min-width: 992px) and (max-width: 1199px)": {
-      paddingTop: "180px",
+      paddingTop: "5rem",
     },
     "@media (min-width: 1200px)": {
-      paddingTop: "200px",
+      paddingTop: "4.5rem",
     },
     padding: "32px 0 0"
   },

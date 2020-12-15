@@ -144,10 +144,10 @@ const landingPageStyle = {
   infoArea5: {},
   heading: {
     "@media (min-width: 992px) and (max-width: 1199px)": {
-      paddingBottom: "120px",
+      paddingBottom: "4rem",
     },
     "@media (min-width: 1200px)": {
-      paddingBottom: "180px",
+      paddingBottom: "4.5rem",
     }
   }
 };
