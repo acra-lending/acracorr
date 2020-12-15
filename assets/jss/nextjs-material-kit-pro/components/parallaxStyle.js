@@ -113,15 +113,15 @@ const parallaxStyle = {
   },
   skyColor: {
     "&:before": {
-      background: "rgba(" + hexToRgb(skyColor) + ", 0.8)",
+      background: "rgba(" + hexToRgb(skyColor) + ", 0.3)",
     },
     "&:after": {
       background:
         "linear-gradient(152deg,rgba(" +
         hexToRgb(grayColor[26]) +
-        ",.8),rgba(" +
+        ",.5),rgba(" +
         hexToRgb(skyColor) +
-        ",.5))"
+        ",.4))"
     },
     "&:after,&:before": {
       position: "absolute",

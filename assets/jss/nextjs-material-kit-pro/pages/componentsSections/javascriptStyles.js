@@ -86,6 +86,15 @@ const javascriptStyles = theme => ({
   infoArea: {
     padding: "0px 0px 20px !important"
   },
+  headingButtons: {
+    "@media (min-width: 992px) and (max-width: 1199px)": {
+      paddingTop: "180px",
+    },
+    "@media (min-width: 1200px)": {
+      paddingTop: "200px",
+    },
+    padding: "32px 0 0"
+  },
   space50: {
     height: "50px",
     display: "block"

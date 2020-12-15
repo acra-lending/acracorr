@@ -95,8 +95,8 @@ export default function LandingPage({ ...rest }) {
       />
 
       <Parallax 
-        image={require("assets/img/bg1-color.jpg")} 
-        filter="sky"
+        image={require("assets/img/bg1-blue.jpg")} 
+        filter="dark"
       >
       {isLoading ? (
         <Spinner />
@@ -104,7 +104,7 @@ export default function LandingPage({ ...rest }) {
         <div className={classes.container} style={{ marginTop: "0" }}>
           {/* Start Loading Area */}
           <GridContainer>
-            <GridItem xs={12} sm={6} md={12}>
+            <GridItem xs={12} sm={6} md={12} className={classes.heading}>
               <br />
               <h1 
                 className={classes.title}
@@ -118,7 +118,7 @@ export default function LandingPage({ ...rest }) {
                 style={{ padding: "64px 0 0 0", marginBottom: "0" }}
               >
                 BECOME AN APPROVED ACRA LENDING CORRESPONDENT PARTNER</h1> */}
-                <h4 className={classes.heading}>{corrs.length > 0 ? parse(corrs[7].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h4>
+                <h4>{corrs.length > 0 ? parse(corrs[7].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h4>
               <SectionSignUp />
 
               {/* <Button
