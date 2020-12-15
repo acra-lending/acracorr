@@ -92,7 +92,7 @@ export default function AboutUsPage() {
               )}
             >
               <h1 className={classes.title} style={{ color: "#fff", marginTop: "-12px", paddingTop: "12px" }}>{corrs.length > 0 ? parse(corrs[0].title.rendered) : isLoading}</h1>
-              <h4 style={{ marginBottom: "0" }}>
+              <h4 style={{ paddingBottom: "0" }}>
                 {corrs.length > 0 ? parse(corrs[0].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}
               </h4>
             </GridItem>

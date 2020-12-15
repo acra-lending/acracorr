@@ -141,7 +141,15 @@ const landingPageStyle = {
     margin: "0 auto",
     padding: "10px 0 0px"
   },
-  infoArea5: {}
+  infoArea5: {},
+  heading: {
+    "@media (min-width: 992px)": {
+      paddingBottom: "200px",
+    },
+    "@media (min-width: 1200px)": {
+      paddingBottom: "250px",
+    }
+  }
 };
 
 export default landingPageStyle;

@@ -6,8 +6,6 @@ import parse from 'html-react-parser';
 import PropTypes from "prop-types";
 // nodejs library that concatenates classes
 import classNames from "classnames";
-// custom CSS
-import customClasses from "assets/css/home.css";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
@@ -109,7 +107,7 @@ export default function LandingPage({ ...rest }) {
             <GridItem xs={12} sm={6} md={12}>
               <br />
               <h1 
-                className={classes.title + customClasses.h1}
+                className={classes.title}
                 style={{ padding: "64px 0 0 0", fontWeight: "bold" }}
               >
                 {corrs.length > 0 ? parse(corrs[8].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}
@@ -120,7 +118,7 @@ export default function LandingPage({ ...rest }) {
                 style={{ padding: "64px 0 0 0", marginBottom: "0" }}
               >
                 BECOME AN APPROVED ACRA LENDING CORRESPONDENT PARTNER</h1> */}
-                <h4 className={customClasses.h4}>{corrs.length > 0 ? parse(corrs[7].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h4>
+                <h4 className={classes.heading}>{corrs.length > 0 ? parse(corrs[7].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h4>
               <SectionSignUp />
 
               {/* <Button
