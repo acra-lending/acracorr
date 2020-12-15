@@ -59,12 +59,14 @@ export default function SectionContact() {
   } = useFormik({
     initialValues: {
       fullname: '',
+      company: '',
       email: '',
       phone: '',
       message: '',
     },
     onSubmit: ({
       fullname,
+      company,
       email,
       phone,
       message
@@ -73,6 +75,7 @@ export default function SectionContact() {
       //create a FormData field for each form field
       const bodyFormData = new FormData();
       bodyFormData.set('your-name', fullname);
+      bodyFormData.set('your-company', company);
       bodyFormData.set('your-email', email);
       bodyFormData.set('your-tel', phone);
       bodyFormData.set('your-message', message);
@@ -142,8 +145,6 @@ export default function SectionContact() {
                     fullWidth: true
                   }}
                 />
-              </GridItem>
-              <GridItem md={6} sm={6}>
                 <CustomInput
                   labelText="Email address"
                   name="email"
@@ -158,6 +159,18 @@ export default function SectionContact() {
                 />
               </GridItem>
               <GridItem md={6} sm={6}>
+              <CustomInput
+                  labelText="Your Company"
+                  name="company"
+                  id="company"
+                  type="text"
+                  onChange={handleChange}
+                  value={values.company}
+                  required
+                  formControlProps={{
+                    fullWidth: true
+                  }}
+                />
                 <CustomInput
                   labelText="Phone"
                   name="phone"
