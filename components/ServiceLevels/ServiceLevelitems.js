@@ -141,32 +141,29 @@ export default function SectionCards() {
               <h3 style={{ textAlign: "center", marginTop: "0" }}>Service Levels</h3>
             </div>
             <GridContainer>
-            {isLoading ? (
-                <Spinner />
-            ) : (
-                corrs.map(corr => (
+                {corrs.map(corr => (
                     <GridItem xs={12} sm={12} md={12} lg={12}>
-                    <div className={classes.rotatingCardContainer}>
-                      <Card color="rose" className={classes.cardRotate}>
-                        <div className={classes.front + " " + classes.wrapperBlue}>
-                          <CardBody color className={classes.cardBodyRotate}>
-                            <h4 className={classes.cardTitleWhite} style={{ textAlign: "center" }}>
-                              {parse(corr.title.rendered)}
-                            </h4>
-                          </CardBody>
-                        </div>
-                        <div className={classes.back + " " + classes.wrapperSky}>
-                          <CardBody className={classes.cardBodyRotate}>
-                            <h4 className={classes.cardTitleWhite}>
-                                {parse(corr.acf.body)}
-                            </h4>
-                          </CardBody>
-                        </div>
-                      </Card>
-                    </div>
-                  </GridItem>
-                )).reverse()
-            )}
+                      <div className={classes.rotatingCardContainer}>
+                        <Card color="rose" className={classes.cardRotate}>
+                          <div className={classes.front + " " + classes.wrapperBlue}>
+                            <CardBody color className={classes.cardBodyRotate}>
+                              <h4 className={classes.cardTitleWhite} style={{ textAlign: "center" }}>
+                                {parse(corr.title.rendered)}
+                              </h4>
+                            </CardBody>
+                          </div>
+                          <div className={classes.back + " " + classes.wrapperSky}>
+                            <CardBody className={classes.cardBodyRotate}>
+                              <h4 className={classes.cardTitleWhite}>
+                                  {parse(corr.acf.body)}
+                              </h4>
+                            </CardBody>
+                          </div>
+                        </Card>
+                      </div>
+                    </GridItem>
+                  )).reverse()
+                }
             </GridContainer>
           </div>
         </div>
