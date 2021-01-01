@@ -48,7 +48,7 @@ export default function FooterItems() {
               <List className={classes.list}>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="#"
+                    href="https://acralending.com/company"
                     className={classes.block}
                   >
                     Company Information
@@ -56,7 +56,7 @@ export default function FooterItems() {
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="#"
+                    href="https://acralending.com/terms-of-use"
                     className={classes.block}
                   >
                     Terms of Use
@@ -64,7 +64,7 @@ export default function FooterItems() {
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="#"
+                    href="https://acralending.com/privacy-policy"
                     className={classes.block}
                   >
                     Privacy Policy
@@ -72,7 +72,7 @@ export default function FooterItems() {
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="#"
+                    href="https://acralending.com/ccpa"
                     className={classes.block}
                   >
                     CCPA
@@ -80,7 +80,7 @@ export default function FooterItems() {
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="#"
+                    href="https://acralending.com/company/#state-licensing-information"
                     className={classes.block}
                   >
                     State Licensing Information
