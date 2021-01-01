@@ -35,6 +35,7 @@ const navPillsStyle = theme => ({
     display: "block"
   },
   pills: {
+    border: "1px solid" + grayColor[6],
     float: "left",
     position: "relative",
     display: "block",
@@ -47,7 +48,7 @@ const navPillsStyle = theme => ({
     height: "auto",
     opacity: "1",
     maxWidth: "100%",
-    margin: "0 5px",
+    margin: "0 0px",
     minHeight: "80px",
     lineHeight: "24px",
     textTransform: "uppercase",
