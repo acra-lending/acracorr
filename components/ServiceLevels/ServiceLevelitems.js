@@ -138,7 +138,7 @@ export default function SectionCards() {
         <div id="morphingCards" className="cd-section">
           <div className={classes.container}>
             <div className={classes.title} style={{ marginTop: "0" }}>
-            <h3 style={{ textAlign: "center", marginTop: "0" }}><strong>Service Levels</strong></h3>
+            <h3 style={{ textAlign: "center", marginTop: "0", fontWeight: "700" }}>Service Levels</h3>
             </div>
             <GridContainer>
                 {corrs.map(corr => (
