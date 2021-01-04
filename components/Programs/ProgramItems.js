@@ -24,7 +24,7 @@ const useStyles = makeStyles(pillsStyle);
 export default function SectionPills() {
   const classes = useStyles();
 
-  const WEBSITE_URL = 'https://bt.citadelservicing.com';
+  const WEBSITE_URL = 'https://acralending.com';
   const API = 'wp-json/wp/v2';
 
   const [corrs, setCorrs] = useState([]) 

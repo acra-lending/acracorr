@@ -66,7 +66,7 @@ export default function SectionCards() {
   const [activeRotate2, setActiveRotate2] = React.useState("");
   const [activeRotate3, setActiveRotate3] = React.useState("");
 
-  const WEBSITE_URL = 'https://bt.citadelservicing.com';
+  const WEBSITE_URL = 'https://acralending.com';
   const API = 'wp-json/wp/v2';
 
   const [corrs, setCorrs] = useState([]) 
