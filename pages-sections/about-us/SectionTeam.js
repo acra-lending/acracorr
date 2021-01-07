@@ -19,37 +19,16 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import { makeStyles } from "@material-ui/core/styles";
 import Slide from "@material-ui/core/Slide";
 
 // @material-ui/icons
 import Close from "@material-ui/icons/Close";
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 
 import teamStyle from "assets/jss/nextjs-material-kit-pro/pages/aboutUsSections/teamStyle.js";
 import javascriptStyles from "assets/jss/nextjs-material-kit-pro/pages/componentsSections/javascriptStyles.js";
-
-import FaceMarc from "assets/img/faces/marc.jpg";
-import FaceChristian from "assets/img/faces/christian.jpg";
-import FaceKendall from "assets/img/faces/kendall.jpg";
-import FaceAvatar from "assets/img/faces/avatar.jpg";
-import bg7 from "assets/img/bg7.jpg";
-import city from "assets/img/examples/city.jpg";
-import marc from "assets/img/faces/marc.jpg";
-import christian from "assets/img/faces/christian.jpg";
-import kendall from "assets/img/faces/kendall.jpg";
-import avatar from "assets/img/faces/avatar.jpg";
-import cardProfile1 from "assets/img/team/KeithLind.jpg";
-import cardProfile2 from "assets/img/team/KyleGunderlock.jpg";
-import cardProfile3 from "assets/img/team/JeffreyLemieux.jpeg";
-import cardProfile4 from "assets/img/team/MarcFeltman.jpg";
-import cardProfile5 from "assets/img/team/AndyGauder.jpg";
-import cardProfile6 from "assets/img/team/ToddLautzenheiser.jpg";
-import cardProfile7 from "assets/img/team/avatar1.png";
-import cardProfile1Square from "assets/img/faces/card-profile1-square.jpg";
-import cardProfile2Square from "assets/img/faces/card-profile2-square.jpg";
-import cardProfile4Square from "assets/img/faces/card-profile4-square.jpg";
-import cardProfile6Square from "assets/img/faces/card-profile6-square.jpg";
 
 const useStyles = makeStyles(teamStyle, javascriptStyles);
 
@@ -61,7 +40,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 export default function SectionTeam() {
   const classes = useStyles();
 
-  const WEBSITE_URL = 'https://bt.citadelservicing.com';
+  const WEBSITE_URL = 'https://acralending.com';
   const API = 'wp-json/wp/v2';
 
   const [corrs, setCorrs] = useState([]); 
@@ -123,7 +102,7 @@ export default function SectionTeam() {
                     <div
                       className={classes.coloredShadow}
                       style={{
-                        backgroundImage: corr._embedded['wp:featuredmedia']['0'].source_url,
+                        backgroundImage: `url(${corr._embedded['wp:featuredmedia']['0'].source_url})`,
                         opacity: "1"
                       }}
                     />
@@ -135,11 +114,18 @@ export default function SectionTeam() {
                     </Muted>
                   </CardBody>
                   <CardFooter profile plain className={classes.justifyContent}>
-                    <Button color="blue" justIcon>
+                    <Button color="blue" justIcon style={{ margin: "0.315rem 10px" }}>
                       <a href={"mailto:" + corr.acf.email} style={{ color: "inherit" }}>
                       <MailOutlineIcon />
                       </a>
                     </Button>
+                    {corr.acf.cell.length > 0 ? 
+                    <Button color="blue" justIcon>
+                      <a href={"tel:" + corr.acf.cell} style={{ color: "inherit" }}>
+                      <PhoneAndroidIcon />
+                      </a>
+                    </Button>
+                    : null}
                   </CardFooter>
                 </Card>
               </GridItem>
