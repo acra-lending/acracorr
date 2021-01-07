@@ -478,15 +478,15 @@ export default function SectionSignUp() {
             </Dialog> */}
             {/* SIGNUP MODAL END */}
             </GridItem>
-            <GridItem xs={12} sm={10} md={4} lg={3}>
+            {/* <GridItem xs={12} sm={10} md={4} lg={3}> */}
             {/* BUTTON SIGNUP MODAL */}
-            <Button 
+            {/* <Button 
                 color="blue"
                 size="lg"
                 block  
                 onClick={Nothing}>
                 Loan Engine
-            </Button>
+            </Button> */}
             {/* SIGNUP MODAL START */}
             {/* <Dialog
                 classes={{
@@ -694,7 +694,7 @@ export default function SectionSignUp() {
                 </Card>
             </Dialog> */}
             {/* SIGNUP MODAL END */}
-            </GridItem>
+            {/* </GridItem> */}
         </GridContainer>
       </div>
     </div>
