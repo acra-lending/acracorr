@@ -114,18 +114,29 @@ export default function SectionTeam() {
                     </Muted>
                   </CardBody>
                   <CardFooter profile plain className={classes.justifyContent}>
-                    <Button color="blue" justIcon style={{ margin: "0.315rem 10px" }}>
-                      <a href={"mailto:" + corr.acf.email} style={{ color: "inherit" }}>
-                      <MailOutlineIcon />
-                      </a>
-                    </Button>
-                    {corr.acf.cell.length > 0 ? 
-                    <Button color="blue" justIcon>
-                      <a href={"tel:" + corr.acf.cell} style={{ color: "inherit" }}>
-                      <PhoneAndroidIcon />
-                      </a>
-                    </Button>
+                    <GridContainer style={{ padding: "0px 15px" }}>
+                    <GridItem xs={12} md={12} lg={12} style={{ display: "flex" }}>
+                      <Button color="blue" justIcon>
+                        <a href={"mailto:" + corr.acf.email} style={{ color: "inherit" }}>
+                        <MailOutlineIcon />
+                        </a>
+                      </Button>
+                        <p style={{ padding: "15px 10px" }}>{corr.acf.email}</p>
+
+                    </GridItem>
+
+                    {corr.acf.cell.length > 0 ?
+                    <GridItem xs={12} md={12} lg={12} style={{ display: "flex" }}> 
+                      <Button color="blue" justIcon>
+                        <a href={"tel:" + corr.acf.cell} style={{ color: "inherit" }}>
+                        <PhoneAndroidIcon />
+                        </a>
+                      </Button>
+                      <p style={{ padding: "15px 10px" }}>{corr.acf.cell}</p>
+                    </GridItem>
                     : null}
+
+                    </GridContainer>
                   </CardFooter>
                 </Card>
               </GridItem>

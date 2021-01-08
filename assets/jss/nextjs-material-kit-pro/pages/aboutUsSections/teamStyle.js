@@ -33,7 +33,7 @@ const teamStyle = {
     color: grayColor[7] + " !important"
   },
   justifyContent: {
-    justifyContent: "center!important"
+    justifyContent: "left!important"
   }
 };
 
