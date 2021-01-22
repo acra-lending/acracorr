@@ -97,9 +97,6 @@ const customInputStyle = {
       color: whiteColor,
       opacity: "1"
     }
-  },
-  labelAsterisk: {
-    color: "red"
   }
 };
 
