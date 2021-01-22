@@ -450,7 +450,7 @@ export default function SectionSignUp() {
             </GridItem>
             <GridItem xs={12} sm={10} md={4} lg={3}>
             {/* BUTTON SIGNUP MODAL */}
-            <Link href="/prescreen">
+            <Link href="/bankstatementanalysis">
                 <Button 
                     color="blue"
                     size="lg"

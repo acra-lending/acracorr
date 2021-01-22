@@ -70,7 +70,7 @@ useEffect(() => {
         <div className={classes.contactContent}>
           <div className={classes.containerLarge}>
           <div className={classes.title}>
-            <h2 style={{ textAlign: "center", marginTop: "0", fontWeight: "700" }}>Pre-Screen Request</h2>
+            <h2 style={{ textAlign: "center", marginTop: "0", fontWeight: "700" }}>Bank Statement Analysis</h2>
           </div>
           <div className={classes.container}>
           <GridContainer>
