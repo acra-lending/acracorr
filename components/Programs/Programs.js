@@ -1,19 +1,10 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
-import Schedule from "@material-ui/icons/Schedule";
-import List from "@material-ui/icons/List";
 // core components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
 import ProgramItems from "components/Programs/ProgramItems.js";
-import NavPills from "components/NavPills/NavPills.js";
 import pillsStyle from "assets/jss/nextjs-material-kit-pro/pages/componentsSections/pillsStyle.js";
 import Spinner from 'components/Spinner/Spinner';
-
-import ServiceLevels from "components/ServiceLevels/ServiceLevels";
 
 const useStyles = makeStyles(pillsStyle);
 

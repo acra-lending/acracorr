@@ -61,6 +61,7 @@ Card.propTypes = {
   color: PropTypes.oneOf([
     "primary",
     "info",
+    "blue",
     "success",
     "warning",
     "danger",

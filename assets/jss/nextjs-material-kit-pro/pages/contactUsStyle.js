@@ -1,5 +1,6 @@
 import {
   container,
+  containerLarge,
   title,
   main,
   mainRaised,
@@ -13,11 +14,12 @@ const contactUsStyle = {
   mainRaised,
   mainRaisedContact,
   title,
+  containerLarge,
   mlAuto,
   description,
   container: {
     ...container,
-    maxWidth: "970px !important"
+    // maxWidth: "970px !important"
   },
   contactContent: {
     paddingBottom: "40px",

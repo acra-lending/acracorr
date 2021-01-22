@@ -2,31 +2,12 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import Checkbox from "@material-ui/core/Checkbox";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import Icon from "@material-ui/core/Icon";
-// @material-ui/icons
-import Timeline from "@material-ui/icons/Timeline";
-import Code from "@material-ui/icons/Code";
-import Group from "@material-ui/icons/Group";
-import Face from "@material-ui/icons/Face";
-import Email from "@material-ui/icons/Email";
-import Check from "@material-ui/icons/Check";
-import Favorite from "@material-ui/icons/Favorite";
 // core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
-import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
 import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import InfoArea from "components/InfoArea/InfoArea.js";
-import CustomInput from "components/CustomInput/CustomInput.js";
 import Programs from "components/Programs/Programs";
 import FooterItems from "components/Footer/FooterItems.js";
 
