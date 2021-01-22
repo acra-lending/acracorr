@@ -1,70 +1,21 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import parse from 'html-react-parser';
-
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import Icon from "@material-ui/core/Icon";
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-import Share from "@material-ui/icons/Share";
-import ChatBubble from "@material-ui/icons/ChatBubble";
-import Schedule from "@material-ui/icons/Schedule";
-import TrendingUp from "@material-ui/icons/TrendingUp";
-import Subject from "@material-ui/icons/Subject";
-import WatchLater from "@material-ui/icons/WatchLater";
-import People from "@material-ui/icons/People";
-import Business from "@material-ui/icons/Business";
-import Check from "@material-ui/icons/Check";
-import Close from "@material-ui/icons/Close";
-import Delete from "@material-ui/icons/Delete";
-import Bookmark from "@material-ui/icons/Bookmark";
-import Refresh from "@material-ui/icons/Refresh";
-import Receipt from "@material-ui/icons/Receipt";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
-import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
-import CardFooter from "components/Card/CardFooter.js";
-import CardAvatar from "components/Card/CardAvatar.js";
-import Info from "components/Typography/Info.js";
-import Danger from "components/Typography/Danger.js";
-import Success from "components/Typography/Success.js";
-import Warning from "components/Typography/Warning.js";
-import Rose from "components/Typography/Rose.js";
-import Button from "components/CustomButtons/Button.js";
 
 import Spinner from 'components/Spinner/Spinner';
 
 import styles from "assets/jss/nextjs-material-kit-pro/pages/componentsSections/sectionCards.js";
 
-import cardBlog1 from "assets/img/examples/card-blog1.jpg";
-import cardBlog2 from "assets/img/examples/card-blog2.jpg";
-import cardBlog3 from "assets/img/examples/card-blog3.jpg";
-import cardBlog5 from "assets/img/examples/card-blog5.jpg";
-import cardBlog6 from "assets/img/examples/card-blog6.jpg";
-import cardProfile1 from "assets/img/examples/card-profile1.jpg";
-import cardProfile4 from "assets/img/examples/card-profile4.jpg";
-import blog1 from "assets/img/examples/blog1.jpg";
-import blog5 from "assets/img/examples/blog5.jpg";
-import blog6 from "assets/img/examples/blog6.jpg";
-import blog8 from "assets/img/examples/blog8.jpg";
-import avatar from "assets/img/faces/avatar.jpg";
-import christian from "assets/img/faces/christian.jpg";
-import marc from "assets/img/faces/marc.jpg";
-import office1 from "assets/img/examples/office1.jpg";
-import color1 from "assets/img/examples/color1.jpg";
-import color2 from "assets/img/examples/color2.jpg";
-import color3 from "assets/img/examples/color3.jpg";
-
 const useStyles = makeStyles(styles);
 
 export default function SectionCards() {
-  const [activeRotate1, setActiveRotate1] = React.useState("");
-  const [activeRotate2, setActiveRotate2] = React.useState("");
-  const [activeRotate3, setActiveRotate3] = React.useState("");
 
   const WEBSITE_URL = 'https://acralending.com';
   const API = 'wp-json/wp/v2';
@@ -142,7 +93,7 @@ export default function SectionCards() {
             </div>
             <GridContainer>
                 {corrs.map(corr => (
-                    <GridItem xs={12} sm={12} md={12} lg={12}>
+                    <GridItem xs={12} sm={12} md={12} lg={12} key={corr.id}>
                       <div className={classes.rotatingCardContainer}>
                         <Card color="rose" className={classes.cardRotate}>
                           <div className={classes.front + " " + classes.wrapperBlue}>

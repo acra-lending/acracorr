@@ -7,6 +7,7 @@ import {
   successColor,
   dangerColor,
   warningColor,
+  blueColor,
   infoColor,
   hexToRgb
 } from "assets/jss/nextjs-material-kit-pro.js";
@@ -144,6 +145,14 @@ const cardStyle = {
   primary: {
     background:
       "linear-gradient(60deg," + primaryColor[1] + ", " + primaryColor[2] + ")",
+    "& h1 small": {
+      color: "rgba(" + hexToRgb(whiteColor) + ", 0.8)"
+    },
+    color: whiteColor
+  },
+  blue: {
+    background:
+      "linear-gradient(60deg," + blueColor + ", " + grayColor[26] + ")",
     "& h1 small": {
       color: "rgba(" + hexToRgb(whiteColor) + ", 0.8)"
     },

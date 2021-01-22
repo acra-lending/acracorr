@@ -1,5 +1,6 @@
 import {
   container,
+  containerLarge,
   whiteColor,
   title,
   mlAuto,
@@ -12,6 +13,7 @@ const basicsStyle = {
   mlAuto,
   mrAuto,
   container,
+  containerLarge,
   ...customSelectStyle,
   ...customCheckboxRadioSwitch,
   sections: {
@@ -35,6 +37,30 @@ const basicsStyle = {
     width: "17px",
     height: "17px",
     color: whiteColor
+  },
+  block: {
+    color: "inherit",
+    padding: "0.9375rem",
+    fontWeight: "500",
+    fontSize: "12px",
+    textTransform: "uppercase",
+    borderRadius: "3px",
+    textDecoration: "none",
+    position: "relative",
+    display: "block"
+  },
+  inlineBlock: {
+    display: "inline-block",
+    padding: "0px",
+    width: "auto"
+  },
+  list: {
+    marginBottom: "0",
+    padding: "0",
+    marginTop: "0"
+  },
+  listItemText: {
+    fontFamily: "'Univers', 'Times New Roman', 'Arial', sans-serif"
   }
 };
 

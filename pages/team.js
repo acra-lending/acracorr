@@ -6,10 +6,6 @@ import parse from "html-react-parser";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
 // core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -20,10 +16,7 @@ import Footer from "components/Footer/Footer.js";
 import FooterItems from "components/Footer/FooterItems.js";
 import Spinner from 'components/Spinner/Spinner';
 // sections for this page
-import SectionDescription from "pages-sections/about-us/SectionDescription.js";
 import SectionTeam from "pages-sections/about-us/SectionTeam.js";
-import SectionServices from "pages-sections/about-us/SectionServices.js";
-import SectionOffice from "pages-sections/about-us/SectionOffice.js";
 import SectionContact from "pages-sections/about-us/SectionContact.js";
 
 import aboutUsStyle from "assets/jss/nextjs-material-kit-pro/pages/aboutUsStyle.js";

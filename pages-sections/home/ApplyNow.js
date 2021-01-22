@@ -8,52 +8,21 @@ import Slide from "@material-ui/core/Slide";
 import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
-import DialogActions from "@material-ui/core/DialogActions";
-import InputLabel from "@material-ui/core/InputLabel";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import FormControl from "@material-ui/core/FormControl";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Tooltip from "@material-ui/core/Tooltip";
-import Popover from "@material-ui/core/Popover";
-import Checkbox from "@material-ui/core/Checkbox";
-import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
-import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Close from "@material-ui/icons/Close";
-import Notifications from "@material-ui/icons/Notifications";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import Assignment from "@material-ui/icons/Assignment";
-import Mail from "@material-ui/icons/Mail";
-import Face from "@material-ui/icons/Face";
-import Timeline from "@material-ui/icons/Timeline";
-import Code from "@material-ui/icons/Code";
 import Group from "@material-ui/icons/Group";
-import Email from "@material-ui/icons/Email";
-import Check from "@material-ui/icons/Check";
 import Apps from "@material-ui/icons/Apps";
 import PhotoSizeSelectActualIcon from "@material-ui/icons/PhotoSizeSelectActual";
-import AttachFile from "@material-ui/icons/AttachFile";
-import Layers from "@material-ui/icons/Layers";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
-import Instruction from "components/Instruction/Instruction.js";
 import Card from "components/Card/Card.js";
-import CardHeader from "components/Card/CardHeader.js";
-import CardBody from "components/Card/CardBody.js";
-import CustomInput from "components/CustomInput/CustomInput.js";
-import CustomFileInput from "components/CustomFileInput/CustomFileInput.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
-import Accordion from "components/Accordion/Accordion.js";
-import ImageUpload from "components/CustomUpload/ImageUpload.js";
 
 import javascriptStyles from "assets/jss/nextjs-material-kit-pro/pages/componentsSections/javascriptStyles.js";
 
 import SignUpContact from "pages-sections/about-us/SignUpContact.js";
-
-import dg1 from "assets/img/dg1.jpg";
-import dg2 from "assets/img/dg2.jpg";
 
 const useStyles = makeStyles(javascriptStyles);
 

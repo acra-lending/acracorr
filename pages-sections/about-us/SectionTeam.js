@@ -7,7 +7,6 @@ import classNames from "classnames";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
-import CardAvatar from "components/Card/CardAvatar.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
@@ -15,15 +14,9 @@ import Button from "components/CustomButtons/Button.js";
 import Muted from "components/Typography/Muted.js";
 import Spinner from 'components/Spinner/Spinner';
 // @material-ui/core components
-import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogActions from "@material-ui/core/DialogActions";
 import { makeStyles } from "@material-ui/core/styles";
 import Slide from "@material-ui/core/Slide";
-
 // @material-ui/icons
-import Close from "@material-ui/icons/Close";
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 

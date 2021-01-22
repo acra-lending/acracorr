@@ -35,12 +35,7 @@ import FooterItems from "components/Footer/FooterItems.js";
 import landingPageStyle from "assets/jss/nextjs-material-kit-pro/pages/landingPageStyle.js";
 import featuresStyle from "assets/jss/nextjs-material-kit-pro/pages/sectionsSections/featuresStyle.js";
 
-import bg9 from "assets/img/bg9.jpg";
-
 // Sections for this page
-import SectionProduct from "pages-sections/landing-page/SectionProduct.js";
-import SectionTeam from "pages-sections/landing-page/SectionTeam.js";
-import SectionWork from "pages-sections/landing-page/SectionWork.js";
 import SectionSignUp from "pages-sections/home/SignUp.js";
 import ApplyNow from "pages-sections/home/ApplyNow.js";
 
