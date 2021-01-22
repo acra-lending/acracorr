@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
-import { useFormik } from 'formik';
+import { useForm } from 'react-hook-form';
 import axios from 'axios';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -43,7 +43,9 @@ const FormStep1 = ({
             {/* <div className={classes.space70} /> */}
                 <div className={classes.title}>
                     <p style={{ textAlign: "left", marginTop: "0", fontWeight: "400" }}><strong>Note:</strong> Requests will only be processed for APPROVED Acra Lending brokers. <br/>
-                    Contact brokers@acralending.com or your AE to confirm Broker ID #</p>
+                    Contact brokers@acralending.com or your AE to confirm Broker ID #<br/><br/>
+                    <p style={{ fontSize: "14px" }}>All fields are required.</p>
+                    </p>
                 </div>
                         <GridItem xs={12} sm={12} md={12} lg={12}>
                             <CustomInput 
@@ -422,6 +424,7 @@ const FormStep4 = ({
 }) => {
     const isEnabled = values.loanAmount.length > 0 && 
         values.appraisedValue.length > 0;
+
     return(
         <>
             <CustomInput
@@ -484,11 +487,10 @@ const FormStep4 = ({
 
 const Confirm = ({
     values,
-    nextStep,
     prevStep,
-    submit
+    nextStep,
 }) => {
-
+  
     const { 
         brokerId, 
         corrSelect,
@@ -509,10 +511,104 @@ const Confirm = ({
         appraisedValue,
         ltv
     } = values
-    
+
+    const { reset, errors } = useForm();
+
+    const WEBSITE_URL = 'https://acralending.com';
+    const FORM_ID = '6777'; // Contact Form ID
+  
+    const [token, setToken] = useState('') 
+    const [isSuccessMessage, setIsSuccessMessage] = useState(false) // Manage success message state
+    const [message, setMessage] = useState('') // Manage success message state
+    const [messageSent, setMessageSent] = useState(false) // Manage sent message state 
+  
+    // useEffect function to authenticate subscriber user to get a token
+    useEffect(() => {
+      axios({
+        method: 'post',
+        url: `${WEBSITE_URL}/wp-json/jwt-auth/v1/token`,
+        data: {
+          username: 'brokertest', // provide a user credential with subscriber role
+          password: 'brokertest1'
+        },
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      }).then(response => {
+        setToken(response.data.token)
+      }).catch(error => console.error( 'Error', error))
+    }, []);
+
+        // submit form
+        const submit = (e) => {
+            e.preventDefault();
+            
+            const bodyFormData = new FormData();
+
+            bodyFormData.append('your-id', brokerId,)
+            bodyFormData.append('corrSelect', corrSelect)
+            bodyFormData.append('your-branch-id', branchId)
+            bodyFormData.append('your-company', company)
+            bodyFormData.append('your-contact', contactName)
+            bodyFormData.append('your-tel', phoneNumber)
+            bodyFormData.append('your-email', email)
+            bodyFormData.append('loan-type', loanType)
+            bodyFormData.append('borrowers-name', borrowerName)
+            bodyFormData.append('borrowers-address', address)
+            bodyFormData.append('borrowers-business-name', businessName)
+            bodyFormData.append('business-type', businessType)
+            bodyFormData.append('percentage-ownership', ownership)
+            bodyFormData.append('bank-statement-type', statementType)
+            bodyFormData.append('business-explanation', explanation)
+            bodyFormData.append('loan-amount', loanAmount)
+            bodyFormData.append('appraised-value', appraisedValue)
+            bodyFormData.append('ltv-calculator', ltvCalculator)
+        
+            // Send it
+            axios({
+            method: 'post',
+            url: `${WEBSITE_URL}/wp-json/contact-form-7/v1/contact-forms/${FORM_ID}/feedback`,
+            data: bodyFormData,
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            }).then(response => {
+            // actions taken when submission goes OK
+            console.log(response)
+            reset({})
+            setMessageSent(true)
+            setMessage(response.data.message)
+            setIsSuccessMessage(true)
+            }).catch(error => {
+            // actions taken when submission goes wrong
+            setMessageSent(true)
+            setMessage(error.message)
+            setIsSuccessMessage(false)
+            console.log(error)
+            })
+
+            setTimeout(() => {nextStep(); window.scrollTo(0,0) }, 4000);
+
+        }
+
+    useEffect(() => {
+        // set timeout 3 seconds to remove error/success message
+        setTimeout(() => {
+        // this will reset messageSent and isSuccessMessage state
+        setMessageSent(false)
+        setIsSuccessMessage(false)
+        }, 3000);
+        // this will be dispatched when isSuccessMessage or messageSent changes its state
+    }, [isSuccessMessage, messageSent])
+
     const classes = useStyles();
+
+    const ltvCalculator = (loanAmount / appraisedValue).toFixed(2);
+
     return(
         <>
+
             <List className={classes.list} style={{ color: "#323E48"}}>
                 <ListItem>
                     <ListItemText classes={{primary:classes.listItemText, secondary:classes.listItemText}} primary="Acra Broker ID or NMLS Number " secondary={brokerId} />
@@ -617,7 +713,7 @@ const Confirm = ({
                     <ListItemText 
                         classes={{primary:classes.listItemText, secondary:classes.listItemText}} 
                         primary="LTV" 
-                        secondary={ltv} />
+                        secondary={ltvCalculator} />
                 </ListItem>
             </List>
             <br/><br/>
@@ -631,13 +727,20 @@ const Confirm = ({
                 </Button>                
                 <Button 
                     color="blue"
-                    onClick={submit} 
+                    onClick={submit}
                     style={{ marginLeft: "10px" }}
-                    // disabled={isSubmitting}
                 >
                     Confirm
                 </Button>
             </GridItem>
+            <div>
+                {messageSent && setIsSuccessMessage && (
+                <div><p style={{ color: "#323E48" }}>{message}</p></div>
+                )}
+                {messageSent && !setIsSuccessMessage && (
+                <div><p style={{ color: "red" }}>{message}</p></div>
+                )}
+            </div>
         </>
     )
 }
@@ -671,49 +774,14 @@ export default function SectionBasics() {
   const [loanAmount, setLoanAmount] = useState("");
   const [appraisedValue, setAppraisedValue] = useState("");
   const [ltv, setLtv] = useState("");
+  
 
-  const WEBSITE_URL = 'https://acralending.com';
-  const API = 'wp-json/wp/v2';
-
-  const [corrs, setCorrs] = useState([]) 
-  const [isLoading, setIsLoading] = useState(false);
-
-//   const getData = async () => {
-//     setIsLoading(true);
-//     try {
-//       const result = await
-//       axios.get(
-//         `${WEBSITE_URL}/${API}/corrprescreen`
-//         )
-//       setCorrs(result.data); // set State
-//       setIsLoading(false);
-
-//     } catch (err) {
-//       console.error(err.message);
-//     }
-// }
-
-// useEffect(() => {
-
-//     getData();
-    
-// }, []);
-
-
-    // submit form
-  const submit = (e) => {
-        e.preventDefault();
-        // Process Form
-        console.log("submit to backend")
-        window.scrollTo(0, 0)
-        nextStep();
-  }
 
   // proceed to the next step
-  const nextStep = () => setStep(step + 1)
+  const nextStep = () => {setStep(step + 1); window.scrollTo(0,0)}
 
   // previous step
-  const prevStep = () => setStep(step - 1)
+  const prevStep = () => {setStep(step - 1); window.scrollTo(0,0)}
 
   const values = { 
       brokerId, 
@@ -783,7 +851,7 @@ export default function SectionBasics() {
                 nextStep={nextStep} 
                 prevStep={prevStep} 
                 values={values} 
-                submit={submit}
+                // submit={submit}
                 />
     case 6:
         return <FileUpload />
