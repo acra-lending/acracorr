@@ -49,15 +49,16 @@ const FormStep1 = ({
                 </div>
                         <GridItem xs={12} sm={12} md={12} lg={12}>
                             <CustomInput 
-                                labelText="Acra Broker ID or NMLS Number"
+                                labelText={<div>Acra Broker ID or NMLS Number<span style={{ color: "red" }}> *</span></div>}
                                 name="your-id"
                                 id="your-id"
                                 type="text"
                                 onChange={event => setBrokerId(event.target.value)}
                                 value={values.brokerId}
                                 formControlProps={{
-                                    fullWidth: true
+                                    fullWidth: true,
                                 }}
+                                
                                 required
                             />
                             <FormControl fullWidth className={classes.selectFormControl}>                    
@@ -65,7 +66,7 @@ const FormStep1 = ({
                                 htmlFor="correspondent-select"
                                 className={classes.selectLabel}
                                 >
-                                Acra Lending Correspondent
+                                Acra Lending Correspondent <span style={{ color: "red" }}> *</span>
                                 </InputLabel>
                             
                                 <Select
@@ -130,7 +131,7 @@ const FormStep2 = ({
     return (
         <>
             <CustomInput
-                labelText="Branch NMLS ID Number"
+                labelText={<div>Branch NMLS ID Number<span style={{ color: "red" }}> *</span></div>}
                 name="your-branch-id"
                 id="your-branch-id"
                 type="text"
@@ -142,7 +143,7 @@ const FormStep2 = ({
                 }}
             />
             <CustomInput
-                labelText="Company Name"
+                labelText={<div>Company Name<span style={{ color: "red" }}> *</span></div>}
                 name="your-company"
                 id="your-company"
                 type="text"
@@ -154,7 +155,7 @@ const FormStep2 = ({
                 }}
             />
             <CustomInput
-                labelText="Contact Name"
+                labelText={<div>Contact Name<span style={{ color: "red" }}> *</span></div>}
                 name="your-contact"
                 id="your-contact"
                 type="text"
@@ -166,7 +167,7 @@ const FormStep2 = ({
                 }}
             />
             <CustomInput
-                labelText="Contact Phone"
+                labelText={<div>Company Phone<span style={{ color: "red" }}> *</span></div>}
                 name="your-tel"
                 id="your-tel"
                 type="tel"
@@ -178,7 +179,7 @@ const FormStep2 = ({
                 }}
             />
             <CustomInput
-                labelText="Contact Email"
+                labelText={<div>Company Email<span style={{ color: "red" }}> *</span></div>}
                 name="your-email"
                 id="your-email"
                 type="email"
@@ -251,7 +252,7 @@ const FormStep3 = ({
                 htmlFor="loan-type"
                 className={classes.selectLabel}
                 >
-                Loan Type
+                Loan Type<span style={{ color: "red" }}> *</span>
                 </InputLabel>
             
                 <Select
@@ -282,7 +283,7 @@ const FormStep3 = ({
                 <br/>
             </FormControl>
             <CustomInput
-                labelText="Borrower's Name"
+                labelText={<div>Borrower's Name<span style={{ color: "red" }}> *</span></div>}
                 name="borrowers-name"
                 id="borrowers-name"
                 type="text"
@@ -294,7 +295,7 @@ const FormStep3 = ({
                 }}
             />        
             <CustomInput
-                labelText="Borrower's Mailing Address"
+                labelText={<div>Borrower's Mailing Address<span style={{ color: "red" }}> *</span></div>}
                 name="borrowers-address"
                 id="borrowers-address"
                 type="text"
@@ -306,7 +307,7 @@ const FormStep3 = ({
                 }}
             />        
             <CustomInput
-                labelText="Borrower's Self-Employment Business Name"
+                labelText={<div>Borrower's Self-Employment Business Name<span style={{ color: "red" }}> *</span></div>}
                 name="borrowers-business-name"
                 id="borrowers-business-name"
                 type="text"
@@ -318,7 +319,7 @@ const FormStep3 = ({
                 }}
             />
             <CustomInput
-                labelText="Type of Business"
+                labelText={<div>Type of Business<span style={{ color: "red" }}> *</span></div>}
                 name="borrowers-type"
                 id="borrowers-type"
                 type="text"
@@ -330,7 +331,7 @@ const FormStep3 = ({
                 }}
             />          
             <CustomInput
-                labelText="Percentage of Ownership"
+                labelText={<div>Percentage of Ownership<span style={{ color: "red" }}> *</span></div>}
                 name="percentage-ownership"
                 id="percentage-ownership"
                 type="text"
@@ -346,7 +347,7 @@ const FormStep3 = ({
                 htmlFor="bank-statement-type"
                 className={classes.selectLabel}
                 >
-                Bank Statement Type
+                Bank Statement Type<span style={{ color: "red" }}> *</span>
                 </InputLabel>
             
                 <Select
@@ -377,7 +378,7 @@ const FormStep3 = ({
                 <br/>
             </FormControl>
             <CustomInput
-            labelText="Explanation of Non-Business, Payroll Deposits, etc."
+            labelText={<div>Explanation of Non-Business, Payroll Deposits, etc.<span style={{ color: "red" }}> *</span></div>}
             name="business-explanation"
             id="business-explanation"
             type=""
@@ -428,7 +429,7 @@ const FormStep4 = ({
     return(
         <>
             <CustomInput
-                labelText="Loan Amount"
+                labelText={<div>Loan Amount<span style={{ color: "red" }}> *</span></div>}
                 name="loan-amount"
                 id="loan-amount"
                 type="text"
@@ -440,7 +441,7 @@ const FormStep4 = ({
                 }}
             />
             <CustomInput
-                labelText="Appraised Value"
+                labelText={<div>Appraised Value<span style={{ color: "red" }}> *</span></div>}
                 name="appraised-value"
                 id="appraised-value"
                 type="text"
