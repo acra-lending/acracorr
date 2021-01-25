@@ -11,6 +11,8 @@ import DialogContent from "@material-ui/core/DialogContent";
 import Close from "@material-ui/icons/Close";
 import Group from "@material-ui/icons/Group";
 import Apps from "@material-ui/icons/Apps";
+import PlaylistAddCheckIcon from '@material-ui/icons/PlaylistAddCheck';
+import SpeedIcon from '@material-ui/icons/Speed';
 import PhotoSizeSelectActualIcon from "@material-ui/icons/PhotoSizeSelectActual";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -36,6 +38,7 @@ Transition.displayName = "Transition";
 export default function SectionSignUp() {
   const [checked, setChecked] = React.useState([]);
   const [signupModal1, setSignupModal1] = React.useState(false);
+  const [signupModal2, setSignupModal2] = React.useState(false);
   const handleToggle = value => {
     const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
@@ -450,15 +453,111 @@ export default function SectionSignUp() {
             </GridItem>
             <GridItem xs={12} sm={10} md={4} lg={3}>
             {/* BUTTON SIGNUP MODAL */}
-            <Link href="/bankstatementanalysis">
                 <Button 
                     color="blue"
                     size="lg"
                     block
-                    >  
+                    onClick={() => setSignupModal2(true)}>  
                     Bank Statement Analysis
                 </Button>
-            </Link>
+            {/* SIGNUP MODAL START */}
+            <Dialog
+                classes={{
+                root: classes.modalRoot,
+                paper: classes.modal + " " + classes.modalSignup
+                }}
+                open={signupModal2}
+                TransitionComponent={Transition}
+                keepMounted
+                onClose={() => setSignupModal2(false)}
+                aria-labelledby="signup-modal-slide-title"
+                aria-describedby="signup-modal-slide-description"
+            >
+                <Card plain className={classes.modalSignupCard}>
+                <DialogTitle
+                    id="signup-modal-slide-title"
+                    disableTypography
+                    className={classes.modalHeader}
+                >
+                    <Button
+                    simple
+                    className={classes.modalCloseButton}
+                    key="close"
+                    aria-label="Close"
+                    onClick={() => setSignupModal2(false)}
+                    >
+                    {" "}
+                    <Close className={classes.modalClose} />
+                    </Button>
+                    <h3
+                    className={classes.cardTitle + " " + classes.modalTitle}
+                    >
+                    Bank Statement Analysis
+                    </h3>
+                </DialogTitle>
+                <DialogContent
+                    id="signup-modal-slide-description"
+                    className={classes.modalBody}
+                >
+                    <GridContainer>
+                    <GridItem
+                        xs={12}
+                        sm={5}
+                        md={5}
+                        className={classes.mlAuto}
+                    >
+                        <InfoArea
+                        className={classes.infoArea}
+                        title="Bank Statement Income Pre-Screen"
+                        description={
+                            <p>
+                                We will review and provide a Bank Statement Analysis prior to submission.
+                            </p>
+                        }
+                        icon={PlaylistAddCheckIcon}
+                        iconColor="blue"
+                        />
+                        <InfoArea
+                        className={classes.infoArea}
+                        title="Expedite Setup and Review"
+                        description={
+                            <p>
+                                Understand income used for qualifying and expedite the setup and UW review process.
+                            </p>
+                        }
+                        icon={SpeedIcon}
+                        iconColor="blue"
+                        />
+                        {/* <InfoArea
+                        className={classes.infoArea}
+                        title="Marketing Collateral"
+                        description={
+                            <p>
+                                Professionally designed marketing collateral ready to incorporate your brand identity.
+                            </p>
+                        }
+                        icon={PhotoSizeSelectActualIcon}
+                        iconColor="blue"
+                        /> */}
+                    </GridItem>
+                    <GridItem
+                        xs={12}
+                        sm={5}
+                        md={5}
+                        className={classes.mrAuto}
+                    >
+                        <SignUpContact />
+                        
+                            Already an approved Acra Lending Correspondent? Take advantage today! {" "}
+                            <Link href="/corr-portal">
+                                Login
+                            </Link>
+                    </GridItem>
+                    </GridContainer>
+                </DialogContent>
+                </Card>
+            </Dialog>
+            {/* SIGNUP MODAL END */}
 
             </GridItem>
         </GridContainer>
