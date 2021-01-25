@@ -236,13 +236,15 @@ export default function SectionSignUp() {
             </GridItem>
             <GridItem xs={12} sm={6} md={4} lg={3}>
             {/* BUTTON SIGNUP MODAL */}
-            <Button 
-                color="blue"
-                size="lg"
-                block 
-                onClick={() => setSignupModal1(true)}>
-                Sellers Guide
-            </Button>
+            <Link href="/file-upload">
+                <Button 
+                    color="blue"
+                    size="lg"
+                    block 
+                    >
+                    Upload
+                </Button>
+            </Link>
             {/* SIGNUP MODAL START */}
             {/* <Dialog
                 classes={{

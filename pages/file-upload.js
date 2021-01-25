@@ -61,7 +61,7 @@ export default function ContactUsPage() {
       <div className={classNames(classes.main, classes.mainRaisedContact)}>
         <div className={classes.contactContent}>
           <div className={classes.container}>
-            <h2 className={classes.title} style={{ textAlign: "center" }}>Loan Scenario File Upload</h2>
+            <h2 className={classes.title} style={{ textAlign: "center" }}>File Upload or Loan Scenario</h2>
             <GridContainer>
               <GridItem md={12} sm={12}>
                 {/* <p style={{ color: "#3C4858" }}>
