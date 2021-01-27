@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import parse from 'html-react-parser';
+import Link from "next/link";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // core components
@@ -80,7 +81,9 @@ export default function SectionPills() {
                                 <h3 style={{ margin: "0", paddingBottom: "12px" }}><strong>Product Details</strong></h3>
                                 <ul style={{ fontSize: "16px" }}>
                                     <li>{parse(corr.acf.product_matrix)}</li>
-                                    <li>{parse(corr.acf.underwriting_guidelines)}</li>
+                                    <Link href="/trid-nontrid">
+                                      <li><a href="#">TRID + Non-TRID Programs</a></li>
+                                    </Link>
                                 </ul>
                             </span>
                             )
