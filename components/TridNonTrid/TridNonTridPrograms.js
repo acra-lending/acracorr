@@ -101,6 +101,7 @@ const TridNonTridPrograms = () => {
                                     size="lg"
                                     block
                                     href={parse(corr.acf.trid_non_trid)}
+                                    target="_blank"
                                     >
                                     Download
                                     <PictureAsPdfIcon style={{ marginLeft: "10px" }}/> 
