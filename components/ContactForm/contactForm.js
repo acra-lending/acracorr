@@ -2,13 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from 'formik';
 import axios from 'axios';
-import parse from 'html-react-parser';
-// nodejs library that concatenates classes
-import classNames from "classnames";
-// react components used to create a google map
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-// core components
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 
