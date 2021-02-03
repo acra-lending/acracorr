@@ -29,23 +29,24 @@ class MyDocument extends Document {
             href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
             rel="stylesheet"
           />
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          {/* Google Tag Manager */}
           <script
-            async
-            src={'https://www.googletagmanager.com/gtag/js?id=G-SR869HQYJ8'}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-SR869HQYJ8', {
-                page_path: window.location.pathname,
-              });
-          `
-          }}
-          />
+                  dangerouslySetInnerHTML={{
+                      __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                          })(window,document,'script','dataLayer','GTM-KPPCHXS');`,
+                  }}
+              />
+              {/* End Google Tag Manager */}
+              {/* Google Tag Manager (noscript) */}
+              <noscript
+                  dangerouslySetInnerHTML={{
+                      __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPPCHXS" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+                  }}
+              />
+              {/* End Google Tag Manager (noscript) */}
         </Head>
         <body>
           <div id="page-transition"></div>
