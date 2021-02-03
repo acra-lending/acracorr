@@ -29,6 +29,23 @@ class MyDocument extends Document {
             href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
             rel="stylesheet"
           />
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src={'https://www.googletagmanager.com/gtag/js?id=G-SR869HQYJ8'}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-SR869HQYJ8', {
+                page_path: window.location.pathname,
+              });
+          `
+          }}
+          />
         </Head>
         <body>
           <div id="page-transition"></div>
