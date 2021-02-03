@@ -6,32 +6,11 @@ import parse from 'html-react-parser';
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // react components used to create a google map
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker
-} from "react-google-maps";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-import PinDrop from "@material-ui/icons/PinDrop";
-import Phone from "@material-ui/icons/Phone";
-import Email from "@material-ui/icons/Email";
-import BusinessCenter from "@material-ui/icons/BusinessCenter";
 // core components
-import Header from "components/Header/Header.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import InfoArea from "components/InfoArea/InfoArea.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
-import Footer from "components/Footer/Footer.js";
-import Parallax from "components/Parallax/Parallax.js";
 
 import contactUsStyle from "assets/jss/nextjs-material-kit-pro/pages/contactUsStyle.js";
 
@@ -44,7 +23,7 @@ export default function ContactForm() {
   });
   const classes = useStyles();
 
-  const WEBSITE_URL = 'https://citadelservicing.com';
+  const WEBSITE_URL = 'https://acralending.com';
   const FORM_ID = '3587'; // Contact Form ID
 
   const [token, setToken] = useState('') 
