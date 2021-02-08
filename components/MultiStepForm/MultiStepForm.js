@@ -43,7 +43,7 @@ const FormStep1 = ({
             {/* <div className={classes.space70} /> */}
                 <div className={classes.title}>
                     <p style={{ textAlign: "left", marginTop: "0", fontWeight: "400" }}><strong>Note:</strong> Requests will only be processed for APPROVED Acra Lending brokers. <br/>
-                    Contact brokers@acralending.com or your AE to confirm Broker ID #<br/><br/>
+                    Contact brokers@acralending.com or your BDO to confirm Broker ID #<br/><br/>
                     <p style={{ fontSize: "14px" }}>All fields are required.</p>
                     </p>
                 </div>
