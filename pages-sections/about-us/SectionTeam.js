@@ -90,7 +90,7 @@ export default function SectionTeam() {
                 <Card plain profile>
                   <CardHeader image plain>
                     <div>
-                      <img src={corr._embedded['wp:featuredmedia']['0'].source_url} alt={corr.acf.name} />
+                      <img src={corr._embedded['wp:featuredmedia']['0'].source_url} alt={corr.acf.name} style={{width: "75%"}}/>
                     </div>
                     <div
                       className={classes.coloredShadow}

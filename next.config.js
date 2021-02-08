@@ -8,6 +8,15 @@ const path = require("path");
 module.exports = withPlugins([[withSass], [withImages], [withCSS]], {
   webpack(config, options) {
     config.resolve.modules.push(path.resolve("./"));
+    config.module.rules.push({
+      test: /\.pdf$/,
+      use: {
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[ext]"
+        }
+      }
+    });
     return config;
   }
 });

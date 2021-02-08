@@ -35,7 +35,7 @@ const cardHeaderStyle = {
     marginTop: "-30px",
     borderRadius: "6px",
     "& img": {
-      width: "75%",
+      width: "100%",
       borderRadius: "6px",
       pointerEvents: "none",
       boxShadow:
