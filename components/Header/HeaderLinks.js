@@ -239,26 +239,24 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Hidden mdDown>
-          <Link href="/corr-portal">
             <Button
               color={"transparent"}
               className={classes.navButton}
               round
+              href="/corr-portal"
             >
-              <MeetingRoom className={classes.icons} /> sign in
+              <MeetingRoom className={classes.icons} /> portal
             </Button>
-          </Link>
         </Hidden>
         <Hidden mdUp>
-        <Link href="/corr-portal">
           <Button
             color={"blue"}
             className={classes.navButton}
             round
+            href="/corr-portal"
           >
-            <MeetingRoom className={classes.icons} /> sign in
+            <MeetingRoom className={classes.icons} /> portal
           </Button>
-        </Link>
         </Hidden>
       </ListItem>
     </List>
