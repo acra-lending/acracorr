@@ -23,6 +23,7 @@ export default function ContactForm() {
 
   const [token, setToken] = useState('') 
   const [isSuccessMessage, setIsSuccessMessage] = useState(false) // Manage success message state
+  const [message, setMessage] = useState('') // Manage success message state
   const [messageSent, setMessageSent] = useState(false) // Manage sent message state 
 
   // useEffect function to authenticate subscriber user to get a token
@@ -87,11 +88,13 @@ export default function ContactForm() {
         resetForm()
         setSubmitting(false)
         setMessageSent(true)
+        setMessage(response.data.message)
         setIsSuccessMessage(true)
       }).catch(error => {
         // actions taken when submission goes wrong
         setSubmitting(false)
         setMessageSent(true)
+        setMessage(error.message)
         setIsSuccessMessage(false)
         console.log(error)
       })
@@ -104,7 +107,7 @@ export default function ContactForm() {
       // this will reset messageSent and isSuccessMessage state
       setMessageSent(false)
       setIsSuccessMessage(false)
-    }, 3000);
+    }, 5000);
     // this will be dispatched when isSuccessMessage or messageSent changes its state
   }, [isSuccessMessage, messageSent])
 
@@ -185,11 +188,11 @@ export default function ContactForm() {
             </Button>
             </div>
             {messageSent && setIsSuccessMessage && (
-                <div><p>Message sent successfully!</p></div>
-                )}
-                {messageSent && !setIsSuccessMessage && (
-                <div><p>Something went wrong. Please try again.</p></div>
-                )}
+              <div><p style={{ color: "#323E48" }}>{message}</p></div>
+            )}
+            {messageSent && !setIsSuccessMessage && (
+              <div><p style={{ color: "#ff0000" }}>{message}</p></div>
+            )}
         </form>
     </div>
   );
