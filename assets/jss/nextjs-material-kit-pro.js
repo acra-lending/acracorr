@@ -425,6 +425,9 @@ const mainRaisedContact = {
     marginLeft: "10px",
     marginRight: "10px"
   },
+  "@media (min-width: 577px and max-width: 1365px)": {
+    marginTop: "150px"
+  },
   margin: "-400px 30px 0px",
   borderRadius: "6px",
   boxShadow:
