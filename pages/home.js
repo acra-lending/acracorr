@@ -112,9 +112,9 @@ export default function LandingPage({ ...rest }) {
                 BECOME AN APPROVED ACRA LENDING CORRESPONDENT PARTNER</h1> */}
                 <h4>{corrs.length > 0 ? parse(corrs[7].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h4>
               <SectionSignUp />
-              {/* <br />
-                <h3>{corrs.length > 0 ? parse(corrs[9].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h3>
-                <QuickQualifier /> */}
+              <br />
+                <h4>{corrs.length > 0 ? parse(corrs[9].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h4>
+                <QuickQualifier />
 
               {/* <Button
                 color="blue"

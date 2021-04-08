@@ -399,7 +399,7 @@ const main = {
 
 const mainRaised = {
   "@media (max-width: 576px)": {
-    marginTop: "-6px"
+    marginTop: "-20px"
   },
   "@media (max-width: 830px)": {
     marginLeft: "10px",

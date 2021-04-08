@@ -59,9 +59,9 @@ export default function QuickQualifier() {
     <div className={classes.section + " " + classes.headingButtons} id="javascriptComponents" style={{ paddingTop: 0 }}>
       <div>
         <GridContainer>
-            <GridItem xs={12} sm={6} md={6} lg={6}>
+            <GridItem xs={12} sm={6} md={9} lg={9}>
             {/* BUTTON SIGNUP MODAL */}
-            <Link href="/file-upload">
+            <Link href="/quickqualifier">
                 <Button 
                     color="blue"
                     size="lg"
