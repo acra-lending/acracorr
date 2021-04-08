@@ -2,16 +2,12 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import parse from 'html-react-parser';
-// nodejs library to set properties for components
-import PropTypes from "prop-types";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
 import Apps from "@material-ui/icons/Apps";
 import Assessment from "@material-ui/icons/Assessment";
 import Group from "@material-ui/icons/Group";
@@ -38,6 +34,7 @@ import featuresStyle from "assets/jss/nextjs-material-kit-pro/pages/sectionsSect
 // Sections for this page
 import SectionSignUp from "pages-sections/home/SignUp.js";
 import ApplyNow from "pages-sections/home/ApplyNow.js";
+import QuickQualifier from 'pages-sections/home/QuickQualifier';
 
 const useStyles = makeStyles(landingPageStyle, featuresStyle);
 
@@ -47,7 +44,7 @@ export default function LandingPage({ ...rest }) {
     document.body.scrollTop = 0;
   });
 
-  const WEBSITE_URL = 'https://bt.citadelservicing.com';
+  const WEBSITE_URL = 'https://acralending.com';
   const API = 'wp-json/wp/v2';
 
   const [corrs, setCorrs] = useState([]) 
@@ -115,6 +112,9 @@ export default function LandingPage({ ...rest }) {
                 BECOME AN APPROVED ACRA LENDING CORRESPONDENT PARTNER</h1> */}
                 <h4>{corrs.length > 0 ? parse(corrs[7].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h4>
               <SectionSignUp />
+              {/* <br />
+                <h3>{corrs.length > 0 ? parse(corrs[9].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h3>
+                <QuickQualifier /> */}
 
               {/* <Button
                 color="blue"
