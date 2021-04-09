@@ -26,6 +26,11 @@ const parallaxStyle = {
     display: "flex",
     alignItems: "center"
   },
+  "@media (max-width: 576px)": {
+    parallax: {
+      height: "140vh",
+    }
+  },
   filter: {},
   primaryColor: {
     "&:before": {
