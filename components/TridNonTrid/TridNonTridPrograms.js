@@ -83,17 +83,32 @@ const TridNonTridPrograms = () => {
                 corrs.map((corr) =>(
                     <GridItem xs={12} sm={12} md={12} lg={6}>
                         <div className={classes.imgRaised}>
-                            <Document
-                                file={`${CORS}/` + parse(corr.acf.trid_non_trid)}
-                                onLoadSuccess={onDocumentLoadSuccess}
-                            >
-                                <Page 
-                                pageNumber={pageNumber}
-                                renderMode="svg"
-                                width="450" /> 
-                            </Document>
+                            <div>
+                                {/* <img src={corr._embedded['wp:featuredmedia']['0'].source_url} alt={corr.acf.name} style={{width: "75%"}}/> */}
+                                <img src={require('../../assets/img/pdf-icon.png')} alt="trid-non-trid" style={{width: "33%"}}/>
+                            </div>
                         </div>
+                        <h4 className={classes.cardTitle}>{parse(corr.acf.overview)}</h4>
+                        {/* <div
+                            className={classes.coloredShadow}
+                            style={{
+                                backgroundImage: `url(${corr._embedded['wp:featuredmedia']['0'].source_url})`,
+                                opacity: "1"
+                            }}
+                        /> */}
                         <br />
+                                          {/* <CardHeader image plain>
+                    <div>
+                      <img src={corr._embedded['wp:featuredmedia']['0'].source_url} alt={corr.acf.name} style={{width: "75%"}}/>
+                    </div>
+                    <div
+                      className={classes.coloredShadow}
+                      style={{
+                        backgroundImage: `url(${corr._embedded['wp:featuredmedia']['0'].source_url})`,
+                        opacity: "1"
+                      }}
+                    />
+                  </CardHeader> */}
                         <GridContainer justify="center">
                             <GridItem  xs={12} sm={6} md={6}>
                                 <Button 
