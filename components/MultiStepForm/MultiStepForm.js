@@ -26,7 +26,8 @@ const selectCorrespondent = [
 	'Marc Feltman',
 	'Andrew Gauder',
 	'Todd Lautzenheiser',
-	'Marty Yocum',
+	'David Byrum',
+	'Marco Huaman',
 	'Bill Parnell'
 ]
 
