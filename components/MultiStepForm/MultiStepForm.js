@@ -24,11 +24,12 @@ const useStyles = makeStyles(basicsStyle);
 const selectCorrespondent = [
     'Jeffrey Lemieux',
 	'Marc Feltman',
-	'Andrew Gauder',
 	'Todd Lautzenheiser',
 	'David Byrum',
 	'Marco Huaman',
-	'Bill Parnell'
+	'Bill Parnell',
+    'Drew Koontz',
+    'Erik Nelson'
 ]
 
 const FormStep1 = ({
