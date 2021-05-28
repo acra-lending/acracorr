@@ -24,7 +24,6 @@ const useStyles = makeStyles(basicsStyle);
 const selectCorrespondent = [
     'Jeffrey Lemieux',
 	'Marc Feltman',
-	'Todd Lautzenheiser',
 	'David Byrum',
 	'Marco Huaman',
     'Drew Koontz',
