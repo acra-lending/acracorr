@@ -27,7 +27,6 @@ const selectCorrespondent = [
 	'Todd Lautzenheiser',
 	'David Byrum',
 	'Marco Huaman',
-	'Bill Parnell',
     'Drew Koontz',
     'Erik Nelson'
 ]
