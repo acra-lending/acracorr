@@ -26,7 +26,6 @@ const selectCorrespondent = [
 	'Marc Feltman',
 	'David Byrum',
 	'Marco Huaman',
-    'Drew Koontz',
     'Erik Nelson'
 ]
 
