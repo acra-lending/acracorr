@@ -23,45 +23,45 @@ const useStyles = makeStyles(styles);
 export default function Header(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const classes = useStyles();
-  React.useEffect(() => {
-    if (props.changeColorOnScroll) {
-      window.addEventListener("scroll", headerColorChange);
-    }
-    return function cleanup() {
-      if (props.changeColorOnScroll) {
-        window.removeEventListener("scroll", headerColorChange);
-      }
-    };
-  });
+  // React.useEffect(() => {
+  //   if (props.changeColorOnScroll) {
+  //     window.addEventListener("scroll", headerColorChange);
+  //   }
+  //   return function cleanup() {
+  //     if (props.changeColorOnScroll) {
+  //       window.removeEventListener("scroll", headerColorChange);
+  //     }
+  //   };
+  // });
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const headerColorChange = () => {
-    const { color, changeColorOnScroll } = props;
+  // const headerColorChange = () => {
+  //   const { color, changeColorOnScroll } = props;
 
-    const windowsScrollTop = window.pageYOffset;
-    if (windowsScrollTop > changeColorOnScroll.height) {
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.remove(classes[color]);
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.add(classes[changeColorOnScroll.color]);
-      document.body
-        .getElementsByTagName("img")[0]
-        .setAttribute("src", require("assets/img/Acra_Logo_Horizontal_Correspondent_White_RGB.png"));
-    } else {
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.add(classes[color]);
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.remove(classes[changeColorOnScroll.color]);
-      document.body
-      .getElementsByTagName("img")[0]
-      .setAttribute("src", require("assets/img/Acra_Logo_Horizontal_Correspondent_Full_Color_RGB_Sm.png"));
-    }
-  };
+  //   const windowsScrollTop = window.pageYOffset;
+  //   if (windowsScrollTop > changeColorOnScroll.height) {
+  //     document.body
+  //       .getElementsByTagName("header")[0]
+  //       .classList.remove(classes[color]);
+  //     document.body
+  //       .getElementsByTagName("header")[0]
+  //       .classList.add(classes[changeColorOnScroll.color]);
+  //     document.body
+  //       .getElementsByTagName("img")[0]
+  //       .setAttribute("src", require("assets/img/Acra_Logo_Horizontal_Correspondent_White_RGB.png"));
+  //   } else {
+  //     document.body
+  //       .getElementsByTagName("header")[0]
+  //       .classList.add(classes[color]);
+  //     document.body
+  //       .getElementsByTagName("header")[0]
+  //       .classList.remove(classes[changeColorOnScroll.color]);
+  //     document.body
+  //     .getElementsByTagName("img")[0]
+  //     .setAttribute("src", require("assets/img/Acra_Logo_Horizontal_Correspondent_Full_Color_RGB_Sm.png"));
+  //   }
+  // };
   const { color, links, brand, fixed, absolute } = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
