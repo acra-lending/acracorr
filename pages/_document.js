@@ -52,11 +52,7 @@ class MyDocument extends Document {
           <div id="page-transition"></div>
           <Main />
           <NextScript />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `(function(d){var s = d.createElement("script");s.setAttribute("data-account", "dC4dVUeRnF");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document);`,
-            }}
-          />
+          <script src="https://cdn.userway.org/widget.js" data-account="dC4dVUeRnF"></script>
         </body>
       </html>
     );
