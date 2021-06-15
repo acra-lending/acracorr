@@ -78,7 +78,6 @@ export default class MyApp extends App {
       <React.Fragment>
         <Head>
           <title>Acra Lending Correspondent</title>
-          <script src="https://cdn.userway.org/widget.js"></script>
         </Head>
         <Component {...pageProps} />
       </React.Fragment>
