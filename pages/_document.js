@@ -52,6 +52,7 @@ class MyDocument extends Document {
           <div id="page-transition"></div>
           <Main />
           <NextScript />
+          <script src="https://cdn.userway.org/widget.js" data-account="dC4dVUeRnF"></script>
         </body>
       </html>
     );
