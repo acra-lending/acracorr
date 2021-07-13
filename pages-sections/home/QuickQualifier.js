@@ -59,224 +59,27 @@ export default function QuickQualifier() {
     <div className={classes.section + " " + classes.headingButtons} id="javascriptComponents" style={{ paddingTop: 0 }}>
       <div>
         <GridContainer>
-            <GridItem xs={12} sm={6} md={9} lg={9}>
-            {/* BUTTON SIGNUP MODAL */}
+            <GridItem xs={12} sm={6} md={5} lg={5}>
             <Link href="/quickqualifier">
                 <Button 
                     color="blue"
                     size="lg"
                     block 
                     >
-                    Quick Qualifier
+                    Loan Scenario Eligibility (no pricing)
                 </Button>
             </Link>
-            {/* SIGNUP MODAL START */}
-            {/* <Dialog
-                classes={{
-                root: classes.modalRoot,
-                paper: classes.modal + " " + classes.modalSignup
-                }}
-                open={signupModal1}
-                TransitionComponent={Transition}
-                keepMounted
-                onClose={() => setSignupModal1(false)}
-                aria-labelledby="signup-modal-slide-title"
-                aria-describedby="signup-modal-slide-description"
-            >
-                <Card plain className={classes.modalSignupCard}>
-                <DialogTitle
-                    id="signup-modal-slide-title"
-                    disableTypography
-                    className={classes.modalHeader}
-                >
-                    <Button
-                    simple
-                    className={classes.modalCloseButton}
-                    key="close"
-                    aria-label="Close"
-                    onClick={() => setSignupModal1(false)}
+            </GridItem>
+            <GridItem xs={12} sm={6} md={5} lg={5}>
+                <Button
+                        href="https://acracorrespondent.loannex.com/"
+                        color="blue"
+                        size="lg"
+                        target="_blank"
+                        block
                     >
-                    {" "}
-                    <Close className={classes.modalClose} />
-                    </Button>
-                    <h3
-                    className={classes.cardTitle + " " + classes.modalTitle}
-                    >
-                    Register
-                    </h3>
-                </DialogTitle>
-                <DialogContent
-                    id="signup-modal-slide-description"
-                    className={classes.modalBody}
-                >
-                    <GridContainer>
-                    <GridItem
-                        xs={12}
-                        sm={5}
-                        md={5}
-                        className={classes.mlAuto}
-                    >
-                        <InfoArea
-                        className={classes.infoArea}
-                        title="Marketing"
-                        description={
-                            <p>
-                            We{"'"}ve created the marketing campaign of the
-                            website. It was a very interesting
-                            collaboration.
-                            </p>
-                        }
-                        icon={Timeline}
-                        iconColor="rose"
-                        />
-                        <InfoArea
-                        className={classes.infoArea}
-                        title="Fully Coded in HTML5"
-                        description={
-                            <p>
-                            We{"'"}ve developed the website with HTML5 and
-                            CSS3. The client has access to the code using
-                            GitHub.
-                            </p>
-                        }
-                        icon={Code}
-                        iconColor="primary"
-                        />
-                        <InfoArea
-                        className={classes.infoArea}
-                        title="Built Audience"
-                        description={
-                            <p>
-                            There is also a Fully Customizable CMS Admin
-                            Dashboard for this product.
-                            </p>
-                        }
-                        icon={Group}
-                        iconColor="info"
-                        />
-                    </GridItem>
-                    <GridItem
-                        xs={12}
-                        sm={5}
-                        md={5}
-                        className={classes.mrAuto}
-                    >
-                        <div className={classes.textCenter}>
-                        <Button justIcon round color="twitter">
-                            <i className="fab fa-twitter" />
-                        </Button>
-                        {` `}
-                        <Button justIcon round color="dribbble">
-                            <i className="fab fa-dribbble" />
-                        </Button>
-                        {` `}
-                        <Button justIcon round color="facebook">
-                            <i className="fab fa-facebook-f" />
-                        </Button>
-                        {` `}
-                        <h4 className={classes.socialTitle}>
-                            or be classical
-                        </h4>
-                        </div>
-                        <form className={classes.form}>
-                        <CustomInput
-                            formControlProps={{
-                            fullWidth: true,
-                            className: classes.customFormControlClasses
-                            }}
-                            inputProps={{
-                            startAdornment: (
-                                <InputAdornment
-                                position="start"
-                                className={classes.inputAdornment}
-                                >
-                                <Face
-                                    className={classes.inputAdornmentIcon}
-                                />
-                                </InputAdornment>
-                            ),
-                            placeholder: "First Name..."
-                            }}
-                        />
-                        <CustomInput
-                            formControlProps={{
-                            fullWidth: true,
-                            className: classes.customFormControlClasses
-                            }}
-                            inputProps={{
-                            startAdornment: (
-                                <InputAdornment
-                                position="start"
-                                className={classes.inputAdornment}
-                                >
-                                <Email
-                                    className={classes.inputAdornmentIcon}
-                                />
-                                </InputAdornment>
-                            ),
-                            placeholder: "Email..."
-                            }}
-                        />
-                        <CustomInput
-                            formControlProps={{
-                            fullWidth: true,
-                            className: classes.customFormControlClasses
-                            }}
-                            inputProps={{
-                            startAdornment: (
-                                <InputAdornment
-                                position="start"
-                                className={classes.inputAdornment}
-                                >
-                                <Icon
-                                    className={classes.inputAdornmentIcon}
-                                >
-                                    lock_outline
-                                </Icon>
-                                </InputAdornment>
-                            ),
-                            placeholder: "Password..."
-                            }}
-                        />
-                        <FormControlLabel
-                            classes={{
-                            label: classes.label
-                            }}
-                            control={
-                            <Checkbox
-                                tabIndex={-1}
-                                onClick={() => handleToggle(1)}
-                                checkedIcon={
-                                <Check className={classes.checkedIcon} />
-                                }
-                                icon={
-                                <Check className={classes.uncheckedIcon} />
-                                }
-                                classes={{
-                                checked: classes.checked,
-                                root: classes.checkRoot
-                                }}
-                            />
-                            }
-                            label={
-                            <span>
-                                I agree to the{" "}
-                                <a href="#pablo">terms and conditions</a>.
-                            </span>
-                            }
-                        />
-                        <div className={classes.textCenter}>
-                            <Button round color="primary">
-                            Get started
-                            </Button>
-                        </div>
-                        </form>
-                    </GridItem>
-                    </GridContainer>
-                </DialogContent>
-                </Card>
-            </Dialog> */}
-            {/* SIGNUP MODAL END */}
+                        Acra Pricing Engine & Detailed Eligiblity
+                </Button>
             </GridItem>
         </GridContainer>
       </div>
