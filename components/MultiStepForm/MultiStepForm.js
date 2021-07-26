@@ -26,7 +26,8 @@ const selectCorrespondent = [
 	'Marc Feltman',
 	'David Byrum',
 	'Marco Huaman',
-    'Erik Nelson'
+    'Erik Nelson',
+    'Zenon Zorij'
 ]
 
 const FormStep1 = ({
