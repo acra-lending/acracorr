@@ -22,11 +22,12 @@ import basicsStyle from "assets/jss/nextjs-material-kit-pro/pages/componentsSect
 const useStyles = makeStyles(basicsStyle);
 
 const selectCorrespondent = [
-    'Jeffrey Lemieux',
-	'Marc Feltman',
-	'David Byrum',
-	'Marco Huaman',
+    'Adam Prather',
+    'David Byrum',
     'Erik Nelson',
+    'Jeffrey Lemieux',
+    'Marc Feltman',
+	'Marco Huaman',
     'Zenon Zorij'
 ]
 
