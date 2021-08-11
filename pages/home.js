@@ -6,8 +6,13 @@ import parse from 'html-react-parser';
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
+import Slide from "@material-ui/core/Slide";
+import Dialog from "@material-ui/core/Dialog";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent";
 // @material-ui/icons
+import Close from "@material-ui/icons/Close";
+
 import Apps from "@material-ui/icons/Apps";
 import Assessment from "@material-ui/icons/Assessment";
 import Group from "@material-ui/icons/Group";
@@ -25,18 +30,24 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Spinner from 'components/Spinner/Spinner';
 import FooterItems from "components/Footer/FooterItems.js";
-
-
+import Card from "components/Card/Card.js";
 
 import landingPageStyle from "assets/jss/nextjs-material-kit-pro/pages/landingPageStyle.js";
 import featuresStyle from "assets/jss/nextjs-material-kit-pro/pages/sectionsSections/featuresStyle.js";
 
 // Sections for this page
 import SectionSignUp from "pages-sections/home/SignUp.js";
+// import Popup from "pages-sections/home/Popup.js";
 import ApplyNow from "pages-sections/home/ApplyNow.js";
 import QuickQualifier from 'pages-sections/home/QuickQualifier';
 
 const useStyles = makeStyles(landingPageStyle, featuresStyle);
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="down" ref={ref} {...props} />;
+});
+
+Transition.displayName = "Transition";
 
 export default function LandingPage({ ...rest }) {
   React.useEffect(() => {
@@ -49,6 +60,24 @@ export default function LandingPage({ ...rest }) {
 
   const [corrs, setCorrs] = useState([]) 
   const [isLoading, setIsLoading] = useState(false);
+  const [checked, setChecked] = React.useState([]);
+  const [signupModal2, setSignupModal2] = React.useState(false);
+
+  const handleToggle = value => {
+    const currentIndex = checked.indexOf(value);
+    const newChecked = [...checked];
+
+    if (currentIndex === -1) {
+      newChecked.push(value);
+    } else {
+      newChecked.splice(currentIndex, 1);
+    }
+    setChecked(newChecked);
+  };
+
+  const Nothing = e => {
+      e.preventDefault();
+  }
 
   const getData = async () => {
     setIsLoading(true);
@@ -68,6 +97,10 @@ export default function LandingPage({ ...rest }) {
   useEffect(() => {
 
     getData();
+    const timer = setTimeout(() => {
+      setSignupModal2(true)
+    }, 3000);
+    return () => clearTimeout(timer);
     
   }, []);
 
@@ -95,7 +128,9 @@ export default function LandingPage({ ...rest }) {
       ) : ( 
         <div className={classes.container} style={{ marginTop: "0" }}>
           {/* Start Loading Area */}
-          <GridContainer>
+          <GridContainer
+            // onWheel={() => setSignupModal2(true)} 
+          >
             <GridItem xs={12} sm={6} md={12} className={classes.heading}>
               <br />
               <h1 
@@ -115,30 +150,52 @@ export default function LandingPage({ ...rest }) {
               <br />
                 <h4>{corrs.length > 0 ? parse(corrs[9].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h4>
                 <QuickQualifier />
+                {/* POPUP MODAL START */}
+                <Dialog
+                    classes={{
+                    root: classes.modalRoot,
+                    paper: classes.modal + " " + classes.modalSignup
+                    }}
+                    open={signupModal2}
+                    TransitionComponent={Transition}
+                    keepMounted
+                    onClose={() => setSignupModal2(false)}
+                    aria-labelledby="signup-modal-slide-title"
+                    aria-describedby="signup-modal-slide-description"
+                >
+                    <Card plain className={classes.modalSignupCard}>
 
-              {/* <Button
-                color="blue"
-                size="lg"
-                href="#"
-                style={{ marginRight: "20px"}}
-              >
-                Get Approved 
-              </Button>
-              <Button
-                color="blue"
-                size="lg"
-                href="#"
-                style={{ marginRight: "20px"}}
-              >
-                Sellers Guide
-              </Button>
-              <Button
-                color="blue"
-                size="lg"
-                href="#"
-              >
-                Loan Qualification Engine
-              </Button> */}
+                        <Button
+                        simple
+                        className={classes.modalCloseButton}
+                        key="close"
+                        aria-label="Close"
+                        onClick={() => setSignupModal2(false)}
+                        >
+                        {" "}
+                        <Close className={classes.modalClose} style={{fill: "black"}} />
+                        </Button>
+                    
+                    <DialogContent
+                        id="signup-modal-slide-description"
+                        className={classes.modalBody}
+                    >
+                        <GridContainer>
+                        <GridItem
+                            xs={12}
+                            sm={12}
+                            md={12}
+                            className={classes.mlAuto}
+                        >
+                            We’ve updated our <a href="https://acralending.com/privacy-policy/" target="_blank">Privacy Policy</a> to allow our products and services to be more available to you. Please read this information carefully to learn more about your legal rights. By continuing to use our products and services, you agree to these updates.
+
+                        </GridItem>
+                        </GridContainer>
+                    </DialogContent>
+                    </Card>
+                </Dialog>
+                {/* POPUP MODAL END */}
+
             </GridItem>
           </GridContainer>
         </div>
