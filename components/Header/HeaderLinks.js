@@ -73,12 +73,14 @@ export default function HeaderLinks(props) {
     <List className={classes.list + " " + classes.mlAuto}>
       <ListItem className={classes.listItem}>
         <Link href="/home">
+          
           <Button 
             className={classes.contactButton}
             color={"transparent"}
           >
-            <HomeIcon className={classes.icon} /> Home
+            <HomeIcon className={classes.icon} /><a> Home </a>
           </Button>
+          
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -87,7 +89,7 @@ export default function HeaderLinks(props) {
             className={classes.contactButton}
             color={"transparent"}
           >
-            <Apps className={classes.icon} /> Our Programs
+            <Apps className={classes.icon} /><a> Our Programs </a>
           </Button>
         </Link>
       </ListItem>
@@ -136,7 +138,7 @@ export default function HeaderLinks(props) {
             className={classes.contactButton}
             color={"transparent"}
           >
-            <Group className={classes.icon} /> Our Team
+            <Group className={classes.icon} /><a> Our Team </a>
           </Button>
         </Link>
       </ListItem>
@@ -233,7 +235,7 @@ export default function HeaderLinks(props) {
             className={classes.contactButton}
             color={"transparent"}
           >
-            <PlaceIcon className={classes.icon} /> Contact Us
+            <PlaceIcon className={classes.icon} /><a> Contact Us </a>
           </Button>
         </Link>
       </ListItem>
