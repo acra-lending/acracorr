@@ -234,9 +234,9 @@ export default function SectionSignUp() {
             </Dialog>
             {/* SIGNUP MODAL END */}
             </GridItem>
-            <GridItem xs={12} sm={6} md={4} lg={3}>
+            {/* <GridItem xs={12} sm={6} md={4} lg={3}> */}
             {/* BUTTON SIGNUP MODAL */}
-            <Link href="/file-upload">
+            {/* <Link href="/file-upload">
                 <Button 
                     color="blue"
                     size="lg"
@@ -244,7 +244,7 @@ export default function SectionSignUp() {
                     >
                     Upload
                 </Button>
-            </Link>
+            </Link> */}
             {/* SIGNUP MODAL START */}
             {/* <Dialog
                 classes={{
@@ -452,7 +452,7 @@ export default function SectionSignUp() {
                 </Card>
             </Dialog> */}
             {/* SIGNUP MODAL END */}
-            </GridItem>
+            {/* </GridItem> */}
             <GridItem xs={12} sm={10} md={4} lg={3}>
             {/* BUTTON SIGNUP MODAL */}
                 <Button 
