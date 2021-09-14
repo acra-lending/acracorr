@@ -12,7 +12,7 @@ const Iframe = () => {
     return (
         // basic bootstrap classes. you can change with yours.
         <div>
-            <iframe src="https://acralending.com/correspondent-portal?ver=1.0" frameborder="0" scrolling="yes" width="100%" height="700px"></iframe>
+            <iframe src="https://acralending.com/correspondent-portal?var=1" frameborder="0" scrolling="yes" width="100%" height="700px"></iframe>
         </div>
     );
 };
