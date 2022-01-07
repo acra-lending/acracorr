@@ -89,45 +89,7 @@ export default function SectionBlogs({ ...rest }) {
             >
             {isLoading ? (
                 <Spinner />
-            ) : (
-            // <NavPills
-            //     color="blue"
-            //     horizontal={{
-            //     tabsGrid: { xs: 12, sm: 3, md: 3 },
-            //     contentGrid: { xs: 12, sm: 9, md: 9 }
-            //     }}
-            //     tabs={
-            //         corrs.map((corr) => (
-            //             {
-            //                 tabButton: [corr.title.rendered],
-            //                 // tabIcon: Dashboard,
-            //                 tabContent: (
-            //                 <span>
-            //                     <h3 style={{ margin: "0", paddingBottom: "12px" }}><strong>Overview</strong></h3>
-            //                     <p>
-            //                     {parse(corr.acf.overview)}
-            //                     </p>
-            //                     <br />
-            //                     <h3 style={{ margin: "0", padding: "0" }}><strong>Details:</strong></h3>
-            //                     <br/>
-            //                     <ul style={{ fontSize: "16px" }}>
-            //                     {parse(corr.acf.details)}
-            //                     </ul>
-            //                     <br />
-            //                     <h3 style={{ margin: "0", paddingBottom: "12px" }}><strong>Product Details</strong></h3>
-            //                     <ul style={{ fontSize: "16px" }}>
-            //                         <li>{parse(corr.acf.product_matrix)}</li>
-            //                         <Link href="/trid-nontrid">
-            //                           <li><a href="#">TRID + Non-TRID Programs</a></li>
-            //                         </Link>
-            //                     </ul>
-            //                 </span>
-            //                 )
-            //             }
-            //         )).reverse()
-            //     }
-            // />
-            
+            ) : (   
                 <Card plain blog className={classes.card}>
                 <GridContainer>
                   <GridItem xs={12} sm={12} md={12}>
