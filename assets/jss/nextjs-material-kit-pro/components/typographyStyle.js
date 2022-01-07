@@ -6,7 +6,8 @@ import {
   warningColor,
   dangerColor,
   roseColor,
-  grayColor
+  grayColor,
+  blueColor
 } from "assets/jss/nextjs-material-kit-pro.js";
 
 const typographyStyle = {
@@ -73,6 +74,12 @@ const typographyStyle = {
   roseText: {
     "&, & *": {
       color: roseColor[0],
+      display: "inline-block"
+    }
+  },
+  blueText: {
+    "&, & *": {
+      color: blueColor,
       display: "inline-block"
     }
   },
