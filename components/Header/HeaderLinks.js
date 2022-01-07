@@ -19,6 +19,7 @@ import MeetingRoom from "@material-ui/icons/MeetingRoom";
 import PlaceIcon from '@material-ui/icons/Place';
 import Group from "@material-ui/icons/Group";
 import HomeIcon from '@material-ui/icons/Home';
+import Event from '@material-ui/icons/Event';
 
 // core components
 import Button from "components/CustomButtons/Button.js";
@@ -71,7 +72,7 @@ export default function HeaderLinks(props) {
   const classes = useStyles();
   return (
     <List className={classes.list + " " + classes.mlAuto}>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <Link href="/home">
           
           <Button 
@@ -82,7 +83,7 @@ export default function HeaderLinks(props) {
           </Button>
           
         </Link>
-      </ListItem>
+      </ListItem> */}
       <ListItem className={classes.listItem}>
         <Link href="/programs">
           <Button 
@@ -90,6 +91,16 @@ export default function HeaderLinks(props) {
             color={"transparent"}
           >
             <Apps className={classes.icon} /><a> Our Programs </a>
+          </Button>
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Link href="/events">
+          <Button 
+            className={classes.contactButton}
+            color={"transparent"}
+          >
+            <Event className={classes.icon} /><a> Events </a>
           </Button>
         </Link>
       </ListItem>
