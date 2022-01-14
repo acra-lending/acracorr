@@ -97,10 +97,10 @@ export default function LandingPage({ ...rest }) {
   useEffect(() => {
 
     getData();
-    const timer = setTimeout(() => {
-      setSignupModal2(true)
-    }, 3000);
-    return () => clearTimeout(timer);
+    // const timer = setTimeout(() => {
+    //   setSignupModal2(true)
+    // }, 3000);
+    // return () => clearTimeout(timer);
     
   }, []);
 
@@ -151,7 +151,7 @@ export default function LandingPage({ ...rest }) {
                 <h4>{corrs.length > 0 ? parse(corrs[9].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h4>
                 <QuickQualifier />
                 {/* POPUP MODAL START */}
-                <Dialog
+                {/* <Dialog
                     classes={{
                     root: classes.modalRoot,
                     paper: classes.modal + " " + classes.modalSignup
@@ -193,7 +193,7 @@ export default function LandingPage({ ...rest }) {
                         </GridContainer>
                     </DialogContent>
                     </Card>
-                </Dialog>
+                </Dialog> */}
                 {/* POPUP MODAL END */}
 
             </GridItem>
