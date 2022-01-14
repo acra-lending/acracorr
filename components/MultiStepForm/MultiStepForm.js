@@ -23,9 +23,9 @@ const useStyles = makeStyles(basicsStyle);
 
 const selectCorrespondent = [
     'Adam Prather',
-    'David Byrum',
     'Erik Nelson',
     'Jeffrey Lemieux',
+    'Lorena Jauregui',
     'Marc Feltman',
 	'Marco Huaman',
     'Zenon Zorij'
