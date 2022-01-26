@@ -427,6 +427,10 @@ const FormStep4 = ({
     const isEnabled = values.loanAmount.length > 0 && 
         values.appraisedValue.length > 0;
 
+    const addCommas = num => num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    const removeNonNumeric = num => num.toString().replace(/[^0-9]/g, "");
+    
+
     return(
         <>
             <CustomInput
@@ -434,7 +438,7 @@ const FormStep4 = ({
                 name="loan-amount"
                 id="loan-amount"
                 type="text"
-                onChange={event => setLoanAmount(event.target.value)}
+                onChange={event => setLoanAmount(addCommas(removeNonNumeric(event.target.value)))}
                 value={values.loanAmount}
                 required
                 formControlProps={{
@@ -446,7 +450,7 @@ const FormStep4 = ({
                 name="appraised-value"
                 id="appraised-value"
                 type="text"
-                onChange={event => setAppraisedValue(event.target.value)}
+                onChange={event => setAppraisedValue(addCommas(removeNonNumeric(event.target.value)))}
                 value={values.appraisedValue}
                 required
                 formControlProps={{
@@ -459,7 +463,7 @@ const FormStep4 = ({
                 id="ltv-calculator"
                 type="text"
                 onChange={event => setLtv(event.target.value)}
-                value={(values.loanAmount / values.appraisedValue).toFixed(2)}
+                value={(Number.parseFloat(values.loanAmount) / Number.parseFloat(values.appraisedValue)).toFixed(2)}
                 required
                 formControlProps={{
                     fullWidth: true
@@ -606,7 +610,7 @@ const Confirm = ({
 
     const classes = useStyles();
 
-    const ltvCalculator = (loanAmount / appraisedValue).toFixed(2);
+    const ltvCalculator = (Number.parseFloat(loanAmount) / Number.parseFloat(appraisedValue)).toFixed(2);
 
     return(
         <>
