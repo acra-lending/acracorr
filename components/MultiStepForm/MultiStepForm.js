@@ -463,7 +463,7 @@ const FormStep4 = ({
                 id="ltv-calculator"
                 type="text"
                 onChange={event => setLtv(event.target.value)}
-                value={(Number.parseFloat(values.loanAmount) / Number.parseFloat(values.appraisedValue)).toFixed(2)}
+                value={(Number.parseFloat(values.loanAmount.replace(/,/g, '')) / Number.parseFloat(values.appraisedValue.replace(/,/g, ''))).toFixed(2)}
                 required
                 formControlProps={{
                     fullWidth: true
