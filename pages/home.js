@@ -126,16 +126,16 @@ export default function LandingPage({ ...rest }) {
       {isLoading ? (
         <Spinner />
       ) : ( 
-        <div className={classes.container} style={{ marginTop: "0" }}>
+        <div className={classes.container}>
           {/* Start Loading Area */}
           <GridContainer
             // onWheel={() => setSignupModal2(true)} 
           >
-            <GridItem xs={12} sm={6} md={12} className={classes.heading}>
+            <GridItem xs={12} sm={12} md={12} className={classes.heading}>
               <br />
               <h1 
                 className={classes.title}
-                style={{ padding: "80px 0 0 0", fontWeight: "bold" }}
+                style={{ fontWeight: "bold" }}
               >
                 {corrs.length > 0 ? parse(corrs[8].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}
                 </h1>

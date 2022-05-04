@@ -59,7 +59,7 @@ export default function QuickQualifier() {
     <div className={classes.section + " " + classes.headingButtons} id="javascriptComponents" style={{ paddingTop: 0 }}>
       <div>
         <GridContainer>
-            <GridItem xs={12} sm={6} md={5} lg={5}>
+            <GridItem xs={12} sm={10} md={8} lg={5}>
             <Link href="/quickqualifier">
                 <Button 
                     color="blue"
@@ -70,7 +70,7 @@ export default function QuickQualifier() {
                 </Button>
             </Link>
             </GridItem>
-            <GridItem xs={12} sm={6} md={5} lg={5}>
+            <GridItem xs={12} sm={10} md={8} lg={5}>
                 <Button
                         href="https://acracorrespondent.loannex.com/"
                         color="blue"
