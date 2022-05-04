@@ -195,6 +195,12 @@ h1 {
   font-size: 2.725rem;
   line-height: 1.15em; }
 
+  @media (max-width: 410px) {
+    h1 {
+      font-size: 2.35rem;
+    }
+  }
+
 h2 {
   font-size: 2.25rem;
   line-height: 1.5em; }
