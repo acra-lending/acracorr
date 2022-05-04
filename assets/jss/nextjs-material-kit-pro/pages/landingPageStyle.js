@@ -28,7 +28,11 @@ const landingPageStyle = {
     marginTop: "30px",
     minHeight: "32px",
     color: whiteColor,
-    textDecoration: "none"
+    textDecoration: "none",
+    "@media (max-width: 576px)": {
+      fontSize: "2.5rem",
+      paddingTop: "10px",
+    },
   },
   subtitle: {
     fontSize: "1.313rem",
