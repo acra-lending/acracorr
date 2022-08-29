@@ -256,7 +256,8 @@ export default function HeaderLinks(props) {
               color={"transparent"}
               className={classes.navButton}
               round
-              href="/corr-portal"
+              href="https://acralending.com/correspondent-portal/"
+              target="_blank"
             >
               <MeetingRoom className={classes.icons} /> portal
             </Button>
@@ -266,7 +267,8 @@ export default function HeaderLinks(props) {
             color={"blue"}
             className={classes.navButton}
             round
-            href="/corr-portal"
+            href="https://acralending.com/correspondent-portal/"
+            target="_blank"
           >
             <MeetingRoom className={classes.icons} /> portal
           </Button>
