@@ -23,6 +23,7 @@ const useStyles = makeStyles(basicsStyle);
 
 const selectCorrespondent = [
     'Marc Feltman',
+    'Nicholas Lemieux',
     'Todd Gillespie',
     'Zenon Zorij'
 ]
