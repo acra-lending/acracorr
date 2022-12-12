@@ -551,7 +551,7 @@ export default function SectionSignUp() {
                         <SignUpContact />
                         
                             Already an approved Acra Lending Correspondent? Take advantage today! {" "}
-                            <Link href="/bankstatementanalysis">
+                            <Link href="https://portal.acracorrespondent.com">
                                 Click Here
                             </Link>
                     </GridItem>
