@@ -13,9 +13,9 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 
 // Spinner
-import Loader from "react-loader-spinner";
+// import Loader from "react-loader-spinner";
 // Spinner css
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 import signupPageStyle from "assets/jss/nextjs-material-kit-pro/pages/signupPageStyle.js";
 
@@ -68,14 +68,14 @@ export default function SignUpPage({ ...rest }) {
               <Card className={classes.cardSignup}>
                 <CardBody>
                 <GridContainer justify="center">
-                  <Loader
+                  {/* <Loader
                     style={{position: "absolute", left: "47%", top: "35%"}}
                     type="Grid"
                     color="#0033A1"
                     height={100}
                     width={100}
                     timeout={2200}
-                  />
+                  /> */}
                 </GridContainer>
                   <Iframe />
                 </CardBody>
