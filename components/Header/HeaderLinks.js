@@ -256,7 +256,7 @@ export default function HeaderLinks(props) {
               color={"transparent"}
               className={classes.navButton}
               round
-              href="https://acralending.com/correspondent-portal/"
+              href="https://portal.acracorrespondent.com"
               target="_blank"
             >
               <MeetingRoom className={classes.icons} /> portal

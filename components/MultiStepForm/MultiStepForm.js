@@ -607,7 +607,7 @@ const Confirm = ({
 
     const classes = useStyles();
 
-    const ltvCalculator = (Number.parseFloat(loanAmount) / Number.parseFloat(appraisedValue)).toFixed(2);
+    const ltvCalculator = (Number.parseFloat(loanAmount.replace(/,/g, '')) / Number.parseFloat(appraisedValue.replace(/,/g, ''))).toFixed(2);
 
     return(
         <>
