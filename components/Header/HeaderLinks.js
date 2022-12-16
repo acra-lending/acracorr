@@ -268,7 +268,6 @@ export default function HeaderLinks(props) {
             className={classes.navButton}
             round
             href="https://acralending.com/correspondent-portal/"
-            target="_blank"
           >
             <MeetingRoom className={classes.icons} /> portal
           </Button>
