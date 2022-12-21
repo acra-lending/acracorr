@@ -21,14 +21,8 @@ import basicsStyle from "assets/jss/nextjs-material-kit-pro/pages/componentsSect
 
 const useStyles = makeStyles(basicsStyle);
 
-const selectCorrespondent = [
-    'Marc Feltman',
-    'Nicholas Lemieux',
-    'Todd Gillespie',
-    'Zenon Zorij'
-]
-
 const FormStep1 = ({
+    aeList,
     nextStep,
     setBrokerId,
     setCorrSelect,
@@ -81,14 +75,13 @@ const FormStep1 = ({
                                     id: "corrSelect"
                                 }}
                                 >
-                                    {selectCorrespondent.map(corrList => (
+                                    {aeList?.data.map((ae) => (
                                         <MenuItem classes={{
                                             root: classes.selectMenuItem,
                                             selected: classes.selectMenuItemSelected
                                         }} 
-                                        key={corrList} 
-                                        value={corrList}>
-                                            {corrList} 
+                                        key={ae.id} 
+                                        value={ae.attributes.name}>{ae.attributes.name}
                                         </MenuItem>
                                     ))}
                                 </Select>
@@ -757,7 +750,7 @@ const FileUpload = () => {
     )
 }
 
-export default function SectionBasics() {
+export default function SectionBasics({ aeList }) {
   const [step, setStep] = useState(1)
   const [brokerId, setBrokerId] = useState("");
   const [corrSelect, setCorrSelect] = useState("");
@@ -777,8 +770,6 @@ export default function SectionBasics() {
   const [loanAmount, setLoanAmount] = useState("");
   const [appraisedValue, setAppraisedValue] = useState("");
   const [ltv, setLtv] = useState("");
-  
-
 
   // proceed to the next step
   const nextStep = () => {setStep(step + 1); window.scrollTo(0,0)}
@@ -814,6 +805,7 @@ export default function SectionBasics() {
                     values={values}
                     setBrokerId={setBrokerId}
                     setCorrSelect={setCorrSelect}
+                    aeList={aeList}
                 />
     case 2:
         return <FormStep2 

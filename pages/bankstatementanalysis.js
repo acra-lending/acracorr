@@ -17,12 +17,14 @@ import Parallax from "components/Parallax/Parallax.js";
 import MultiStepForm from "components/MultiStepForm/MultiStepForm.js";
 import Spinner from 'components/Spinner/Spinner';
 import QualifyingCriteria from "components/MultiStepForm/QualifyingCriteria.js";
+const fetch = require('node-fetch');
+
 
 import contactUsStyle from "assets/jss/nextjs-material-kit-pro/pages/contactUsStyle.js";
 
 const useStyles = makeStyles(contactUsStyle);
 
-export default function ContactUsPage() {
+export default function ContactUsPage({ aeList }) {
   React.useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -75,7 +77,7 @@ useEffect(() => {
           <div className={classes.container}>
           <GridContainer>
           <GridItem xs={12} sm={12} md={8}>
-              <MultiStepForm />
+              <MultiStepForm aeList={aeList} />
                 <br />
                 <br />
                 <p style={{ color: "#3C4858", fontSize: "14px" }}>{corrs.length > 0 ? parse(corrs[0].acf.note) : isLoading}</p>
@@ -93,4 +95,15 @@ useEffect(() => {
       <FooterItems />
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const users = await fetch(`https://api.acralending.com/api/corr-portal-bdos`)
+
+  const aeList = await users.json();
+  return {
+      props: { 
+        aeList 
+      },
+  };
 }
