@@ -5,7 +5,14 @@ const withImages = require("next-images");
 const webpack = require("webpack");
 const path = require("path");
 
-module.exports = withPlugins([[withImages]], {
+const nextConfig = {
+  images: {
+  disableStaticImages: true,
+  },
+};
+
+
+module.exports = withPlugins([[withImages], nextConfig], {
   // module.exports = withPlugins([[withSass], [withImages], [withCSS]], {
   // module.exports = {
   webpack(config, options) {
