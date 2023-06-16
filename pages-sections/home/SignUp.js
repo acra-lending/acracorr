@@ -453,17 +453,17 @@ export default function SectionSignUp() {
             </Dialog> */}
             {/* SIGNUP MODAL END */}
             {/* </GridItem> */}
-            <GridItem xs={12} sm={6} md={4} lg={3}>
+            {/* <GridItem xs={12} sm={6} md={4} lg={3}> */}
             {/* BUTTON SIGNUP MODAL */}
-                <Button 
+                {/* <Button 
                     color="blue"
                     size="lg"
                     block
                     onClick={() => setSignupModal2(true)}>  
                     Bank Statement Analysis
-                </Button>
+                </Button> */}
             {/* SIGNUP MODAL START */}
-            <Dialog
+            {/* <Dialog
                 classes={{
                 root: classes.modalRoot,
                 paper: classes.modal + " " + classes.modalSignup
@@ -496,8 +496,8 @@ export default function SectionSignUp() {
                     >
                     Bank Statement Analysis
                     </h3>
-                </DialogTitle>
-                <DialogContent
+                </DialogTitle> */}
+                {/* <DialogContent
                     id="signup-modal-slide-description"
                     className={classes.modalBody}
                 >
@@ -529,7 +529,7 @@ export default function SectionSignUp() {
                         }
                         icon={SpeedIcon}
                         iconColor="blue"
-                        />
+                        /> */}
                         {/* <InfoArea
                         className={classes.infoArea}
                         title="Marketing Collateral"
@@ -541,7 +541,7 @@ export default function SectionSignUp() {
                         icon={PhotoSizeSelectActualIcon}
                         iconColor="blue"
                         /> */}
-                    </GridItem>
+                    {/* </GridItem>
                     <GridItem
                         xs={12}
                         sm={5}
@@ -554,14 +554,14 @@ export default function SectionSignUp() {
                             <Link href="/bankstatementanalysis">
                                 Click Here
                             </Link>
-                    </GridItem>
-                    </GridContainer>
+                    </GridItem> */}
+                    {/* </GridContainer>
                 </DialogContent>
                 </Card>
-            </Dialog>
+            </Dialog> */}
             {/* SIGNUP MODAL END */}
 
-            </GridItem>
+            {/* </GridItem> */}
             <GridItem xs={12} sm={6} md={4} lg={3}>
                 <Button 
                     color="blue"

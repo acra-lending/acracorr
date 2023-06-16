@@ -151,7 +151,7 @@ export default function LandingPage({ ...rest }) {
                 <h4>{corrs.length > 0 ? parse(corrs[9].content.rendered.replace(/<[^>]+>/g, '')) : isLoading}</h4>
                 <QuickQualifier />
                 {/* POPUP MODAL START */}
-                {/* <Dialog
+                { <Dialog
                     classes={{
                     root: classes.modalRoot,
                     paper: classes.modal + " " + classes.modalSignup
@@ -187,13 +187,13 @@ export default function LandingPage({ ...rest }) {
                             md={12}
                             className={classes.mlAuto}
                         >
-                            We’ve updated our <a href="https://acralending.com/privacy-policy/" target="_blank">Privacy Policy</a> to allow our products and services to be more available to you. Please read this information carefully to learn more about your legal rights. By continuing to use our products and services, you agree to these updates.
+                            We moved! We are now located at 3 Ada Parkway, Irvine, CA 92618
 
                         </GridItem>
                         </GridContainer>
                     </DialogContent>
                     </Card>
-                </Dialog> */}
+                </Dialog> }
                 {/* POPUP MODAL END */}
 
             </GridItem>
