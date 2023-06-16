@@ -455,13 +455,13 @@ export default function SectionSignUp() {
             {/* </GridItem> */}
             <GridItem xs={12} sm={6} md={4} lg={3}>
             {/* BUTTON SIGNUP MODAL */}
-                <Button 
+                {/* <Button 
                     color="blue"
                     size="lg"
                     block
                     onClick={() => setSignupModal2(true)}>  
                     Bank Statement Analysis
-                </Button>
+                </Button> */}
             {/* SIGNUP MODAL START */}
             <Dialog
                 classes={{
