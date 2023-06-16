@@ -12,13 +12,13 @@ const nextConfig = {
 };
 
 
-module.exports = withPlugins([[withImages], nextConfig], {
+module.exports = withPlugins([[withImages]], {
   // module.exports = withPlugins([[withSass], [withImages], [withCSS]], {
   // module.exports = {
   webpack(config, options) {
     config.resolve.modules.push(path.resolve("./"));
     config.module.rules.push({
-      test: /\.pdf$/,
+      test: /\.(jpe?g|png|svg|gif|ico|eot|ttf|woff|woff2|mp4|pdf|webm|txt)$/,
       use: {
         loader: "file-loader",
         options: {
