@@ -541,13 +541,8 @@ export default function SectionSignUp() {
                         icon={PhotoSizeSelectActualIcon}
                         iconColor="blue"
                         /> */}
-<<<<<<< Updated upstream
-                    {/* </GridItem> */}
-                    {/* <GridItem
-=======
                     {/* </GridItem>
                     <GridItem
->>>>>>> Stashed changes
                         xs={12}
                         sm={5}
                         md={5}
