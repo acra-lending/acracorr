@@ -93,7 +93,7 @@ export default function HeaderLinks(props) {
             <Apps className={classes.icon} /><a> Our Programs </a>
           </Button>
         </Link>
-      </ListItem>
+    </ListItem> 
       <ListItem className={classes.listItem}>
         <Link href="/events">
           <Button 
