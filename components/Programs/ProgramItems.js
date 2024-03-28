@@ -14,6 +14,7 @@ import Spinner from 'components/Spinner/Spinner';
 
 import ServiceLevels from "components/ServiceLevels/ServiceLevels";
 
+
 const useStyles = makeStyles(pillsStyle);
 
 export default function SectionPills() {
@@ -80,7 +81,7 @@ export default function SectionPills() {
                                 <br />
                                 <h3 style={{ margin: "0", paddingBottom: "12px" }}><strong>Product Details</strong></h3>
                                 <ul style={{ fontSize: "16px" }}>
-                                    <li>{parse(corr.acf.product_matrix)}</li>
+                                    {/* <li>{parse(corr.acf.product_matrix)}</li> */}
                                     <Link href="/trid-nontrid">
                                       <li><a href="#">TRID + Non-TRID Programs</a></li>
                                     </Link>
